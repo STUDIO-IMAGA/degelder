@@ -1,0 +1,43 @@
+.header-frontpage{
+  h3{
+    font-size: 1.4rem;
+  }
+  p,li{
+    font-size: 1.1rem;
+  }
+  .container-bg{
+    width:66.6666666667%;
+  }
+}
+
+@include media-breakpoint-up(xl){
+  .header-frontpage{
+    .header-push{
+      padding-top: 13rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg){
+  .header-frontpage{
+    .header-push{
+      padding-top: 13rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(md){
+  .header-frontpage{
+    .header-push{
+      padding-top: 13rem;
+    }
+  }
+}
+
+@include media-breakpoint-up(sm){
+  .header-frontpage{
+    .header-push{
+      padding-top: 13rem;
+    }
+  }
+}

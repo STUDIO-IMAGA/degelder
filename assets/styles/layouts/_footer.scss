@@ -1,0 +1,10 @@
+footer{
+  .list-unstyled{
+    .nav-link{
+      padding:0;
+      
+      @extend .text-body;
+    }
+  }
+
+}

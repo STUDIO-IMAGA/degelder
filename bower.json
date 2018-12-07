@@ -1,0 +1,24 @@
+{
+  "name": "imaga",
+  "homepage": "https://odil.io/",
+  "authors": [
+    "Odilio Witteveen <hallo@odil.io>"
+  ],
+  "license": "GPL",
+  "private": true,
+  "dependencies": {
+    "popper.js": "1.12.3",
+    "aos": "2.2.0",
+    "smooth-scroll.js": "12.1.5",
+    "font-awesome": "4.7.0",
+    "slick-carousel": "1.7.1"
+  },
+  "overrides": {
+    "font-awesome": {
+      "main": [
+        "./scss/font-awesome.scss",
+        "./fonts/*"
+      ]
+    }
+  }
+}

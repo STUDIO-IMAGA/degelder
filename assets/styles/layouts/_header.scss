@@ -1,0 +1,41 @@
+header{
+  position: relative;
+  z-index: 100;
+  box-shadow: 0px 2px 4px 0 rgba(26, 23, 27, 0.16);
+
+  .navbar{
+    padding: 0;
+
+    .navbar-brand{
+      margin-top: -26px;
+      margin-bottom: -6px;
+    }
+    #primary_navigation{
+      .nav-item{
+        .nav-link{
+          font-size: 1.2rem;
+          font-style: italic;
+        }
+      }
+    }
+    .winkelmandje{
+      display: inline-block;
+      color: $black;
+
+      &-icon{
+        display: inline-block;
+        vertical-align: middle;
+        background-image: url('../images/winkelmandje-icon.png');
+        height: 32px;
+        width: 32px;
+        margin-right: .2rem;
+      }
+      &-prijs{
+        font-style: italic;
+      }
+    }
+  }
+}
+@include media-breakpoint-down(md){
+
+}

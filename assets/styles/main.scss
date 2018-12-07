@@ -1,0 +1,23 @@
+@import "common/variables";
+@import "common/mixins";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/font-awesome/scss/font-awesome.scss";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+// endbower
+
+@import "common/global";
+@import "components/buttons";
+@import "components/backgrounds";
+@import "components/comments";
+@import "components/forms";
+@import "components/typography";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+@import "layouts/frontpage";

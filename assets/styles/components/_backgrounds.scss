@@ -1,0 +1,40 @@
+body{
+  background-image:url('../images/achtergrond.jpg');
+}
+.bg-contain{
+  background-size: contain !important;
+}
+
+.bg-cover{
+  background-size: cover !important;
+}
+
+.bg-center{
+  background-position: center !important;
+
+  &-top{
+    background-position: center top !important;
+  }
+  &-left{
+    background-position: center left !important;
+  }
+  &-right{
+    background-position: center right !important;
+  }
+  &-bottom{
+    background-position: center bottom !important;
+  }
+}
+
+$max: 105;
+$step: 5;
+
+@each $color, $value in $theme-colors {
+  @for $i from 1 through ceil($max/$step) {
+      $num: ($i - 1)*$step;
+      .bg-#{$color}-#{$num} {
+        index: $i; value: $value;
+        background-color: rgba($value, $num / 100);
+      }
+  }
+}

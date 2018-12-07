@@ -1,2 +1,2 @@
-# degelder
-Roots/Sage Thema voor Kaasboerderij De Gelder
+# boilerplate
+IMAGA's Roots/Sage boilerplate remix
