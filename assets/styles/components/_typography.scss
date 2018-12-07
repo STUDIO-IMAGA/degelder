@@ -8,6 +8,24 @@ a{
 
 .list{
   &-checkmark{
+    list-style-type: none;
+    padding:0;
 
+    li{
+      position: relative;
+      padding-top: .2rem;
+      padding-bottom: .2rem;
+
+      &:before{
+        display: inline-block;
+        content:"";
+        height: 18px;
+        width: 22px;
+        background-image: url('../images/icons/icon-checkmark.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-right: .6rem;
+      }
+    }
   }
 }

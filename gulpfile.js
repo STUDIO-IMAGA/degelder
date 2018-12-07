@@ -204,7 +204,7 @@ gulp.task('fonts', function() {
   return gulp.src(globs.fonts)
     .pipe(flatten())
     .pipe(gulp.dest(path.dist + 'fonts'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.reload(({stream:true})));
 });
 
 // ### Images
@@ -241,7 +241,7 @@ gulp.task('images', function() {
       ]})
     ]))
     .pipe(gulp.dest(path.dist + 'images'))
-    .pipe(browserSync.stream());
+    .pipe(browserSync.reload(({stream:true})));
 });
 
 // ### JSHint

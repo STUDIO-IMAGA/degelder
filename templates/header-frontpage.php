@@ -1,7 +1,8 @@
 <? use IMAGA\Theme\Assets; ?>
+
 <section class="header-frontpage">
   <div class="container-fluid">
-    <div class="container-bg" style="background-image:url(<?= Assets\asset_path('images/frontpage.png');?>);"></div>
+    <div class="container-bg" style="background-image:url(<?= Assets\asset_path('images/upload/frontpage.png');?>);"></div>
     <div class="row align-items-stretch">
       <div class="col-8 header-push">
         <div class="row p-4">
@@ -32,14 +33,15 @@
               <li>Eerlijk en ambachtelijk</li>
               <li>Grootste producent van boerenkaas in Nederland</li>
             </ul>
+            <br/>
             <h3>Ons motto:</h3>
             <h3><i>Tevreden en gezonde koeien geven de beste melk!</i></h3>
             <p><b>Wij zijn lid van</b></p>
             <div class="pb-2">
-              <img class="img-fluid img-round mr-3" src="https://placehold.it/87x87"/>
-              <img class="img-fluid img-round mr-3" src="https://placehold.it/87x87"/>
-              <img class="img-fluid img-round mr-3" src="https://placehold.it/87x87"/>
-              <img class="img-fluid img-round" src="https://placehold.it/87x87"/>
+              <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/boerenkaas.png');?>"/>
+              <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/boerderij-zuivel.png');?>"/>
+              <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/kaas-van-de-boerderij.png');?>"/>
+              <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/kb.png');?>"/>
             </div>
           </div>
         </div>
@@ -47,11 +49,13 @@
     </div>
   </div>
 </section>
-<section>
+<section class="featured-product">
   <div class="container">
+    <div class="container-bg" style="background-image:url(<?= Assets\asset_path('images/upload/featured-product.png');?>);"></div>
     <div class="row">
-      <div class="col-12">
-
+      <div class="col-12 py-7">
+        <h3>De Tynjetaler: onze trots.</h3>
+        <h4>Proef onze Tijnjetaler nu voor maar € 12,95 per kilo</h4>
       </div>
     </div>
   </div>

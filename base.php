@@ -18,7 +18,7 @@ use IMAGA\Theme\Wrapper;
 
     <? do_action('get_header'); ?>
 
-    <? get_template_part('templates/header'); ?>
+    <? get_template_part('templates/navigation'); ?>
 
     <div class="wrap" role="document">
 

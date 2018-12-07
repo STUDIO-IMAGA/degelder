@@ -1,6 +1,7 @@
 body{
-  background-image:url('../images/achtergrond.jpg');
+  background-image:url('../images/papier.jpg');
 }
+
 .bg-contain{
   background-size: contain !important;
 }
@@ -29,6 +30,7 @@ body{
 $max: 105;
 $step: 5;
 
+// Generate diffrent opacity background varients based on theme-colors()
 @each $color, $value in $theme-colors {
   @for $i from 1 through ceil($max/$step) {
       $num: ($i - 1)*$step;
