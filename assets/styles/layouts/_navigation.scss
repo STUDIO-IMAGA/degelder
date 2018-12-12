@@ -9,13 +9,9 @@ header{
     .navbar-brand{
       margin-top: -26px;
       margin-bottom: -6px;
-    }
-    #primary_navigation{
-      .nav-item{
-        .nav-link{
-          font-size: 1.2rem;
-          font-style: italic;
-        }
+
+      img{
+        width: 290px;
       }
     }
     .winkelmandje{
@@ -41,7 +37,92 @@ header{
       }
     }
   }
+  #nav-top{
+    height: 40px;
+  }
+  #nav-main{
+    .nav-item{
+      .nav-link{
+        font-size: 1.2rem;
+        font-style: italic;
+      }
+    }
+  }
+  &.nav-fixed{
+    .navbar-brand{
+      margin-top: 8px;
+      margin-bottom: -6px;
+
+      img{
+        width: 250px;
+      }
+    }
+    #nav-top{
+      height: 0px;
+      .nav-item{
+        .nav-link{
+          color: transparent !important;
+        }
+      }
+    }
+  }
+}
+#header-spacer{
+  height:114px;
 }
 @include media-breakpoint-down(md){
+  #header-spacer{
+    height:81px;
+  }
+  header{
+    .navbar-toggler{
+      .navbar-toggler-text{
+        vertical-align: middle;
+        margin-left: 12px;
+      }
+    }
+    .navbar{
+      .navbar-brand{
+        margin-top: 8px;
+        margin-bottom: 9px;
 
+        img{
+          width: 175px;
+        }
+      }
+    }
+    #nav-top{
+      height: 0px;
+      .nav-item{
+        .nav-link{
+          color: transparent !important;
+        }
+      }
+    }
+  }
+}
+@include media-breakpoint-down(sm){
+  #header-spacer{
+    height:68px;
+  }
+  header{
+    .navbar{
+      .navbar-brand{
+        margin-top: 7px;
+        margin-bottom: 7px;
+
+        img{
+          width: 150px;
+        }
+      }
+    }
+    #nav-top{
+      height: 0px;
+      .nav-item{
+        .nav-link{
+          color: transparent !important;
+        }
+      }
+    }
+  }
 }

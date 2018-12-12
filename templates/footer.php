@@ -1,6 +1,7 @@
 <?
 
 use IMAGA\Theme\Navigation;
+use IMAGA\Theme\Assets;
 
 $address = get_option( 'woocommerce_store_address' );
 $postcode = get_option( 'woocommerce_store_postcode' );
@@ -17,6 +18,11 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
 
 <footer class="footer">
   <div class="container pt-7">
+    <div class="trekker"></div>
+    <div class="kaasboerderij"></div>
+    <div class="bosjes-1"></div>
+    <div class="bosjes-2"></div>
+
     <div class="row">
       <div class="col col-xl-3">
         <h6>Openingstijden boerderijwinkel</h6>
@@ -53,26 +59,26 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
         <h6>Contactgegevens</h6>
         <ul class="list-unstyled">
           <li>
-            <a class="text-body" href="https://www.google.com/maps/dir/8932+Leeuwarden/<?=$full_address;?>" target="_blank">
+            <a href="https://www.google.com/maps/dir/8932+Leeuwarden/<?=$full_address;?>" target="_blank">
               <?=$address;?><br/>
               <?=$postcode;?> <?=$city;?>
             </a>
           </li>
           <li>
-            <a class="text-body" href="tel:<?=$phone;?>"><?=$phone;?></a>
+            <a href="tel:<?=$phone;?>"><?=$phone;?></a>
           </li>
           <li>
-            <a class="text-body" href="mailto:<?=$email;?>"><?=$email;?></a>
+            <a href="mailto:<?=$email;?>"><?=$email;?></a>
           </li>
         </ul>
       </div>
       <div class="col col-xl-4">
         <h6>Wij zijn lid van</h6>
         <div>
-          <img class="img-fluid img-round mr-3" src="https://placehold.it/71x71"/>
-          <img class="img-fluid img-round mr-3" src="https://placehold.it/71x71"/>
-          <img class="img-fluid img-round mr-3" src="https://placehold.it/71x71"/>
-          <img class="img-fluid img-round" src="https://placehold.it/71x71"/>
+          <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/boerenkaas.png');?>"/>
+          <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/boerderij-zuivel.png');?>"/>
+          <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/kaas-van-de-boerderij.png');?>"/>
+          <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/kb.png');?>"/>
         </div>
       </div>
     </div>

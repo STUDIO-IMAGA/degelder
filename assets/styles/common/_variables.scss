@@ -1,27 +1,27 @@
 // settings
 $main-sm-columns:       12;
 $sidebar-sm-columns:    0;
-$enable-caret:              true;
-$enable-rounded:            true;
-$enable-shadows:            false;
-$enable-gradients:          false;
-$enable-transitions:        true;
-$enable-grid-classes:       true;
-$enable-print-styles:       true;
+$enable-caret:          true;
+$enable-rounded:        true;
+$enable-shadows:        false;
+$enable-gradients:      false;
+$enable-transitions:    true;
+$enable-grid-classes:   true;
+$enable-print-styles:   true;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 512px,
-  md: 960px,
-  lg: 1280px,
-  xl: 1600px
+  sm: 769px,
+  md: 961px,
+  lg: 1281px,
+  xl: 1601px
 );
 
 $container-max-widths: (
-  sm: 480px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1408px
+  sm: 768px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1600px
 );
 
 // Color system
@@ -91,7 +91,7 @@ $colors: (
   brown-400:     $brown-400,
   brown-500:     $brown-500,
   green:         $green,
-  green-100:     $green-100,
+  green-light:   $green-light,
   cyan-blue:     $cyan-blue,
 
   indigo:        $indigo,
@@ -125,7 +125,7 @@ $theme-colors: (
   brown-400:     $brown-400,
   brown-500:     $brown-500,
   green:         $green,
-  green-100:     $green-100,
+  green-light:   $green-light,
   cyan-blue:     $cyan-blue,
 
   indigo:        $indigo,
@@ -236,15 +236,15 @@ $navbar-dark-color:                 rgba($white, .5);
 $navbar-dark-hover-color:           rgba($white, .75);
 $navbar-dark-active-color:          $white;
 $navbar-dark-disabled-color:        rgba($white, .25);
-$navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
-$navbar-dark-toggler-border-color:  rgba($white, .1);
+$navbar-dark-toggler-icon-bg:       url("../images/icons/icon-menu.svg");
+$navbar-dark-toggler-border-color:  transparent;
 
 $navbar-light-color:                $black;
 $navbar-light-hover-color:          $blue;
 $navbar-light-active-color:         $blue;
 $navbar-light-disabled-color:       rgba($black, .3);
-$navbar-light-toggler-icon-bg:      str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-light-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23");
-$navbar-light-toggler-border-color: rgba($black, .1);
+$navbar-light-toggler-icon-bg:      url("../images/icons/icon-menu.svg");
+$navbar-light-toggler-border-color: transparent;
 
 $navbar-brand-padding-y:            0;
 $navbar-padding-x:                  1.5rem;

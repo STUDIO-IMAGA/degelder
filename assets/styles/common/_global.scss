@@ -17,12 +17,16 @@
 .img-round{
   border-radius: 9999px !important;
 }
-.container{
+section{
   position: relative;
-  &-fluid{
+  .container{
     position: relative;
+    &-fluid{
+      position: relative;
+    }
   }
-  &-bg{
+  .container-bg,
+  .section-bg{
     position: absolute;
     top: 0;
     bottom: 0;
@@ -31,4 +35,16 @@
     background-position: center;
     background-size: cover;
   }
+}
+
+
+.breakpoint-indicator{
+  position: fixed;
+  z-index: 9999999;
+  background: rgba(0,0,0,.5);
+  border:1px solid #000;
+  color: #fff;
+  line-height: 1.6;
+  font-size: 22px;
+  padding: 5px 8px;
 }

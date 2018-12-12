@@ -1,10 +1,21 @@
 footer{
+  color: $brown-400;
+  background-image: url('../images/footer-bg.png');
+  background-size: cover;
+  background-position: top center;
+
   .list-unstyled{
-    .nav-link{
+    .nav-link,a{
       padding:0;
-      
-      @extend .text-body;
+      color: $brown-400;
+
+      &:hover{
+        color: $black;
+      }
     }
   }
-
+  .trekker{}
+  .kaasboerderij{}
+  .bosjes-1{}
+  .bosjes-2{}
 }

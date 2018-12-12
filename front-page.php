@@ -2,6 +2,8 @@
 
 <? get_template_part('templates/header','frontpage'); ?>
 
+<? get_template_part('templates/layouts/featured','product'); ?>
+
 <? if( have_rows('layouts') ): ?>
   <? while( have_rows('layouts') ): the_row(); ?>
 

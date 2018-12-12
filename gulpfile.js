@@ -8,6 +8,7 @@ var flatten      = require('gulp-flatten');
 var gulp         = require('gulp');
 var gulpif       = require('gulp-if');
 var imagemin     = require('gulp-imagemin');
+var imageminMozjpeg = require('imagemin-mozjpeg');
 var jshint       = require('gulp-jshint');
 var lazypipe     = require('lazypipe');
 var less         = require('gulp-less');
@@ -212,9 +213,8 @@ gulp.task('fonts', function() {
 gulp.task('images', function() {
   return gulp.src(globs.images)
     .pipe(imagemin([
-      imagemin.jpegtran({
-        progressive: true,
-        arithmetic: true
+      imageminMozjpeg({
+        progressive: true
       }),
       imagemin.gifsicle({
         optimizationLevel: 3,

@@ -33,6 +33,21 @@
           topOnEmptyHash: true
         });
 
+        function getScrollPixel() {
+          var h=document.documentElement,b=document.body,st='scrollTop',sh='scrollHeight';return(h[st]||b[st]);
+        }
+
+        document.addEventListener('scroll', function(){
+
+          var s= Math.floor( getScrollPixel() );
+
+          if( s > 180){
+            document.getElementById("navigation").classList.add('nav-fixed');
+          }else{
+            document.getElementById("navigation").classList.remove('nav-fixed');
+          }
+        });
+
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
