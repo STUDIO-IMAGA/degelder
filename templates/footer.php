@@ -20,8 +20,8 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
   <div class="container pt-7">
     <div class="trekker"></div>
     <div class="kaasboerderij"></div>
-    <div class="bosjes-1"></div>
-    <div class="bosjes-2"></div>
+    <div class="bosjes-links"></div>
+    <div class="bosjes-rechts"></div>
 
     <div class="row">
       <div class="col col-xl-3">
@@ -51,11 +51,11 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
           </div>
         </div>
       </div>
-      <div class="col col-xl-2">
+      <div class="col col-xl-3">
         <h6>Klantenservice</h6>
         <?= Navigation\navigation_list('tertiary_navigation','tertiary_navigation','list-unstyled');?>
       </div>
-      <div class="col col-xl-2">
+      <div class="col col-xl-3">
         <h6>Contactgegevens</h6>
         <ul class="list-unstyled">
           <li>
@@ -72,7 +72,7 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
           </li>
         </ul>
       </div>
-      <div class="col col-xl-4">
+      <div class="col col-xl-3">
         <h6>Wij zijn lid van</h6>
         <div>
           <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/boerenkaas.png');?>"/>

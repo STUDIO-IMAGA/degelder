@@ -17,26 +17,6 @@
 .img-round{
   border-radius: 9999px !important;
 }
-section{
-  position: relative;
-  .container{
-    position: relative;
-    &-fluid{
-      position: relative;
-    }
-  }
-  .container-bg,
-  .section-bg{
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-position: center;
-    background-size: cover;
-  }
-}
-
 
 .breakpoint-indicator{
   position: fixed;

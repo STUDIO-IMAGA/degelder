@@ -14,8 +14,80 @@ footer{
       }
     }
   }
-  .trekker{}
-  .kaasboerderij{}
-  .bosjes-1{}
-  .bosjes-2{}
+  .trekker,
+  .kaasboerderij,
+  .bosjes-links,
+  .bosjes-rechts,
+  .bosjes-links:before,
+  .bosjes-links:after,
+  .bosjes-rechts:before,
+  .bosjes-rechts:after{
+    position: absolute;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  .trekker{
+    width: 84px;
+    height: 61px;
+    background-image: url('../images/icons/icon-trekker.svg');
+    top: -7px;
+    right: 90rem;
+    animation-name: trekker;
+    animation-duration: 60s;
+    animation-timing-function: ease-in-out;
+    z-index: 10;
+  }
+  .kaasboerderij{
+    width: 235px;
+    height: 72px;
+    background-image: url('../images/icons/icon-kaasboerderij.svg');
+    top: -30px;
+    right: 18rem;
+  }
+  .bosjes-links{
+    width: 91px;
+    height: 18px;
+    background-image: url('../images/icons/icon-bosjes-1.svg');
+    top: 6px;
+    left: 4rem;
+
+    &:before{
+      position: absolute;
+      background-image: url('../images/icons/icon-dikke-boom.svg');
+      content: "";
+      width: 80px;
+      height: 80px;
+      top: -52px;
+      left: -113px;
+    }
+    &:after{
+      position: absolute;
+      background-image: url('../images/icons/icon-dunne-boom.svg');
+      content: "";
+      width: 70px;
+      height: 68px;
+      top: -40px;
+      left: -75px;
+    }
+  }
+  .bosjes-rechts{
+    width: 313px;
+    height: 24px;
+    background-image: url('../images/icons/icon-bosjes-2.svg');
+    top: 0;
+    right: 0;
+    z-index: 10;
+
+    &:after{
+      position: absolute;
+      background-image: url('../images/icons/icon-dunne-boom.svg');
+      content: "";
+      width: 70px;
+      height: 68px;
+      top: -40px;
+      left: -75px;
+      z-index: 1;
+    }
+  }
 }

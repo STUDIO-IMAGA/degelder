@@ -41,17 +41,23 @@ header{
     height: 40px;
   }
   #nav-main{
-    .nav-item{
-      .nav-link{
-        font-size: 1.2rem;
-        font-style: italic;
+    .container{
+      align-items: start;
+      margin-top: 0px;
+
+      .nav-item{
+        .nav-link{
+          font-size: 1.2rem;
+          font-style: italic;
+        }
       }
     }
   }
   &.nav-fixed{
     .navbar-brand{
-      margin-top: 8px;
+      margin-top: -15px;
       margin-bottom: -6px;
+      margin-right: 4rem;
 
       img{
         width: 250px;
@@ -63,6 +69,11 @@ header{
         .nav-link{
           color: transparent !important;
         }
+      }
+    }
+    #nav-main{
+      .container{
+        margin-top: 22px;
       }
     }
   }

@@ -11,7 +11,7 @@
   </nav>
 
   <nav id="nav-main" class="navbar navbar-expand-lg navbar-light">
-    <div class="container align-items-start">
+    <div class="container">
 
       <?= Navigation\toggler( 'primary_navigation' ); ?>
 
