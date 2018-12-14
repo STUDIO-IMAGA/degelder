@@ -1,3 +1,11 @@
 .featured-product{
   margin-top: 5px;
+
+  .container{
+    overflow: hidden;
+
+    &:hover .container-bg{
+      transform: scale(1.04);
+    }
+  }
 }

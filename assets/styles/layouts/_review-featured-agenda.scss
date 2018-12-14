@@ -1,0 +1,58 @@
+.review-featured-agenda{
+
+  .bg-reviews{
+    background-color: rgba(#faeed2, .6);
+    background-blend-mode: multiply;
+  }
+  .bg-agenda{
+    background-color: rgba(#faeed2, .3);
+    background-blend-mode: multiply;
+  }
+
+  .review{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: row;
+    margin-bottom: 20px;
+
+    .author{
+      background-image: url('../images/icons/icon-quote.svg');
+      background-size: 100% 53px;
+      background-repeat: no-repeat;
+      background-position: center top;
+      width: 17%;
+      text-align: center;
+      padding-top: 8px;
+      font-size: .95rem;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.33;
+    }
+    .quote{
+      margin-left: 27px;
+      width: 83%;
+      font-size: 1rem;
+    }
+  }
+  .agenda{
+    .event{
+      line-height: 1.85;
+      color: $brown-500;
+
+      &:hover{
+        text-decoration: none;
+        color: $blue;
+      }
+
+      .date{
+        display: inline-block;
+        width: 140px;
+      }
+      .description{
+        display: inline-block;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}

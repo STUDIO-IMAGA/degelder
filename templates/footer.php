@@ -74,11 +74,19 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
       </div>
       <div class="col col-xl-3">
         <h6>Wij zijn lid van</h6>
-        <div>
-          <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/boerenkaas.png');?>"/>
-          <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/boerderij-zuivel.png');?>"/>
-          <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/kaas-van-de-boerderij.png');?>"/>
-          <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/kb.png');?>"/>
+        <div class="row">
+          <div class="col p-1">
+            <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/boerenkaas.png');?>"/>
+          </div>
+          <div class="col p-1">
+            <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/boerderij-zuivel.png');?>"/>
+          </div>
+          <div class="col p-1">
+            <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/kaas-van-de-boerderij.png');?>"/>
+          </div>
+          <div class="col p-1">
+            <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/kb.png');?>"/>
+          </div>
         </div>
       </div>
     </div>

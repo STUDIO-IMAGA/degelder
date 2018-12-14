@@ -1,9 +1,12 @@
 .btn{
-  font-size: 1.2rem;
   margin-right: 1rem;
   font-weight: 700;
 
   @extend .box-shadow;
+
+  &-sm{
+    font-style: italic;
+  }
 
   &[class*="outline"]{
     box-shadow: none;

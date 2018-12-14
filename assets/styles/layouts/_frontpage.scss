@@ -1,43 +1,21 @@
 .header-frontpage{
+  .display-1{
+    text-shadow: 0.7px 0.7px 3px rgba(26, 23, 27, 0.15), 1.5px 1.3px 4px rgba(26, 23, 27, 0.15);
+  }
   h3{
     font-size: 1.4rem;
+  }
+  .bg-cyan{
+    p{
+      font-size: 1.25rem;
+
+      @extend .mb-3;
+    }
   }
   p,li{
     font-size: 1.1rem;
   }
   .container-bg{
     width:66.6666666667%;
-  }
-}
-
-@include media-breakpoint-up(xl){
-  .header-frontpage{
-    .header-push{
-      padding-top: 13rem;
-    }
-  }
-}
-
-@include media-breakpoint-up(lg){
-  .header-frontpage{
-    .header-push{
-      padding-top: 13rem;
-    }
-  }
-}
-
-@include media-breakpoint-up(md){
-  .header-frontpage{
-    .header-push{
-      padding-top: 13rem;
-    }
-  }
-}
-
-@include media-breakpoint-up(sm){
-  .header-frontpage{
-    .header-push{
-      padding-top: 13rem;
-    }
   }
 }

@@ -9,6 +9,9 @@ $enable-transitions:    true;
 $enable-grid-classes:   true;
 $enable-print-styles:   true;
 
+$grid-columns:                12;
+$grid-gutter-width:           70px;
+
 $grid-breakpoints: (
   xs: 0,
   sm: 769px,
@@ -21,7 +24,7 @@ $container-max-widths: (
   sm: 768px,
   md: 960px,
   lg: 1280px,
-  xl: 1600px
+  xl: 1470px
 );
 
 // Color system
@@ -166,16 +169,16 @@ $spacers: (
 );
 
 
-$body-bg:                     $white;
+$body-bg:                     #f3f0e9;
 $body-color:                  $brown-500;
 
 $font-family-sans-serif:      'Amaranth', sans-serif;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-family-base:            $font-family-sans-serif;
 
-$font-size-base:              1.125rem; // Assumes the browser default, typically `16px`
-$font-size-lg:                ($font-size-base * 1.1);
-$font-size-sm:                $font-size-base;
+$font-size-base:              1.125rem; // About 18px
+$font-size-lg:                ($font-size-base * 1.25); // About 20px
+$font-size-sm:                1rem;// About 16px
 
 $line-height-lg:              1.35;
 $line-height-sm:              1.35;
@@ -276,12 +279,12 @@ $input-btn-focus-width:           0rem;
 $input-btn-focus-color:           $brown-100;
 
 
-// $input-btn-padding-y-sm:      .25rem;
-// $input-btn-padding-x-sm:      .5rem;
+$input-btn-padding-y-sm:      .5rem;
+$input-btn-padding-x-sm:      1.3rem;
 // $input-btn-line-height-sm:    $line-height-sm;
 //
-// $input-btn-padding-y-lg:      .5rem;
-// $input-btn-padding-x-lg:      1rem;
+$input-btn-padding-y-lg:      .5rem;
+$input-btn-padding-x-lg:      1.8rem;
 // $input-btn-line-height-lg:    $line-height-lg;
 //
 // $input-btn-border-width:      $border-width;

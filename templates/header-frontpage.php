@@ -2,25 +2,23 @@
 
 <section class="header-frontpage">
   <div class="container">
-    <div class="container-bg" style="background-image:url(<?= Assets\asset_path('images/upload/frontpage.png');?>);"></div>
-    <div class="row align-items-stretch">
-      <div class="col-8 header-push">
-        <div class="row p-4">
+    <div class="container-bg" style="background-image:url(<?= Assets\asset_path('images/upload/frontpage.jpg');?>);"></div>
+    <div class="row align-items-end">
+      <div class="col-8">
+        <div class="row">
           <div class="col-12 text-white">
             <h1 class="display-1">Kaasboerderij</h1>
             <h1 class="display-1">De Gelder</h1>
           </div>
         </div>
-        <div class="row p-4 bg-cyan">
-          <div class="col-12">
-            <h6>Prijswinnende boerenkaasmakers en Fries familiebedrijf sinds  1985.</h6>
-            <h6>Beleef onze kaasboerderij en proef onze kazen!</h6>
-            <br>
-            <p><a class="btn btn-yellow" href="#">Bekijk assortiment</a><a class="btn btn-outline-brown" href="#">Leer ons kennen</a></p>
+        <div class="row bg-cyan">
+          <div class="col-12 py-3">
+            <p>Prijswinnende boerenkaasmakers en Fries familiebedrijf sinds  1985.<br>Beleef onze kaasboerderij en proef onze kazen!</p>
+            <p><a class="btn btn-yellow btn-lg" href="#">Bekijk assortiment</a><a class="btn btn-outline-brown btn-lg" href="#">Leer ons kennen</a></p>
           </div>
         </div>
       </div>
-      <div class="col-4 bg-yellow-light pt-3 px-4">
+      <div class="col-4 bg-yellow-light py-3">
         <div class="row">
           <div class="col-12">
             <h2>Kaas- en zuivelmakers sinds 1985</h2>
