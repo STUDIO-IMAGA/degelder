@@ -19,6 +19,8 @@
   </div>
 </section>
 
+<? get_template_part('templates/layouts/facts'); ?>
+
 <? if( have_rows('layouts') ): ?>
   <? while( have_rows('layouts') ): the_row(); ?>
 
