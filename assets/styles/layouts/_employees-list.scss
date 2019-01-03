@@ -1,0 +1,19 @@
+.layout{
+  &.employees-list{
+    .employee{
+      text-align: center;
+      padding-bottom: 2rem;
+
+      .name{
+        padding-top: 1rem;
+        font-size: 1.125rem;
+        font-family: 'Amaranth', sans-serif;
+      }
+      .description{
+        font-size: 1.125rem;
+        font-family: 'Amaranth', sans-serif;
+        font-style: italic;
+      }
+    }
+  }
+}

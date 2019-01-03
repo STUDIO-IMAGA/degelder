@@ -27,6 +27,10 @@
 
 <? get_template_part('templates/layouts/employees','display'); ?>
 
+<? get_template_part('templates/layouts/employees','list'); ?>
+
+<? get_template_part('templates/layouts/gallery'); ?>
+
 <? if( have_rows('layouts') ): ?>
   <? while( have_rows('layouts') ): the_row(); ?>
 

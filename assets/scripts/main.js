@@ -58,6 +58,14 @@
         //     window.scrollTo(window.scrollX, window.scrollY + 2 );
         //   }
         // }, 0);
+
+        $('.slick-slider').slick({
+          infinite: true,
+          speed: 300,
+          fade: true,
+          arrows: true
+        });
+
       }
     },
     // Home page
