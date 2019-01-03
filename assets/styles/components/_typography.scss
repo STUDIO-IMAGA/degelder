@@ -1,6 +1,12 @@
 *{
   text-rendering: optimizeLegibility;
 }
+.serif{
+  font-family: 'Zilla Slab', serif;
+}
+.sans-serif{
+  font-family: 'Amaranth', sans-serif;
+}
 
 a{
   transition: all .3s ease;

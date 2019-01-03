@@ -21,6 +21,12 @@
 
 <? get_template_part('templates/layouts/facts'); ?>
 
+<? get_template_part('templates/layouts/title'); ?>
+
+<? get_template_part('templates/layouts/content'); ?>
+
+<? get_template_part('templates/layouts/employees','display'); ?>
+
 <? if( have_rows('layouts') ): ?>
   <? while( have_rows('layouts') ): the_row(); ?>
 
