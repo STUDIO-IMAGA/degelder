@@ -31,6 +31,8 @@
 
 <? get_template_part('templates/layouts/gallery'); ?>
 
+<? get_template_part('templates/layouts/steps'); ?>
+
 <? if( have_rows('layouts') ): ?>
   <? while( have_rows('layouts') ): the_row(); ?>
 

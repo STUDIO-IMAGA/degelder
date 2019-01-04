@@ -1,0 +1,17 @@
+.layout{
+  &.steps{
+    .item{
+      align-items: center;
+      
+      &:nth-of-type(even){
+
+        div:first-child{
+          order: 2;
+        }
+        div:last-child{
+          order: 1;
+        }
+      }
+    }
+  }
+}
