@@ -33,6 +33,8 @@
 
 <? get_template_part('templates/layouts/steps'); ?>
 
+<? get_template_part('templates/layouts/products','list'); ?>
+
 <? if( have_rows('layouts') ): ?>
   <? while( have_rows('layouts') ): the_row(); ?>
 

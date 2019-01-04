@@ -1,15 +1,35 @@
 .layout{
   &.steps{
-    .item{
-      align-items: center;
-      
-      &:nth-of-type(even){
+    .title{
+      &:after{
+        position: absolute;
+        content: "";
+        height: 4px;
+        width: 50px;
+        background-color: $yellow-light;
+        left: calc(50% - 25px);
+        bottom: -2rem;
+      }
 
-        div:first-child{
-          order: 2;
-        }
-        div:last-child{
-          order: 1;
+      .sans-serif{
+        font-weight: normal;
+      }
+    }
+    .wrapper{
+      padding-top: 4rem;
+
+      .item{
+        align-items: center;
+
+        &:nth-of-type(even){
+
+          div:first-child{
+            order: 2;
+          }
+
+          div:last-child{
+            order: 1;
+          }
         }
       }
     }

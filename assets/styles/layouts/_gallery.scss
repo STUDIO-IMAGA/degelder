@@ -4,6 +4,10 @@
     margin:0 auto;
     padding-bottom: 5rem;
 
+    .sans-serif{
+      font-weight: normal;
+    }
+
     &:after{
       position: absolute;
       content: "";
@@ -14,63 +18,68 @@
       left: calc(50% - 70px);
     }
 
-    .description{
+    .wrapper{
       padding-top: 2rem;
 
-      .title{
-        font-family: 'Zilla Slab', serif;
-        font-weight: bold;
-        font-size: 1.625rem;
-        text-align: center;
-      }
-      .content{
-        font-family: 'Amaranth', sans-serif;
-        font-size: 1.25rem;
-      }
-    }
-
-    .slick-arrow{
-      position: absolute;
-      width: 46px;
-      height: 46px;
-      background-color: $yellow-light;
-      border: 0px;
-      top: 143px;
-      font-size: 0px;
-
-      &:before{
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center;
+      .slick-slide{
+        padding: 8px;
       }
 
-      &.slick-prev{
-        left: -100px;
+      .description{
+        padding-top: 2rem;
 
-        &:before{
-          position: absolute;
-          display: block;
-          content: "";
-          width: 25px;
-          height: 20px;
-          top: 13px;
-          left: 10px;
-          background-image: url('../images/icons/icon-pijl.svg');
+        .title{
+          font-family: 'Zilla Slab', serif;
+          font-weight: bold;
+          font-size: 1.625rem;
+          text-align: center;
         }
       }
-      &.slick-next{
-        right: -100px;
+
+      .slick-arrow{
+        position: absolute;
+        width: 46px;
+        height: 46px;
+        background-color: $yellow-light;
+        border: 0px;
+        top: 143px;
+        font-size: 0px;
 
         &:before{
-          position: absolute;
-          display: block;
-          content: "";
-          width: 25px;
-          height: 20px;
-          top: 13px;
-          left: 10px;
-          background-image: url('../images/icons/icon-pijl.svg');
-          transform: rotate(180deg);
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-position: center;
+        }
+
+        &.slick-prev{
+          left: -100px;
+
+          &:before{
+            position: absolute;
+            display: block;
+            content: "";
+            width: 25px;
+            height: 20px;
+            top: 13px;
+            left: 10px;
+            background-image: url('../images/icons/icon-pijl.svg');
+          }
+        }
+
+        &.slick-next{
+          right: -100px;
+
+          &:before{
+            position: absolute;
+            display: block;
+            content: "";
+            width: 25px;
+            height: 20px;
+            top: 13px;
+            left: 10px;
+            background-image: url('../images/icons/icon-pijl.svg');
+            transform: rotate(180deg);
+          }
         }
       }
     }

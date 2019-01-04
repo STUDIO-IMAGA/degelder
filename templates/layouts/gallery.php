@@ -1,6 +1,12 @@
 <section class="layout gallery">
   <div class="container">
     <div class="row">
+      <div class="col-12 text-center">
+        <h5 class="sans-serif"><i>Zo gaat het in zijn werk</i></h5>
+        <h2>Kaasmaken: zo doen we dat</h2>
+      </div>
+    </div>
+    <div class="row wrapper">
       <div class="col-12">
         <div class="slick-slider">
           <div>

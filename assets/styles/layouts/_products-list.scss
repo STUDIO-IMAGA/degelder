@@ -1,0 +1,48 @@
+.layout{
+  &.products-list{
+    .wrapper{
+      @extend .list-unstyled;
+      border: 1px solid #e0ddd6;
+      border-bottom: none;
+      background: $white;
+
+      a{
+        color: $body-color;
+        text-decoration: none !important;
+      }
+
+      .item{
+        padding: 17px;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid #e0ddd6;
+
+        .image{
+          display: inline-block;
+          width: 74px;
+          height: 74px;
+
+          & + .title{
+            text-indent: 32px;
+          }
+        }
+        .title{
+          display: inline-block;
+          width: 100%;
+        }
+        .icon{
+          display: inline-block;
+          width: 30px;
+          height: 30px;
+
+          &.pdf{
+            background-image: url('../images/icons/icon-pdf.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+        }
+      }
+    }
+  }
+}

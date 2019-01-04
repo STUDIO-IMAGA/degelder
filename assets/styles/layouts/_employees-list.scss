@@ -1,18 +1,27 @@
 .layout{
   &.employees-list{
-    .employee{
-      text-align: center;
-      padding-bottom: 2rem;
+    .sans-serif{
+      font-weight: normal;
+    }
 
-      .name{
-        padding-top: 1rem;
-        font-size: 1.125rem;
-        font-family: 'Amaranth', sans-serif;
-      }
-      .description{
-        font-size: 1.125rem;
-        font-family: 'Amaranth', sans-serif;
-        font-style: italic;
+    .wrapper{
+      padding-top: 2rem;
+
+      .employee{
+        text-align: center;
+        padding-bottom: 2rem;
+
+        .name{
+          padding-top: 1rem;
+          font-size: 1.125rem;
+          font-family: 'Amaranth', sans-serif;
+        }
+
+        .description{
+          font-size: 1.125rem;
+          font-family: 'Amaranth', sans-serif;
+          font-style: italic;
+        }
       }
     }
   }
