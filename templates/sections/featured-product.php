@@ -3,7 +3,7 @@
 <section class="layout featured-product">
     <div class="container">
       <a class="unstyled" href="#">
-        <div class="container-bg bg-center-left" style="background-image:url(<?= Assets\asset_path('images/upload/featured-product.jpg');?>);"></div>
+        <div class="container-bg bg-center-left" style="background-image:url(<?= the_sub_field('featured_image'); ?>);"></div>
         <div class="row justify-content-center">
           <div class="col-10 py-9">
             <h3>De Tynjetaler: onze trots.</h3>

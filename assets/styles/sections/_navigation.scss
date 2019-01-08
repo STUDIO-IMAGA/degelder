@@ -39,6 +39,11 @@ header{
   }
   #nav-top{
     height: 40px;
+    .nav-item{
+      .nav-link{
+        font-size: .813rem;
+      }
+    }
   }
   #nav-main{
     .container{
@@ -101,6 +106,7 @@ header{
       .navbar-brand{
         margin-top: 8px;
         margin-bottom: 9px;
+        margin-right: 0px;
 
         img{
           width: 175px;
@@ -112,6 +118,19 @@ header{
       .nav-item{
         .nav-link{
           color: transparent !important;
+        }
+      }
+    }
+    #nav-main{
+      .container{
+        align-items: center;
+
+      }
+    }
+    &.nav-fixed{
+      #nav-main{
+        .container{
+          margin-top: 0px;
         }
       }
     }
@@ -129,14 +148,6 @@ header{
 
         img{
           width: 150px;
-        }
-      }
-    }
-    #nav-top{
-      height: 0px;
-      .nav-item{
-        .nav-link{
-          color: transparent !important;
         }
       }
     }

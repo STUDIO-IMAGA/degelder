@@ -90,4 +90,9 @@ footer{
       z-index: 1;
     }
   }
+  .quality-marks{
+    .item{
+      @extend .p-1;
+    }
+  }
 }

@@ -24,38 +24,41 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
     <div class="bosjes-rechts"></div>
 
     <div class="row">
-      <div class="col col-xl-3">
+
+      <div class="col-md-5 col-xl-3 d-none d-md-block">
         <h6>Openingstijden boerderijwinkel</h6>
         <div class="row">
-          <div class="col-4">
+          <div class="col-5 col-xl-4">
             Ma
           </div>
-          <div class="col-8">
+          <div class="col-7 col-xl-8">
             <?=get_option('woocommerce_store_shoppinghours_monday');?>
           </div>
         </div>
-        <div class="row">
-          <div class="col-4">
+        <div class="row align-items-center">
+          <div class="col-5 col-xl-4 pr-0">
             Di t/m vr
           </div>
-          <div class="col-8">
+          <div class="col-7 col-xl-8">
             <?=get_option('woocommerce_store_shoppinghours_tue_vr');?>
           </div>
         </div>
         <div class="row">
-          <div class="col-4">
+          <div class="col-5 col-xl-4">
             Za
           </div>
-          <div class="col-8">
+          <div class="col-7 col-xl-8">
             <?=get_option('woocommerce_store_shoppinghours_saturday');?>
           </div>
         </div>
       </div>
-      <div class="col col-xl-3">
+
+      <div class="col-md-4 col-xl-3 d-none d-md-block">
         <h6>Klantenservice</h6>
         <?= Navigation\navigation_list('tertiary_navigation','tertiary_navigation','list-unstyled');?>
       </div>
-      <div class="col col-xl-3">
+
+      <div class="col-12 col-md-3 col-xl-3">
         <h6>Contactgegevens</h6>
         <ul class="list-unstyled">
           <li>
@@ -72,23 +75,12 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
           </li>
         </ul>
       </div>
-      <div class="col col-xl-3">
+
+      <div class="col-12 col-md-5 col-xl-3">
         <h6>Wij zijn lid van</h6>
-        <div class="row">
-          <div class="col p-1">
-            <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/boerenkaas.png');?>"/>
-          </div>
-          <div class="col p-1">
-            <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/boerderij-zuivel.png');?>"/>
-          </div>
-          <div class="col p-1">
-            <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/kaas-van-de-boerderij.png');?>"/>
-          </div>
-          <div class="col p-1">
-            <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/kb.png');?>"/>
-          </div>
-        </div>
+        <? get_template_part('templates/components/quality-marks'); ?>
       </div>
+
     </div>
   </div>
 </footer>

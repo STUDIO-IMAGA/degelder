@@ -31,11 +31,11 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 /**
  * Get the flexible layout and return template file.
  */
-function get_layout( $row_layout ){
-  if( locate_template( array('templates/layouts/'. $row_layout .'.php') ) ):
-    get_template_part('templates/layouts/'. $row_layout );
+function get_section( $row_layout ){
+  if( locate_template( array('templates/sections/'. $row_layout .'.php') ) ):
+    include( locate_template('templates/sections/'. $row_layout .'.php') );
   else:
-    echo '<div class="alert alert-danger m-0">De layout "'.$row_layout.'" wordt niet ondersteund.</div>';
+    include( locate_template('templates/error-section.php') );
   endif;
 }
 
@@ -90,4 +90,27 @@ function limit_text($text, $limit, $prepend) {
   endif;
 
   return $text;
+}
+
+/**
+ * Return array of WooCommerce products
+ */
+function get_products( $limit = 4 ){
+  $args = array(
+    'featured' => true,
+  );
+  $products = wc_get_products( $args );
+
+  if( $products ):
+    foreach ($products as $product):
+      ?>
+      This is: <?= $product->name; ?> <?= $product->price; ?>
+      <?
+      if( locate_template( array('templates/sections/featured-product.php') ) ):
+        include( locate_template('templates/sections/featured-product.php') );
+      else:
+        include( locate_template('templates/error.php') );
+      endif;
+    endforeach;
+  endif;
 }

@@ -2,7 +2,7 @@
 
 <section class="header-frontpage">
   <div class="container">
-    <div class="container-bg" style="background-image:url(<?= Assets\asset_path('images/upload/frontpage.jpg');?>);"></div>
+    <div class="container-bg" style="background-image:url(<?= get_the_post_thumbnail_url(); ?>);"></div>
     <div class="row align-items-end">
       <div class="col-8">
         <div class="row">
@@ -35,12 +35,7 @@
             <h3>Ons motto:</h3>
             <h3><i>Tevreden en gezonde koeien geven de beste melk!</i></h3>
             <p><b>Wij zijn lid van</b></p>
-            <div class="pb-2">
-              <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/boerenkaas.png');?>"/>
-              <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/boerderij-zuivel.png');?>"/>
-              <img class="img-fluid img-round mr-3" src="<?= Assets\asset_path('images/upload/kaas-van-de-boerderij.png');?>"/>
-              <img class="img-fluid img-round" src="<?= Assets\asset_path('images/upload/kb.png');?>"/>
-            </div>
+            <? get_template_part('templates/components/quality-marks'); ?>
           </div>
         </div>
       </div>
