@@ -1,14 +1,11 @@
 <? use IMAGA\Theme\Extras; ?>
+<? use IMAGA\Theme\Assets; ?>
 
 <? get_template_part('templates/header','frontpage'); ?>
 
-<? if( have_rows('sections') ): ?>
-  <? while( have_rows('sections') ): the_row(); ?>
+<? get_template_part('templates/components/frontpage','featured-product'); ?>
 
-  <? Extras\get_section( get_row_layout() ); ?>
-
-  <? endwhile; ?>
-<? endif; ?>
+<? get_template_part('templates/components/frontpage','featured-pages'); ?>
 
 <section class="layout review-featured-agenda">
   <div class="container">

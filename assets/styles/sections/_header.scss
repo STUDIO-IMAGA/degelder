@@ -1,1 +1,7 @@
 header{}
+
+.section{
+  &.header{
+    padding-bottom: 3rem;
+  }
+}

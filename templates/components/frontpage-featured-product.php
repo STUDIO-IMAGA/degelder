@@ -1,4 +1,6 @@
-<? $post_object = get_sub_field('product'); ?>
+<? $post_object = get_field('featured_product_product'); ?>
+<? $featured_product_title = get_field('featured_product_title'); ?>
+<? $featured_product_subtitle = get_field('featured_product_subtitle'); ?>
 
 <? if( $post_object ): ?>
 
@@ -13,8 +15,9 @@
           <div class="container-bg bg-center-left" style="background-image:url(<?= $image['url'] ?>);"></div>
           <div class="row justify-content-center">
             <div class="col-10 py-9">
-              <h3><? the_sub_field('title');?></h3>
-              <h5><? the_sub_field('subtitle'); ?></h5>
+              <h2><?= $featured_product_title; ?></h2>
+              <h5><?= $featured_product_subtitle  ?></h5>
+              <a class="btn btn-outline-brown btn-lg" href="<?= get_permalink($post->ID); ?>">Bestellen</a>
             </div>
           </div>
         </a>
