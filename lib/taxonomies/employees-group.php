@@ -5,11 +5,11 @@ namespace IMAGA\Theme\Taxonomies\Employees\Skills;
 /*
  * Skills Taxonomy for Employees
  */
-function create_taxonomy_skills() {
+function create_taxonomy_group() {
 
   $labels = array(
-    'name'                       => _x( 'Skills', 'Skills General Name', 'imaga' ),
-    'singular_name'              => _x( 'Skill', 'Skill Singular Name', 'imaga' ),
+    'name'                       => _x( 'Groep', 'Group General Name', 'imaga' ),
+    'singular_name'              => _x( 'Groep', 'Group Singular Name', 'imaga' ),
   );
 
   $args = array(
@@ -23,7 +23,7 @@ function create_taxonomy_skills() {
   );
 
   // Registering the taxonomy
-  register_taxonomy( 'skills', array( 'employees' ), $args );
+  register_taxonomy( 'group', array( 'employees' ), $args );
 }
 
-add_action( 'init', __NAMESPACE__ . '\\create_taxonomy_skills' );
+add_action( 'init', __NAMESPACE__ . '\\create_taxonomy_group' );

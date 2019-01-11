@@ -24,8 +24,12 @@ $files = [
   'lib/titles.php',                       // Page titles
   'lib/wrapper.php',                      // Theme wrapper class
   'lib/customizer.php',                   // Theme customizer
+
   'lib/posttypes/employees.php',          // Custom Post Type Employees
   'lib/posttypes/activities.php',         // Custom Post Type Reviews
+
+  'lib/taxonomies/employees-group.php',         // Custom Post Type Reviews
+
 ];
 
 foreach ($files as $file):
