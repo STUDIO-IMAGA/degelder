@@ -3,6 +3,7 @@ footer{
   background-image: url('../images/footer-bg.png');
   background-size: cover;
   background-position: top center;
+  margin-top: 4rem;
 
   .list-unstyled{
     .nav-link,a{
@@ -20,8 +21,8 @@ footer{
   .bosjes-rechts,
   .bosjes-links:before,
   .bosjes-links:after,
-  .bosjes-rechts:before,
-  .bosjes-rechts:after{
+  .bosjes-rechts,
+  .boom-rechts{
     position: absolute;
     background-size:contain;
     background-repeat: no-repeat;
@@ -31,19 +32,22 @@ footer{
     width: 84px;
     height: 61px;
     background-image: url('../images/icons/icon-trekker.svg');
+    background-size: 84px;
     top: -7px;
-    right: 90rem;
+    right: 80vw;
     animation-name: trekker;
     animation-duration: 60s;
     animation-timing-function: ease-in-out;
     z-index: 10;
   }
   .kaasboerderij{
+    top: -42px;
+    right: 18rem;
     width: 235px;
     height: 72px;
     background-image: url('../images/icons/icon-boerderij.svg');
-    top: -30px;
-    right: 18rem;
+    background-position: center -102px;
+    background-size: 235px;
   }
   .bosjes-links{
     width: 91px;
@@ -78,17 +82,16 @@ footer{
     top: 0;
     right: 0;
     z-index: 10;
-
-    &:after{
-      position: absolute;
-      background-image: url('../images/icons/icon-dunne-boom.svg');
-      content: "";
-      width: 70px;
-      height: 68px;
-      top: -40px;
-      left: -75px;
-      z-index: 1;
-    }
+  }
+  .boom-rechts{
+    position: absolute;
+    background-image: url('../images/icons/icon-dunne-boom.svg');
+    content: "";
+    width: 70px;
+    height: 68px;
+    top: -52px;
+    right: 115px;
+    z-index: 1;
   }
   .quality-marks{
     .item{

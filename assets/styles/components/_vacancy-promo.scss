@@ -1,0 +1,33 @@
+.vacancy-promo{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  
+  a{
+    position: relative;
+    color: $body-color;
+
+    &:before{
+      position: absolute;
+      content: '';
+      top: .05rem;
+      left: -0.1rem;
+      right: -.1rem;
+      bottom: -.01em;
+      opacity: 1;
+      background-color: $cyan;
+      transition: 300ms;
+      transition-property: opacity;
+      z-index: -1;
+    }
+
+    &:hover{
+      color: $blue-light;
+      text-decoration: none;
+
+      &:before{
+        opacity: 0;
+        z-index: -1;
+      }
+    }
+  }
+}

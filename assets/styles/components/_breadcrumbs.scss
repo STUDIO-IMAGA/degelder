@@ -1,0 +1,17 @@
+.breadcrumbs{
+  font-family: 'Zilla Slab', serif;
+  font-size: 16px;
+  font-weight: 100;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+
+  a{
+    color: $body-color;
+    margin-right: .3rem;
+    margin-left: .3rem;
+  }
+  .breadcrumb_last{
+    margin-left: .3rem;
+  }
+}

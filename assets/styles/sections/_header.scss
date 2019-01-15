@@ -1,7 +1,10 @@
-header{}
-
 .section{
   &.header{
-    padding-bottom: 3rem;
+    .content{
+      min-height: 450px;
+    }
+    .container-bg{
+      right: 41.6666666667%;
+    }
   }
 }

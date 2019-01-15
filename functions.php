@@ -26,7 +26,8 @@ $files = [
   'lib/customizer.php',                   // Theme customizer
 
   'lib/posttypes/employees.php',          // Custom Post Type Employees
-  'lib/posttypes/activities.php',         // Custom Post Type Reviews
+  'lib/posttypes/activities.php',         // Custom Post Type Activities
+  'lib/posttypes/vacancies.php',         // Custom Post Type Vacancies
 
   'lib/taxonomies/employees-group.php',         // Custom Post Type Reviews
 

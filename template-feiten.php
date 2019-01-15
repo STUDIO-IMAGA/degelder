@@ -1,6 +1,6 @@
 <?
 /**
-* Template Name: Met Header
+* Template Name: Header + Feiten
 */
 
 use IMAGA\Theme\Extras;
@@ -21,3 +21,7 @@ use IMAGA\Theme\Extras;
   <? endif; ?>
 
 <? endwhile; ?>
+
+<? get_template_part('templates/components/vacancy','promo'); ?>
+
+<? get_template_part('templates/components/facts','display'); ?>

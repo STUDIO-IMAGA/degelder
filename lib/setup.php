@@ -174,3 +174,8 @@ add_filter('wpcf7_form_elements', function($content) {
  * Disable WooCommerce JetPack nag
  */
 add_filter( 'jetpack_just_in_time_msgs', '__return_false' );
+
+
+add_filter( 'the_content_more_link', function(){
+  return '<a class="btn btn-yellow btn-sm" href="' . get_permalink() . '">Lees meer</a>';
+});

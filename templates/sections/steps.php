@@ -11,75 +11,19 @@
     <div class="row wrapper">
       <div class="col-10">
 
-        <div class="row item">
-          <div class="col-3">
-            <img class="" src="https://placehold.it/250x250?text=Kaas" alt="">
-          </div>
-          <div class="col-9">
-            <h4>Modellen</h4>
-            <p>Kaas bestaat voor het grootste gedeelte uit melk. Voor 1 kilo kaas is maar liefst 10 liter melk nodig. Een koe in de wei eet per dag circa 80 kilogram gras en kan tot wel 150 liter water per dag drinken. Een koe geeft gemiddeld 25-30 liter melk per dag.</p>
-          </div>
-        </div>
-
-        <div class="row item">
-          <div class="col-3">
-            <img class="" src="https://placehold.it/250x250?text=Gewichten" alt="">
-          </div>
-          <div class="col-9">
-            <h4>Gewichten</h4>
-            <p>Kaas bestaat voor het grootste gedeelte uit melk. Voor 1 kilo kaas is maar liefst 10 liter melk nodig. Een koe in de wei eet per dag circa 80 kilogram gras en kan tot wel 150 liter water per dag drinken. Een koe geeft gemiddeld 25-30 liter melk per dag.</p>
-          </div>
-        </div>
-
-        <div class="row item">
-          <div class="col-3">
-            <img class="" src="https://placehold.it/250x250?text=Kazen" alt="">
-          </div>
-          <div class="col-9">
-            <h4>Leeftijden</h4>
-            <p>Kaas bestaat voor het grootste gedeelte uit melk. Voor 1 kilo kaas is maar liefst 10 liter melk nodig. Een koe in de wei eet per dag circa 80 kilogram gras en kan tot wel 150 liter water per dag drinken. Een koe geeft gemiddeld 25-30 liter melk per dag.</p>
-          </div>
-        </div>
-
-        <div class="row item">
-          <div class="col-3">
-            <img class="" src="https://placehold.it/250x250?text=Kazen" alt="">
-          </div>
-          <div class="col-9">
-            <h4>Leeftijden</h4>
-            <p>Kaas bestaat voor het grootste gedeelte uit melk. Voor 1 kilo kaas is maar liefst 10 liter melk nodig. Een koe in de wei eet per dag circa 80 kilogram gras en kan tot wel 150 liter water per dag drinken. Een koe geeft gemiddeld 25-30 liter melk per dag.</p>
-          </div>
-        </div>
-
-        <div class="row item">
-          <div class="col-3">
-            <img class="" src="https://placehold.it/250x250?text=Kazen" alt="">
-          </div>
-          <div class="col-9">
-            <h4>Leeftijden</h4>
-            <p>Kaas bestaat voor het grootste gedeelte uit melk. Voor 1 kilo kaas is maar liefst 10 liter melk nodig. Een koe in de wei eet per dag circa 80 kilogram gras en kan tot wel 150 liter water per dag drinken. Een koe geeft gemiddeld 25-30 liter melk per dag.</p>
-          </div>
-        </div>
-
-        <div class="row item">
-          <div class="col-3">
-            <img class="" src="https://placehold.it/250x250?text=Kazen" alt="">
-          </div>
-          <div class="col-9">
-            <h4>Leeftijden</h4>
-            <p>Kaas bestaat voor het grootste gedeelte uit melk. Voor 1 kilo kaas is maar liefst 10 liter melk nodig. Een koe in de wei eet per dag circa 80 kilogram gras en kan tot wel 150 liter water per dag drinken. Een koe geeft gemiddeld 25-30 liter melk per dag.</p>
-          </div>
-        </div>
-
-        <div class="row item">
-          <div class="col-3">
-            <img class="" src="https://placehold.it/250x250?text=Kazen" alt="">
-          </div>
-          <div class="col-9">
-            <h4>Leeftijden</h4>
-            <p>Kaas bestaat voor het grootste gedeelte uit melk. Voor 1 kilo kaas is maar liefst 10 liter melk nodig. Een koe in de wei eet per dag circa 80 kilogram gras en kan tot wel 150 liter water per dag drinken. Een koe geeft gemiddeld 25-30 liter melk per dag.</p>
-          </div>
-        </div>
+        <? if( have_rows('steps') ): ?>
+          <? while( have_rows('steps') ): the_row(); ?>
+            <? $image = get_sub_field('image'); ?>
+            <div class="row item">
+              <div class="col-3 text-center">
+                <img class="img-fluid" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>">
+              </div>
+              <div class="col-9">
+                <? the_sub_field('content'); ?>
+              </div>
+            </div>
+          <? endwhile; ?>
+        <? endif;?>
 
       </div>
     </div>

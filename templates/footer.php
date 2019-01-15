@@ -22,6 +22,7 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
     <div class="kaasboerderij"></div>
     <div class="bosjes-links"></div>
     <div class="bosjes-rechts"></div>
+    <div class="boom-rechts"></div>
 
     <div class="row">
 

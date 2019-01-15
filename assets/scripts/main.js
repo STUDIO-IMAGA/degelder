@@ -63,7 +63,8 @@
           infinite: true,
           speed: 300,
           fade: true,
-          arrows: true
+          arrows: true,
+          adaptiveHeight: true
         });
 
       }

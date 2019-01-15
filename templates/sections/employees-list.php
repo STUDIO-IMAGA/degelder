@@ -8,25 +8,31 @@
       </div>
     </div>
 
-    <div class="row wrapper">
+    <div class="row justify-content-center wrapper">
 
-      <? $args = array('post_type' => 'employees', 'posts_per_page' => -1); ?>
-      <? $query = new wp_query( $args );?>
+      <? $custom_term = get_sub_field('employees_group'); ?>
 
-      <? if($query->have_posts()): ?>
-        <? while( $query->have_posts() ) : $query->the_post(); ?>
-          <div class="col-3 employee">
-            <img class="img-fluid img-round" src="<?= get_the_post_thumbnail_url('thumbnail'); ?>" alt="Persoon">
-            <div class="name">
-              <? the_sub_field('firstname'); ?> <? the_sub_field('lastname'); ?>
-            </div>
-            <div class="description">
-              <? the_sub_field('job_title'); ?>
-            </div>
-          </div>
-        <? endwhile; ?>
-        <? wp_reset_postdata(); wp_reset_query();?>
-      <? endif; ?>
+
+        <? $args = array('post_type' => 'employees', 'tax_query' => array(array( 'taxonomy'=>'group', 'field'=>'slug', 'terms'=>$custom_term->slug ) )); ?>
+        <? $query = new wp_query( $args ); $i = 0; $total = $query->found_posts;?>
+
+          <? if($query->have_posts()): ?>
+             <? while( $query->have_posts() ) : $query->the_post(); ?>
+
+             <div class="col-3 employee">
+               <img class="img-fluid img-round" src="<?= get_the_post_thumbnail_url( get_the_ID(), 'thumbnail'); ?>" alt="Persoon">
+               <div class="name">
+                 <? the_field('firstname', get_the_ID() ); ?> <? the_sub_field('lastname', get_the_ID() ); ?>
+               </div>
+               <div class="description">
+                 <? the_sub_field('job_title', get_the_ID()); ?>
+               </div>
+             </div>
+
+             <? endwhile; ?>
+
+           <? wp_reset_postdata(); wp_reset_query();?>
+         <? endif; ?>
 
     </div>
   </div>

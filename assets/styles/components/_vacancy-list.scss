@@ -1,0 +1,26 @@
+.component{
+  &.vacancy-list{
+    margin-bottom: 5rem;
+    
+    .item{
+      position: relative;
+      margin-top: 3rem;
+      margin-bottom: 5rem;
+
+      &:after{
+        position: absolute;
+        content: "";
+        width: 140px;
+        height: 4px;
+        background-color: $yellow-light;
+        bottom: -2rem;
+        left: calc(50% - 70px);
+      }
+
+      .btn{
+        margin-top: 1rem;
+        font-style: normal;
+      }
+    }
+  }
+}

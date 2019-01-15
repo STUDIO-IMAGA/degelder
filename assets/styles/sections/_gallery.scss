@@ -21,18 +21,22 @@
     .wrapper{
       padding-top: 2rem;
 
-      .slick-slide{
+      .item{
         padding: 8px;
-      }
 
-      .description{
-        padding-top: 2rem;
+        img{
+          margin: 0 auto;
+        }
 
-        .title{
-          font-family: 'Zilla Slab', serif;
-          font-weight: bold;
-          font-size: 1.625rem;
-          text-align: center;
+        .description{
+          padding-top: 2rem;
+
+          .title{
+            font-family: 'Zilla Slab', serif;
+            font-weight: bold;
+            font-size: 1.625rem;
+            text-align: center;
+          }
         }
       }
 

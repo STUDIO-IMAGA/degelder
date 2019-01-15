@@ -1,6 +1,6 @@
 <?
 /**
-* Template Name: Vacatures
+* Template Name: Bezoek Ons
 */
 
 use IMAGA\Theme\Extras;
@@ -10,4 +10,4 @@ use IMAGA\Theme\Extras;
 
 <? get_template_part('templates/breadcrumbs'); ?>
 
-<? get_template_part('templates/components/vacancy','list'); ?>
+<? get_template_part('templates/components/frontpage','featured-pages'); ?>
