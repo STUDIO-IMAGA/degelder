@@ -1,5 +1,7 @@
 <? use IMAGA\Theme\Assets; ?>
 
+<? $selector = get_field('layout_selector'); ?>
+
 <section class="layout facts">
   <div class="container">
     <div class="row">

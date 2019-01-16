@@ -5,7 +5,7 @@
 
 <? get_template_part('templates/components/frontpage','featured-product'); ?>
 
-<? get_template_part('templates/components/frontpage','featured-pages'); ?>
+<? get_template_part('templates/sections/featured-pages'); ?>
 
 <section class="layout review-featured-agenda">
   <div class="container">

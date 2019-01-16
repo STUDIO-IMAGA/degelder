@@ -1,13 +1,13 @@
 <? use IMAGA\Theme\Extras; ?>
 
-<article <? post_class(); ?>>
+<? get_template_part('templates/header'); ?>
 
-  <? if( have_rows('layouts') ): ?>
-    <? while( have_rows('layouts') ): the_row(); ?>
+<? get_template_part('templates/breadcrumbs'); ?>
 
-      <? Extras\get_section( get_row_layout() ); ?>
+<? if( have_rows('sections') ): ?>
+  <? while( have_rows('sections') ): the_row(); ?>
 
-    <? endwhile; ?>
-  <? endif; ?>
+    <? Extras\get_section( get_row_layout() ); ?>
 
-</article>
+  <? endwhile; ?>
+<? endif; ?>
