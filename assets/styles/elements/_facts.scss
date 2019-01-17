@@ -1,0 +1,83 @@
+.element{
+  &.facts{
+    padding-top: 2rem;
+
+    h2{
+      color: #624e37;
+    }
+
+    .facts-item{
+      text-align: center;
+      min-height:280px;
+      margin-right: -($grid-gutter-width / 3);
+      margin-left: -($grid-gutter-width / 3);
+
+      .facts-bg{
+        position: absolute;
+        left:0;
+        right:0;
+        top:0;
+        bottom:0;
+        z-index: -1;
+
+        svg{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .facts-content{
+        padding-top: 50px;
+        padding-bottom: 45px;
+
+        strong,
+        b{
+          font-size: 2.15rem;
+        }
+
+        em,
+        i{
+          display: inline-block;
+          position: relative;
+          font-style: normal;
+          color: $white;
+          font-size: 2.15rem;
+          margin-right: .2em;
+          margin-left: .2em;
+
+          &:after{
+            position: absolute;
+            content:'';
+            top: .2em;
+            right: -.1em;
+            left: -.1em;
+            bottom: 0;
+            z-index: -1;
+          }
+        }
+      }
+
+      // Hoeft eigelijk niet. Er zijn namelijk maar 3 keuzes.
+      // Wel is dit handig voor als er meer kleuren bij komen vanuit theme-colors.
+      @each $color, $value in $theme-colors {
+        &.#{$color}{
+          i,
+          em{
+            &:after{
+              // color: color-yiq($value);
+              background-color: $value;
+            }
+          }
+
+          .facts-bg svg{
+            fill: map-get($theme-colors, '#{$color}-light');
+          }
+        }
+      }
+      &.yellow .facts-bg svg{
+        // Deze wijkt iets af.
+        fill: #f3e1b5;
+      }
+    }
+  }
+}

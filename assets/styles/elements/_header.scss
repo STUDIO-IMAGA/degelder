@@ -1,0 +1,43 @@
+.element{
+  &.header{
+    ul{
+      li{
+        font-size: 1.063rem; // About 17px
+      }
+    }
+    .display-1{
+      text-shadow: 0.7px 0.7px 3px rgba(26, 23, 27, 0.15), 1.5px 1.3px 4px rgba(26, 23, 27, 0.15);
+    }
+
+    &-narrow{
+      .container-bg{
+        right: 41.6666666667%;
+      }
+      .col{
+        &.left{
+          @extend .col-7;
+        }
+        &.right{
+          min-height: 454px;
+
+          @extend .px-5;
+          @extend .col-5;
+        }
+      }
+    }
+
+    &-wide{
+      .container-bg{
+        right: 33.3333333333%;
+      }
+      .col{
+        &.left{
+          @extend .col-8;
+        }
+        &.right{
+          @extend .col-4;
+        }
+      }
+    }
+  }
+}

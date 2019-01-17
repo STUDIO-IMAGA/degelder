@@ -31,11 +31,11 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 /**
  * Get the flexible layout and return template file.
  */
-function get_section( $row_layout ){
-  if( locate_template( array('templates/sections/'. $row_layout .'.php') ) ):
-    include( locate_template('templates/sections/'. $row_layout .'.php') );
+function get_element( $element ){
+  if( locate_template( array('templates/elements/'. $element .'.php') ) ):
+    include( locate_template('templates/elements/'. $element .'.php') );
   else:
-    include( locate_template('templates/error-section.php') );
+    include( locate_template('templates/elements/error.php') );
   endif;
 }
 

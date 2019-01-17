@@ -1,9 +1,47 @@
-@keyframes trekker {
-  from {
+@keyframes trekker-rijden {
+  // Start vanaf de boerderij
+  0% {
     right: 34rem;
   }
 
-  to {
-    right: 80vw;
+  // Weg om spul op te halen
+  20%{
+    right: 120vw;
+    transform: scaleX(1);
+  }
+  // Omdraaien
+  21%{
+    right: 120vw;
+    transform: scaleX(-1);
+  }
+
+  // Naar de andere kant
+  70%{
+    right: -20vw;
+    transform: scaleX(-1);
+  }
+
+  // Terug naar de boerderij draaien
+  71%{
+    right: -20vw;
+    transform: scaleX(1);
+  }
+
+  100% {
+    right: 34rem;
+  }
+}
+
+@keyframes trekker-motor {
+  0% {
+    top: -7px;
+  }
+
+  50% {
+    top: -6px;
+  }
+
+  100% {
+    top: -7px;
   }
 }

@@ -61,3 +61,12 @@ add_shortcode( 'list-unstyled', function($atts, $content = null){
 add_shortcode( 'list-item', function($atts, $content = null){
   return '<li>' . do_shortcode($content) . '</li>';
 });
+
+/**
+ * Gets Quality Marks(Keurmerken) template part
+ */
+add_shortcode( 'keurmerken', function($atts){
+  ob_start();
+  get_template_part('templates/components/quality-marks');
+  return ob_get_clean();
+});

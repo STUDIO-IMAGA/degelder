@@ -18,7 +18,7 @@
   }
 
   &-yellow{
-    @include button-variant($yellow, $yellow, #fcd975, #fcd975, #fcd975, #fcd975);
+    @include button-variant($yellow, $yellow, #fcd87a, #fcd87a, #fcd87a, #fcd87a);
   }
 
   &:focus:not([class*="outline"]),

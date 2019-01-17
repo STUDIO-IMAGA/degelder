@@ -1,0 +1,18 @@
+.element{
+  &.vacancies{
+    .wrapper{
+      .item{
+        bottom: 4rem;
+
+        &:after{
+          position: absolute;
+          content: "";
+          width: 140px;
+          height: 4px;
+          left: calc(50% - 70px);
+          bottom: 2rem;
+        }
+      }
+    }
+  }
+}

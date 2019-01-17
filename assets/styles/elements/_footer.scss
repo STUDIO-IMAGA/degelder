@@ -1,0 +1,108 @@
+footer{
+  color: $brown-400;
+  background-image: url(../images/footer-bg.png);
+  background-size: cover;
+  background-position: center 4rem;
+  background-repeat: no-repeat;
+  padding-top: 4rem;
+  overflow: hidden;
+
+  .list-unstyled{
+    .nav-link,a{
+      padding:0;
+      color: $brown-400;
+
+      &:hover{
+        color: $black;
+      }
+    }
+  }
+
+  .trekker,
+  .kaasboerderij,
+  .bosjes-links,
+  .bosjes-rechts,
+  .bosjes-links:before,
+  .bosjes-links:after,
+  .bosjes-rechts,
+  .boom-rechts{
+    position: absolute;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .trekker{
+    width: 84px;
+    height: 61px;
+    background-image: url('../images/icons/icon-trekker.svg');
+    background-size: 84px;
+    top: -7px;
+    right: 34rem;
+    animation: trekker-rijden 120s ease-in-out,  trekker-motor 200ms infinite linear;
+    z-index: 10;
+  }
+
+  .kaasboerderij{
+    top: -42px;
+    right: 18rem;
+    width: 235px;
+    height: 72px;
+    background-image: url('../images/icons/icon-boerderij.svg');
+    background-position: center -102px;
+    background-size: 235px;
+  }
+
+  .bosjes-links{
+    width: 91px;
+    height: 18px;
+    background-image: url('../images/icons/icon-bosjes-1.svg');
+    top: 6px;
+    left: 4rem;
+
+    &:before{
+      position: absolute;
+      background-image: url('../images/icons/icon-dikke-boom.svg');
+      content: "";
+      width: 80px;
+      height: 80px;
+      top: -52px;
+      left: -113px;
+    }
+    &:after{
+      position: absolute;
+      background-image: url('../images/icons/icon-dunne-boom.svg');
+      content: "";
+      width: 70px;
+      height: 68px;
+      top: -40px;
+      left: -75px;
+    }
+  }
+
+  .bosjes-rechts{
+    width: 313px;
+    height: 24px;
+    background-image: url('../images/icons/icon-bosjes-2.svg');
+    top: 0;
+    right: 0;
+    z-index: 2;
+  }
+
+  .boom-rechts{
+    position: absolute;
+    background-image: url('../images/icons/icon-dunne-boom.svg');
+    content: "";
+    width: 70px;
+    height: 68px;
+    top: -52px;
+    right: 115px;
+    z-index: 1;
+  }
+
+  .quality-marks{
+    .item{
+      @extend .p-1;
+    }
+  }
+}

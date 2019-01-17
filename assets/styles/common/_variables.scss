@@ -57,7 +57,7 @@ $grays: (
 // Primair
 $brown:         #3d342c;
 $yellow:        #ffcf47;
-$blue:          #25b4e5;
+$blue:          #327fc2; //#25b4e5;
 
 //Secundair
 $cyan:          #acdcec;
@@ -68,7 +68,9 @@ $brown-400:     #837264;
 $brown-500:     $brown;
 $green:         #7ead7c;
 $cyan-blue:     #badcea;
-$blue-light:    #33a6d5;
+$blue-light:    #c2dce9; //#33a6d5;
+$yellow-light:  #fcd87a; //#f3e1b5;
+$green-light:   #afd1a9;
 
 
 // Normal Colours
@@ -78,8 +80,6 @@ $purple:        #6f42c1;
 $pink:          #e83e8c;
 $red:           #e31b1b;
 $orange:        #f4701f;
-$yellow-light:  #fcd87a;
-$green-light:   #a4d2a4;
 $teal:          #466baa;
 $turquoise:     #00bfa5;
 
@@ -180,7 +180,7 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberati
 $font-family-base:            $font-family-sans-serif;
 
 $font-size-base:              1.125rem;        // About 18px
-$font-size-lg:                $font-size-base; // About 20px
+$font-size-lg:                $font-size-base; // About 18px
 $font-size-sm:                1rem;            // About 16px
 
 $line-height-lg:              1.35;
@@ -193,10 +193,10 @@ $font-weight-bold:            700;
 $font-weight-base:            $font-weight-normal;
 $line-height-base:            1.5;
 
-$link-color:                  $blue;
+$link-color:                  $black;
 $link-decoration:             none;
-$link-hover-color:            darken($link-color, 15%);
-$link-hover-decoration:       underline;
+$link-hover-color:            $link-color;
+$link-hover-decoration:       none;
 
 $paragraph-margin-bottom:     .6rem;
 
@@ -248,8 +248,8 @@ $navbar-dark-toggler-icon-bg:       url("../images/icons/icon-menu.svg");
 $navbar-dark-toggler-border-color:  transparent;
 
 $navbar-light-color:                $black;
-$navbar-light-hover-color:          $blue;
-$navbar-light-active-color:         $blue;
+$navbar-light-hover-color:          #33a6d5;
+$navbar-light-active-color:         #33a6d5;
 $navbar-light-disabled-color:       rgba($black, .3);
 $navbar-light-toggler-icon-bg:      url("../images/icons/icon-menu.svg");
 $navbar-light-toggler-border-color: transparent;
