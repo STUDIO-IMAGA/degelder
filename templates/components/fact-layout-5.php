@@ -1,3 +1,5 @@
+<? $layout = get_sub_field('layout_'.$selector); ?>
+
 <div class="container">
   <div class="row align-items-start">
 
@@ -13,7 +15,7 @@
           <div class="facts-content">
             <h4><? the_content(); ?></h4>
             <div class="image">
-              <img class="img-fluid" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
+              <img class="img-fluid" src="<?= $image['sizes']['facts']; ?>" title="<?= $image['title']; ?>" alt="<?= $image['alt']; ?>">
             </div>
           </div>
         </div>
@@ -36,7 +38,7 @@
           </div>
           <div class="facts-content">
             <div class="image">
-              <img class="img-fluid" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
+              <img class="img-fluid" src="<?= $image['sizes']['facts']; ?>" title="<?= $image['title']; ?>" alt="<?= $image['alt']; ?>">
             </div>
             <h4><? the_content(); ?></h4>
           </div>
@@ -60,7 +62,7 @@
           </div>
           <div class="facts-content">
             <div class="image">
-              <img class="img-fluid" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
+              <img class="img-fluid" src="<?= $image['sizes']['facts']; ?>" title="<?= $image['title']; ?>" alt="<?= $image['alt']; ?>">
             </div>
             <h4><? the_content(); ?></h4>
           </div>
@@ -87,7 +89,7 @@
           </div>
           <div class="facts-content">
             <div class="image">
-              <img class="img-fluid" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
+              <img class="img-fluid" src="<?= $image['sizes']['facts']; ?>" title="<?= $image['title']; ?>" alt="<?= $image['alt']; ?>">
             </div>
             <h4><? the_content(); ?></h4>
           </div>
@@ -112,7 +114,7 @@
           <div class="facts-content">
             <h4><? the_content(); ?></h4>
             <div class="image">
-              <img class="img-fluid" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>">
+              <img class="img-fluid" src="<?= $image['sizes']['facts']; ?>" title="<?= $image['title']; ?>" alt="<?= $image['alt']; ?>">
             </div>
           </div>
         </div>

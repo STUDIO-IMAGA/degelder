@@ -14,17 +14,17 @@ $grid-gutter-width:           70px;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 769px,
-  md: 961px,
-  lg: 1281px,
-  xl: 1601px
+  sm: 700px,
+  md: 900px,
+  lg: 1200px,
+  xl: 1400px
 );
 
 $container-max-widths: (
-  sm: 768px,
-  md: 960px,
-  lg: 1280px,
-  xl: 1600px
+  sm: 640px,
+  md: 780px,
+  lg: 1080px,
+  xl: 1280px
 );
 
 // Color system
@@ -290,3 +290,6 @@ $input-btn-padding-y-lg:      .5rem;
 $input-btn-padding-x-lg:      1.8rem;
 // $input-btn-line-height-lg:    $line-height-lg;
 // $input-btn-border-width:      $border-width;
+
+
+$alert-border-radius:         .2rem;

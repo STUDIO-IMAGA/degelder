@@ -19,13 +19,17 @@
              <? while( $query->have_posts() ) : $query->the_post(); ?>
 
              <div class="col-3 employee">
+
                <img class="img-fluid img-round" src="<?= get_the_post_thumbnail_url( get_the_ID(), 'thumbnail'); ?>" alt="Persoon">
+
                <div class="name">
                  <? the_field('firstname', get_the_ID() ); ?> <? the_sub_field('lastname', get_the_ID() ); ?>
                </div>
+
                <div class="description">
                  <? the_sub_field('job_title', get_the_ID()); ?>
                </div>
+
              </div>
 
              <? endwhile; ?>

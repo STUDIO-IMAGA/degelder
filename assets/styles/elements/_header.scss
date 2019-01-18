@@ -8,6 +8,11 @@
     .display-1{
       text-shadow: 0.7px 0.7px 3px rgba(26, 23, 27, 0.15), 1.5px 1.3px 4px rgba(26, 23, 27, 0.15);
     }
+    .col{
+      &.right{
+        min-height: 420px;
+      }
+    }
 
     &-narrow{
       .container-bg{

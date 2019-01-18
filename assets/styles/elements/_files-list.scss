@@ -1,5 +1,7 @@
 .element{
-  &.products-list{
+  &.files-list{
+    @extend .pt-5;
+
     .wrapper{
       @extend .list-unstyled;
       border: 1px solid #e0ddd6;
@@ -36,6 +38,12 @@
           height: 30px;
 
           &.pdf{
+            background-image: url('../images/icons/icon-pdf.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+          }
+          &.image{
             background-image: url('../images/icons/icon-pdf.svg');
             background-size: contain;
             background-repeat: no-repeat;

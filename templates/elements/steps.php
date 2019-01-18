@@ -13,15 +13,21 @@
 
         <? if( have_rows('steps') ): ?>
           <? while( have_rows('steps') ): the_row(); ?>
+
             <? $image = get_sub_field('image'); ?>
+
             <div class="row item">
+
               <div class="col-3 text-center">
                 <img class="img-fluid" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>">
               </div>
+
               <div class="col-9">
                 <? the_sub_field('content'); ?>
               </div>
+
             </div>
+
           <? endwhile; ?>
         <? endif;?>
 

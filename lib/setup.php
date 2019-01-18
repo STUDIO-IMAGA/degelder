@@ -39,8 +39,29 @@ function setup() {
   add_editor_style(Assets\asset_path('styles/main.css'));
 
   // Add image sizes
-  // Used for related posts and more reviews
-  add_image_size('post-thumbnail-related', 500, 300, true);
+  // Header Element
+  add_image_size('header-background', 1080, 600, true);
+
+  // Featured Pages Element
+  add_image_size('featured-page', 420, 280, true);
+
+  // Featured Product Element
+  add_image_size('featured-product', 1600, 360, true);
+
+  // Quality Marks Component
+  add_image_size('quality-mark', 76, 76, true);
+
+  // RPA Featured Product Component
+  add_image_size('featured-product-small', 180, 180, true);
+
+  // Facts Element
+  add_image_size('facts', 180, 180, true);
+
+  // Content Element
+  add_image_size('content', 550, 320, true);
+
+  // File List Element
+  add_image_size('file', 74, 74);
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 

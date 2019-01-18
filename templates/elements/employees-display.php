@@ -24,19 +24,25 @@
                   <? $image = get_field('image', $custom_term); ?>
 
                   <? if($image): ?>
-                  <img class="img-fluid img-shadow" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>">
+
+                    <img class="img-fluid img-shadow" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>">
+
                   <? else: ?>
+
                     <img class="img-fluid img-shadow" src="https://placehold.it/550x320?text=<?= $custom_term->name; ?>" title="Kies een afbeelding voor de groep '<?= $custom_term->name; ?>'.">
+
                   <? endif; ?>
 
                   <div class="names">
                     <? while( $query->have_posts() ) : $query->the_post(); $i++; ?>
 
-                    <? the_field('firstname'); ?><?= ($i < $total )?', ':''; ?>
+                      <? the_field('firstname'); ?><?= ($i < $total )?', ':''; ?>
 
                     <? endwhile; ?>
                   </div>
+
                   <div class="label"><?= $custom_term->name; ?></div>
+
                  </div>
 
                <? wp_reset_postdata(); wp_reset_query();?>
