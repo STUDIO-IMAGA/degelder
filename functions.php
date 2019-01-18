@@ -29,6 +29,7 @@ $files = [
   'lib/posttypes/activities.php',         // Custom Post Type Activities
   'lib/posttypes/vacancies.php',          // Custom Post Type Vacancies
   'lib/posttypes/facts.php',              // Custom Post Type Vacancies
+  'lib/posttypes/reviews.php',              // Custom Post Type Vacancies
 
   'lib/taxonomies/employees-group.php',   // Custom Post Type Reviews
 

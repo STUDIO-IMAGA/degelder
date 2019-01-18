@@ -21,7 +21,7 @@ function create_post_type_activities() {
     'public'                => true,
     'show_ui'               => true,
     'show_in_menu'          => true,
-    'menu_position'         => 25, // 5 - below posts, 15 - below links, 20 - below pages, 25 - below comments, 60 below first seperator, 65 - below plugins, 70 - below users, 75 - below tools, 80 - below settings, 100 - below second seperator
+    'menu_position'         => 25,
     // 'menu_icon'             => 'dashicons-format-chat',
     'show_in_admin_bar'     => true,
     'show_in_nav_menus'     => true,
@@ -29,7 +29,7 @@ function create_post_type_activities() {
     'has_archive'           => true,
     'exclude_from_search'   => false,
     'publicly_queryable'    => true,
-    'capability_type'       => 'page',
+    'capability_type'       => 'post',
   );
 
   // Registering the post type
