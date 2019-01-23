@@ -48,19 +48,19 @@
     <? $query = new WP_Query( $args ); ?>
 
     <? if($query->have_posts()): ?>
-    <ul class="list-unstyled agenda">
-      <? while( $query->have_posts() ): $query->the_post(); ?>
+      <ul class="list-unstyled agenda">
+        <? while( $query->have_posts() ): $query->the_post(); ?>
 
-        <li>
-          <a class="event" href="#">
-            <div class="date">
-              <?= strtotime(get_field('date_time')); ?>
-            </div>
-            <div class="description">
-              <? the_title(); ?>
-            </div>
-          </a>
-        </li>
+          <li>
+            <a class="event" href="#">
+              <div class="date">
+                <? the_field('date_time'); ?>
+              </div>
+              <div class="description">
+                <? the_title(); ?>
+              </div>
+            </a>
+          </li>
 
         <? endwhile; ?>
 

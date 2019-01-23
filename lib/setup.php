@@ -16,6 +16,9 @@ function setup() {
   // http://codex.wordpress.org/Function_Reference/add_theme_support#Title_Tag
   add_theme_support('title-tag');
 
+  // This theme supports WooCommerce
+  add_theme_support('woocommerce');
+
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
   register_nav_menus([
@@ -55,7 +58,7 @@ function setup() {
   add_image_size('featured-product-small', 180, 180, true);
 
   // Facts Element
-  add_image_size('facts', 180, 180, true);
+  add_image_size('facts', 370, 160, false);
 
   // Content Element
   add_image_size('content', 550, 320, true);
