@@ -4,9 +4,9 @@ namespace IMAGA\Theme\Setup;
 
 use IMAGA\Theme\Assets;
 
-/**
-* Theme setup
-*/
+/*
+ * Theme setup
+ */
 function setup() {
 
   // Make theme available for translation
@@ -18,6 +18,16 @@ function setup() {
 
   // This theme supports WooCommerce
   add_theme_support('woocommerce');
+
+  register_sidebar([
+    'name' => __( 'Winkelsidebar', 'image' ),
+    'id' => 'woocommerce-sidebar',
+    'description' => __( 'Sidebar op de producten overzicht pagina.', 'image' ),
+    'before_widget' => null,
+    'after_widget' => null,
+    'before_title' => '<h5>',
+    'after_title' => '</h5>',
+  ]);
 
   // Register wp_nav_menu() menus
   // http://codex.wordpress.org/Function_Reference/register_nav_menus
@@ -68,9 +78,9 @@ function setup() {
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
-/**
-* Theme assets
-*/
+/*
+ * Theme assets
+ */
 function assets() {
   wp_enqueue_style('imaga/css', Assets\asset_path('styles/main.css'), false, null);
 
@@ -78,9 +88,9 @@ function assets() {
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
 
-/**
-* Login assets
-*/
+/*
+ * Login assets
+ */
 function add_login_stylesheet() {
 
   wp_register_style('imaga/login', Assets\asset_path('styles/login.css') );
@@ -91,8 +101,8 @@ function add_login_stylesheet() {
 add_action( 'login_enqueue_scripts', __NAMESPACE__ . '\\add_login_stylesheet' );
 
 /*
-* ACF Google Maps API Key
-*/
+ * ACF Google Maps API Key
+ */
 function add_acf_google_maps_key() {
 
   if( ! defined( 'GOOGLE_MAPS_API' ) ) return;
@@ -102,9 +112,9 @@ function add_acf_google_maps_key() {
 }
 add_action('acf/init', __NAMESPACE__ . '\\add_acf_google_maps_key');
 
-/**
-* Add Google Fonts
-*/
+/*
+ * Add Google Fonts
+ */
 function add_google_fonts() {
 
   // Defined in functions.php
@@ -115,14 +125,14 @@ function add_google_fonts() {
 }
 add_action( 'wp_head', __NAMESPACE__ . '\\add_google_fonts' , 1);
 
-/**
-* Remove acf-post2post nag
-*/
+/*
+ * Remove acf-post2post nag
+ */
 add_filter('remove_hube2_nag', '__return_true');
 
-/**
-* Remove 'page-template' from body class on pages with custom templates
-*/
+/*
+ * Remove 'page-template' from body class on pages with custom templates
+ */
 function prefix_remove_body_class($wp_classes) {
 
   if ( is_page_template() ):
@@ -135,33 +145,33 @@ function prefix_remove_body_class($wp_classes) {
 }
 add_filter('body_class', __NAMESPACE__ . '\\prefix_remove_body_class', 20, 2);
 
-/**
-* Remove from admin menu
-*/
+/*
+ * Remove from admin menu
+ */
 function remove_admin_menus() {
   remove_menu_page( 'edit-comments.php' );
 }
 add_action( 'admin_menu', __NAMESPACE__ . '\\remove_admin_menus' );
 
-/**
-*Remove from post and pages
-*/
+/*
+ * Remove from post and pages
+ */
 function remove_comment_support() {
   remove_post_type_support( 'post', 'comments' );
   remove_post_type_support( 'page', 'comments' );
 }
 add_action( 'init', __NAMESPACE__ . '\\remove_comment_support', 100);
 
-/**
-* Remove from admin bar
-*/
+/*
+ * Remove from admin bar
+ */
 function admin_bar_render() {
   global $wp_admin_bar;
   $wp_admin_bar->remove_menu('comments');
 }
 add_action( 'wp_before_admin_bar_render', __NAMESPACE__ . '\\admin_bar_render' );
 
-/**
+/*
  * Add custom styling for Layout Columns in ACF
  */
 function register_admin_styles(){
@@ -183,9 +193,9 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-/**
-* Disable auto-paragraphing for Contact Form 7
-*/
+/*
+ * Disable auto-paragraphing for Contact Form 7
+ */
 add_filter('wpcf7_autop_or_not', '__return_false');
 
 add_filter('wpcf7_form_elements', function($content) {
@@ -199,7 +209,9 @@ add_filter('wpcf7_form_elements', function($content) {
  */
 add_filter( 'jetpack_just_in_time_msgs', '__return_false' );
 
-
+/*
+ * Customize the_content_more_link
+ */
 add_filter( 'the_content_more_link', function(){
   return '<a class="btn btn-yellow btn-sm" href="' . get_permalink() . '">Lees meer</a>';
 });

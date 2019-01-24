@@ -1,0 +1,48 @@
+.woocommerce{
+  &-sidebar{
+    h5{
+      color: $brown;
+    }
+    .woocommerce-widget-layered-nav-list{
+      padding: 0;
+      margin:0;
+      margin-bottom: 3rem;
+
+      .woocommerce-widget-layered-nav-list__item{
+        display: inline-block;
+        position: relative;
+        font-style: italic;
+        font-family: 'Amaranth', sans-serif;
+        font-size: 1.125rem;
+        margin-bottom: 13px;
+
+        a:before{
+          display: inline-block;
+          height: 28px;
+          width: 28px;
+          border: 2px solid $yellow-light;
+          vertical-align: middle;
+          content:'';
+          margin-right: .6rem;
+        }
+
+        &.chosen{
+          a:before{
+            background-image: url('../images/icons/icon-checkmark-dark.svg');
+            background-repeat: no-repeat;
+            background-size: 70%;
+            background-position: center;
+          }
+        }
+
+        .count{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+
+}

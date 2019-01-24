@@ -1,0 +1,28 @@
+.woocommerce{
+  .products{
+    .product{
+      text-align: center;
+      margin-bottom: 4rem;
+
+      .woocommerce-loop-product__title{
+        font-family: 'Zilla Slab', serif;
+        font-size: 1.448rem;
+        color: $brown;
+
+      }
+      img{
+        @extend .img-fluid;
+        margin-bottom: 1rem;
+      }
+      .price{
+        font-family: 'Amaranth', sans-serif;
+        font-style: italic;
+        color: #624e37;
+        font-size: 1.19rem;
+      }
+      .add_to_cart_button{
+        display: none;
+      }
+    }
+  }
+}
