@@ -44,5 +44,13 @@
 }
 
 @include media-breakpoint-up(lg) {
-
+  .woocommerce{
+    &-sidebar{
+      .woocommerce-widget-layered-nav-list{
+        .woocommerce-widget-layered-nav-list__item{
+          display: block;
+        }
+      }
+    }
+  }
 }

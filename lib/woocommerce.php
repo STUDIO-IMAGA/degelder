@@ -144,3 +144,9 @@ add_filter('woocommerce_general_settings', __NAMESPACE__ . '\\woocommerce_settin
  * source: https://docs.woocommerce.com/document/disable-the-default-stylesheet/
  */
 add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
+
+/*
+ * Remove breadcrumbs
+ * source: https://fillintheblank.co/latest/removing-breadcrumbs-in-woocommerce/
+ */
+remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
