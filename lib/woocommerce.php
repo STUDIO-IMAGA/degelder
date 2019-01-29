@@ -20,7 +20,7 @@ function woocommerce_settings_fields($settings) {
 
           // open section
           $new_settings[$key] = array(
-              'title'    => __('Winkel omschrijving'),
+              'title'    => __('Winkel Informatie'),
               'type'     => 'title',
               'desc'     => __('Tekst boven aan het productenoverzicht pagina.'),
               'id'       => 'store_description',
@@ -37,11 +37,31 @@ function woocommerce_settings_fields($settings) {
           );
           $key++;
 
-          // Add title
+          // Add description
           $new_settings[$key] = array(
               'title'    => __('Omschrijving'),
               'desc'     => __('Voer hier de omschrijving in.'),
               'id'       => 'woocommerce_store_shop_description',
+              'type'     => 'text',
+              'desc_tip' => true,
+          );
+          $key++;
+
+          // Add Kamer van koophandel number
+          $new_settings[$key] = array(
+              'title'    => __('KvKnr.'),
+              'desc'     => __('Voer hier het Kamer van Koophandel registratie nummer in.'),
+              'id'       => 'woocommerce_store_kvk',
+              'type'     => 'text',
+              'desc_tip' => true,
+          );
+          $key++;
+
+          // Add IBAN number
+          $new_settings[$key] = array(
+              'title'    => __('IBAN'),
+              'desc'     => __('Voer hier het IBAN rekeningnummer in.'),
+              'id'       => 'woocommerce_store_iban',
               'type'     => 'text',
               'desc_tip' => true,
           );
@@ -150,3 +170,25 @@ add_filter( 'woocommerce_enqueue_styles', '__return_empty_array' );
  * source: https://fillintheblank.co/latest/removing-breadcrumbs-in-woocommerce/
  */
 remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0);
+
+/*
+ * Rename product tabs
+ * source: https://fillintheblank.co/latest/removing-breadcrumbs-in-woocommerce/
+ */
+function woocommerce_rename_tabs($tabs) {
+
+  $tabs['description']['title'] = 'Uitgebreide informatie';
+  $tabs['additional_information']['title'] = 'Voedingswaarden';
+
+  return $tabs;
+
+}
+add_filter( 'woocommerce_product_tabs', __NAMESPACE__ . '\\woocommerce_rename_tabs', 98);
+
+
+function grd_remove_woocommerce_styles_scripts() {
+	remove_action( 'wp_head', array( $GLOBALS['woocommerce'], 'generator' ) );
+	remove_action( 'wp_enqueue_scripts', array( $GLOBALS['woocommerce'], 'frontend_scripts' ) );
+}
+define( 'WOOCOMMERCE_USE_CSS', false );
+add_action( 'init', __NAMESPACE__ . '\\grd_remove_woocommerce_styles_scripts', 99 );

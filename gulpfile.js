@@ -329,6 +329,7 @@ gulp.task('zip', function(callback) {
     'dist/**/*',
     'acf-json/*',
     'templates/**/*',
+    'woocommerce/**/*',
     'vendor/**/*',
     'lang/*',
     'lib/**/*',

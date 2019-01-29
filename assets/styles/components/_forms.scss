@@ -1,22 +1,116 @@
-// Search form
-.searchs-form{
-  @extend .form-inline;
+.wpcf7-form{
+  .wpcf7-acceptance{
+    display: block;
+    font-size: 15px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 
-  label {
-    font-weight: normal;
-    @extend .form-group;
+    .wpcf7-list-item{
+      margin: 0;
+
+      & > label{
+
+        input[type='checkbox']{
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+
+          & ~ .wpcf7-list-item-label{
+            &:before{
+              display: inline-block;
+              height:20px;
+              width:20px;
+              border: 2px solid $yellow;
+              vertical-align: text-top;
+              margin-right: .6rem;
+            }
+          }
+
+          &:checked ~ .wpcf7-list-item-label{
+            &:before{
+              background-image: url('../images/icons/icon-checkmark-dark.svg');
+              background-repeat: no-repeat;
+              background-size: .7rem;
+              background-position: center;
+            }
+          }
+        }
+      }
+    }
   }
 
-  .search-field {
-    @extend .form-control;
-  }
-
-  .search-submit {
+  .wpcf7-submit{
     @extend .btn;
-    @extend .btn-secondary;
+    @extend .btn-lg;
+    @extend .btn-yellow;
   }
-}
-.ajax-loader{
-  position: absolute;
-  display: none;
+  .wpcf7-not-valid{
+    border-color: $red;
+  }
+
+  .wpcf7-not-valid-tip{
+    font-family: 'Zilla Slab', serif;
+    color: $red;
+    font-size: 16px;
+  }
+
+  .wpcf7-response-output{
+    border: none;
+    font-family: 'Zilla Slab', serif;
+    font-weight: bold;
+    font-size: 19px;
+  }
+
+  .wpcf7-response-output{
+    margin:0;
+    padding: 1rem 0;
+
+    &.wpcf7-validation-errors,
+    &.wpcf7-mail-sent-ng,
+    &.wpcf7-validation-missing,
+    &.wpcf7-mail-sent-ok{
+      &:before{
+        display: inline-block;
+        vertical-align: middle;
+        height: 40px;
+        width: 40px;
+        margin-right: 1rem;
+        border-radius: 90rem;
+        text-align: center;
+      }
+    }
+
+    &.wpcf7-validation-errors,
+    &.wpcf7-mail-sent-ng{
+      &:before{
+        border: 2px solid $red;
+        color: $red;
+        content:"\d7";
+        font-size: 50px;
+        line-height: 30px;
+      }
+    }
+
+    &.wpcf7-validation-missing{
+      &:before{
+        border: 2px solid $blue-light;
+        color: $blue-light;
+        content:'?';
+        font-size: 32px;
+        line-height: 34px;
+      }
+    }
+
+    &.wpcf7-mail-sent-ok{
+      &:before{
+        border: 2px solid $green;
+        color: $green;
+        content:'\2713';
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+  }
 }

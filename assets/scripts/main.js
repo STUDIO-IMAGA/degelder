@@ -78,9 +78,53 @@
         // JavaScript to be fired on the home page, after the init JS
       }
     },
-    // About us page, note the change from about-us to about_us.
-    'woocommerce': {
+    // Body class but dashes(-) change to underscores(_)
+    'single_product': {
       init: function() {
+
+        $('.product-quantity-plus').click(function(e){
+          e.preventDefault();
+
+          var target = $(this).attr('field');
+          var current_value = parseInt( $('input[name='+target+']').val() );
+          var max_value = ( $('input[name='+target+']').attr('max').length > 0 )? parseInt( $('input[name='+target+']').attr('max') ) : 0 ;
+
+          if ( !isNaN(current_value) && ( (current_value <= max_value) || ( max_value === 0) )  ){
+
+            $('input[name='+target+']').val(current_value + 1);
+            $('.product-quantity-label').html(current_value + 1);
+
+          } else {
+
+            $('input[name='+target+']').val(1);
+            $('.product-quantity-label').html(1);
+
+            // Apply disabled style
+
+          }
+        });
+
+        $(".product-quantity-minus").click(function(e) {
+          e.preventDefault();
+
+          var target = $(this).attr('field');
+          var current_value = parseInt( $('input[name='+target+']').val() );
+          var min_value = parseInt( $('input[name='+target+']').attr('min') );
+
+          if ( !isNaN(current_value) && current_value > min_value ) {
+
+            $('input[name='+target+']').val(current_value - 1);
+            $('.product-quantity-label').html(current_value - 1);
+
+          } else {
+
+            $('input[name='+target+']').val(1);
+            $('.product-quantity-label').html(1);
+
+            // Apply disabled style
+
+          }
+        });
       }
     }
   };

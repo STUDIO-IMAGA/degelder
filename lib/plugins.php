@@ -30,6 +30,10 @@ add_action( 'after_setup_theme', function() {
         'slug'               => 'resmushit-image-optimizer',
       ),
       array(
+        'name'               => 'Klassieke editor',
+        'slug'               => 'classic-editor',
+      ),
+      array(
         'name'               => 'Duplicate Post',
         'slug'               => 'duplicate-post',
       ),

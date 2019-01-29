@@ -1,0 +1,14 @@
+.template{
+  &-cart{
+    .product-thumbnail{
+      a{
+        display: inline-block;
+        width: 80px;
+
+        img{
+          @extend .img-fluid;
+        }
+      }
+    }
+  }
+}

@@ -28,7 +28,7 @@ if ( post_password_required() ) {
   <div class="container">
 
     <div class="row">
-      <div class="col-12 col-lg-6">
+      <div class="col-12 col-lg-6 pt-1">
         <?php
       		/**
       		 * Hook: woocommerce_before_single_product_summary.
@@ -37,15 +37,17 @@ if ( post_password_required() ) {
       		 * @hooked woocommerce_show_product_images - 20
       		 */
       		do_action( 'woocommerce_before_single_product_summary' );
-
       	?>
       </div>
-      <div class="col-12 col-lg-6">
+
+      <div class="col-12 col-lg-6 pt-lg-4">
         <? woocommerce_template_single_title(); ?>
 
         <? woocommerce_template_single_price(); ?>
 
         <? woocommerce_template_single_excerpt(); ?>
+
+        <? woocommerce_template_single_add_to_cart(); ?>
 
       		<?php
       			/**

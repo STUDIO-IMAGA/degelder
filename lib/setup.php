@@ -67,9 +67,6 @@ function setup() {
   // RPA Featured Product Component
   add_image_size('featured-product-small', 180, 180, true);
 
-  // Facts Element
-  add_image_size('facts', 370, 160, false);
-
   // Content Element
   add_image_size('content', 550, 320, true);
 
@@ -84,7 +81,7 @@ add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 function assets() {
   wp_enqueue_style('imaga/css', Assets\asset_path('styles/main.css'), false, null);
 
-  wp_deregister_script( 'jquery' );
+  wp_deregister_script('jquery');
   wp_enqueue_script('jquery', Assets\asset_path('scripts/jquery.js'), null, null, true);
 
   wp_enqueue_script('imaga/js', Assets\asset_path('scripts/main.js'), ['jquery'], null, true);
@@ -200,12 +197,6 @@ if( function_exists('acf_add_options_page') ) {
  * Disable auto-paragraphing for Contact Form 7
  */
 add_filter('wpcf7_autop_or_not', '__return_false');
-
-add_filter('wpcf7_form_elements', function($content) {
-    $content = preg_replace('/<(span).*?class="\s*(?:.*\s)?wpcf7-form-control-wrap(?:\s[^"]+)?\s*"[^\>]*>(.*)<\/\1>/i', '\2', $content);
-
-    return $content;
-});
 
 /*
  * Disable WooCommerce JetPack nag

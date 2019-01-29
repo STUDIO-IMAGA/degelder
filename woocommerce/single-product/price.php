@@ -15,4 +15,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 global $product;
 
 ?>
-<h5 class="product_price"><i><?php echo $product->get_price_html(); ?></i></h5>
+<h5 class="product-price"><i><?php echo $product->get_price_html(); ?></i></h5>
