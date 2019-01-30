@@ -28,38 +28,44 @@ defined( 'ABSPATH' ) || exit;
 <section>
   <div class="container">
     <div class="row pt-2">
+
       <div class="woocommerce-sidebar col-12 col-lg-3">
+
         <? dynamic_sidebar( 'woocommerce-sidebar' ); ?>
+
       </div>
+
       <div class="woocommerce-products col-12 col-lg-9">
-        <?
-        if ( woocommerce_product_loop() ):
 
-          woocommerce_product_loop_start();
+        <? if ( woocommerce_product_loop() ): ?>
 
-          if ( wc_get_loop_prop( 'total' ) ):
-            while ( have_posts() ):
-              the_post();
+          <? woocommerce_product_loop_start(); ?>
 
-              do_action( 'woocommerce_shop_loop' );
+          <? if ( wc_get_loop_prop( 'total' ) ): ?>
+            <? while ( have_posts() ): the_post(); ?>
 
-              wc_get_template_part( 'content', 'product' );
-            endwhile;
-          endif;
+              <? do_action( 'woocommerce_shop_loop' ); ?>
 
-          woocommerce_product_loop_end();
+              <div class="product col-4">
 
-          // pagination
-          do_action( 'woocommerce_after_shop_loop' );
+                <? wc_get_template_part( 'content', 'product' ); ?>
 
-        else:
+              </div>
 
-          do_action( 'woocommerce_no_products_found' );
+            <? endwhile; ?>
+          <? endif; ?>
 
-        endif;
+          <? woocommerce_product_loop_end(); ?>
 
-        do_action( 'woocommerce_after_main_content' );
-        ?>
+          <? do_action( 'woocommerce_after_shop_loop' ); ?>
+
+        <? else: ?>
+
+          <? do_action( 'woocommerce_no_products_found' ); ?>
+
+        <? endif; ?>
+
+        <? do_action( 'woocommerce_after_main_content' ); ?>
       </div>
     </div>
   </div>

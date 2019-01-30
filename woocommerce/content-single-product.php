@@ -27,8 +27,8 @@ if ( post_password_required() ) {
 <section id="product-<?php the_ID(); ?>" <?php wc_product_class(); ?>>
   <div class="container">
 
-    <div class="row">
-      <div class="col-12 col-lg-6 pt-1">
+    <div class="row pt-5 pb-6 align-items-end">
+      <div class="col-12 col-lg-6">
         <?php
       		/**
       		 * Hook: woocommerce_before_single_product_summary.
@@ -40,7 +40,8 @@ if ( post_password_required() ) {
       	?>
       </div>
 
-      <div class="col-12 col-lg-6 pt-lg-4">
+      <div class="col-12 col-lg-6 py-lg-6">
+
         <? woocommerce_template_single_title(); ?>
 
         <? woocommerce_template_single_price(); ?>
@@ -62,7 +63,6 @@ if ( post_password_required() ) {
       			 * @hooked woocommerce_template_single_sharing - 50
       			 * @hooked WC_Structured_Data::generate_product_data() - 60
       			 */
-      			// do_action( 'woocommerce_single_product_summary' );
       		?>
       </div>
     </div>
@@ -80,8 +80,16 @@ if ( post_password_required() ) {
            * @hooked woocommerce_upsell_display - 15
            * @hooked woocommerce_output_related_products - 20
            */
-          //do_action( 'woocommerce_after_single_product_summary' );
+          // do_action( 'woocommerce_after_single_product_summary' );
         ?>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+
+        <? woocommerce_output_related_products(); ?>
+        
       </div>
     </div>
 
