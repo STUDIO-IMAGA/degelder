@@ -1,12 +1,40 @@
 .template{
   &-cart{
-    .product-thumbnail{
-      a{
-        display: inline-block;
-        width: 80px;
+    .table{
+      thead{
+        th{
+          border: none;
+        }
+      }
 
-        img{
-          @extend .img-fluid;
+      tbody{
+
+        .product-remove{
+          position: relative;
+          
+          .remove{
+            position: absolute;
+            top: calc(50% - 12px);
+            color: $red;
+            border: 1px solid $red;
+            border-radius: 30px;
+            display: inline-block;
+            height: 24px;
+            width: 24px;
+            line-height: 20px;
+            text-align: center;
+          }
+        }
+
+        .product-thumbnail{
+          a{
+            display: inline-block;
+            width: 80px;
+
+            img{
+              @extend .img-fluid;
+            }
+          }
         }
       }
     }

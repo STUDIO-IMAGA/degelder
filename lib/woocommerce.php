@@ -192,3 +192,66 @@ function grd_remove_woocommerce_styles_scripts() {
 }
 define( 'WOOCOMMERCE_USE_CSS', false );
 add_action( 'init', __NAMESPACE__ . '\\grd_remove_woocommerce_styles_scripts', 99 );
+
+function iap_wc_bootstrap_form_field_args ($args, $key, $value) {
+
+  // var_dump($args);
+  /*
+  array (size=18)
+  'type' => string 'text' (length=4)
+  'label' => string 'Voornaam' (length=8)
+  'description' => string '' (length=0)
+  'placeholder' => string '' (length=0)
+  'maxlength' => boolean false
+  'required' => boolean true
+  'autocomplete' => string 'given-name' (length=10)
+  'id' => string 'billing_first_name' (length=18)
+  'class' =>
+    array (size=1)
+      0 => string 'form-row-first' (length=14)
+  'label_class' =>
+    array (size=0)
+      empty
+  'input_class' =>
+    array (size=0)
+      empty
+  'return' => boolean false
+  'options' =>
+    array (size=0)
+      empty
+  'custom_attributes' =>
+    array (size=0)
+      empty
+  'validate' =>
+    array (size=0)
+      empty
+  'default' => string '' (length=0)
+  'autofocus' => string '' (length=0)
+  'priority' => int 10
+  */
+
+  $args['input_class'][] = 'form-control';
+  return $args;
+}
+add_filter('woocommerce_form_field_args', __NAMESPACE__ . '\\iap_wc_bootstrap_form_field_args', 10, 3);
+
+add_filter('woocommerce_form_field_country', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+add_filter('woocommerce_form_field_state', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+add_filter('woocommerce_form_field_textarea', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+add_filter('woocommerce_form_field_checkbox', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+add_filter('woocommerce_form_field_password', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+add_filter('woocommerce_form_field_text', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+add_filter('woocommerce_form_field_email', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+add_filter('woocommerce_form_field_tel', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+add_filter('woocommerce_form_field_number', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+add_filter('woocommerce_form_field_select', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+add_filter('woocommerce_form_field_radio', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+function clean_checkout_fields_class_attribute_values( $field, $key, $args, $value ){
+    if( is_checkout() ){
+        // remove "form-row"
+        $field = str_replace( array('<p class="form-row ', '<p class="form-row' ,'</p>'), array('<div class="form-group ', '<div class="form-group ', '</div>'), $field);
+        $field = str_replace( array('<span class="woocommerce-input-wrapper">','</span>'), array('', ''), $field);
+    }
+
+    return $field;
+}

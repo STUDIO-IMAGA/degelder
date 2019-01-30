@@ -1,0 +1,94 @@
+.woocommerce{
+
+  &-notices-wrapper{
+    text-align: center;
+  }
+
+  &-message,
+  &-info,
+  &-error{
+    padding: .8rem;
+    color: $light;
+
+    .button,
+    .restore-item,
+    .showcoupon{
+      @extend .btn;
+      @extend .btn-sm;
+      @extend .btn-light;
+    }
+  }
+
+  &-message{
+    background-color: $green;
+  }
+
+  &-info{
+    background-color: $blue;
+  }
+
+  &-error{
+    background-color: $red;
+  }
+}
+
+.woocommerce-store-notice.demo_store{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: .5rem;
+  background-color: $red;
+  color: $light;
+  text-align: center;
+  font-size: .9rem;
+  z-index: 2010;
+
+  .woocommerce-store-notice__dismiss-link{
+    @extend .btn;
+    @extend .btn-sm;
+    @extend .btn-light;
+  }
+}
+
+.quantity{
+  &-plus,
+  &-minus{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid $yellow;
+    border-radius: 10rem;
+    font-family: 'Zilla Slab', serif;
+    font-size: 2rem;
+    background: transparent;
+    line-height: 0;
+    height: 40px;
+    width: 40px;
+
+    &.disabled{
+      border-color: #aaaaaa;
+      color: #aaaaaa;
+    }
+  }
+
+  .label-wrapper{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80px;
+    overflow: hidden;
+    margin-left: -15px;
+    margin-right: -15px;
+
+    .quantity-label{
+      background: none;
+      border: none;
+      font-family: Amaranth,sans-serif;
+      font-weight: 700;
+      font-size: 25px;
+      text-align: center;
+      line-height: 38px;
+      width: 100px;
+    }
+  }
+}

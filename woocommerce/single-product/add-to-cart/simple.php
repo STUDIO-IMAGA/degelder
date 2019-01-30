@@ -27,7 +27,6 @@ if ( $product->is_in_stock() ) : ?>
 
       <?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-
       <?php
       do_action( 'woocommerce_before_add_to_cart_quantity' );
 
@@ -39,12 +38,6 @@ if ( $product->is_in_stock() ) : ?>
 
       do_action( 'woocommerce_after_add_to_cart_quantity' );
       ?>
-
-      <input type='button' value='-' class='product-quantity-minus' field='quantity'/>
-
-      <span class="product-quantity-label">1</span>
-
-      <input type='button' value='+' class='product-quantity-plus' field='quantity'/>
 
       <button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="btn btn-lg btn-yellow add-to-cart-button">
         Toevoegen aan winkelmand

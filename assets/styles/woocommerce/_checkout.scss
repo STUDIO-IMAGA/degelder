@@ -1,4 +1,14 @@
 .templates{
   &-checkout{
+
+    .woocommerce-checkout{
+      .form-row{
+        @extend .form-group;
+
+        input{
+          @extend .form-control;
+        }
+      }
+    }
   }
 }

@@ -23,7 +23,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 	<table class="table shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
-		<thead class="bg-yellow text-brown">
+		<thead class="bg-yellow-light text-brown">
 			<tr>
 				<th class="product-remove" scope="col">&nbsp;</th>
 				<th class="product-thumbnail" scope="col">&nbsp;</th>
@@ -128,6 +128,15 @@ do_action( 'woocommerce_before_cart' ); ?>
 
 			<?php do_action( 'woocommerce_cart_contents' ); ?>
 
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><?php _e( 'Subtotal', 'woocommerce' ); ?></td>
+        <td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+      </tr>
+
 			<tr>
 				<td colspan="6" class="actions">
           <div class="row">
@@ -163,7 +172,7 @@ do_action( 'woocommerce_before_cart' ); ?>
   <?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 </div>
 
-<div class="cart-collaterals">
+<div class="cart-collaterals mt-4">
 	<?php
 		/**
 		 * Cart collaterals hook.
@@ -171,7 +180,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 		 * @hooked woocommerce_cross_sell_display
 		 * @hooked woocommerce_cart_totals - 10
 		 */
-		do_action( 'woocommerce_cart_collaterals' );
+		//do_action( 'woocommerce_cart_collaterals' );
 	?>
 </div>
 

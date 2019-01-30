@@ -53,18 +53,48 @@
         // JavaScript to be fired on all pages, after page specific JS is fired
 
         // Set the offset when entering page with hash present in the url
-        // window.setTimeout(function(){
-        //   if (location.hash.length !== 0) {
-        //     window.scrollTo(window.scrollX, window.scrollY + 2 );
-        //   }
-        // }, 0);
+        window.setTimeout(function(){
+          if (location.hash.length !== 0) {
+            window.scrollTo(window.scrollX, window.scrollY + 20 );
+          }
+        }, 0);
 
-        $('.slick-slider').slick({
-          infinite: true,
-          speed: 300,
-          fade: true,
-          arrows: true,
-          adaptiveHeight: true
+        $('.quantity-plus').click(function(e){
+          e.preventDefault();
+
+          var target_id = '#' + $(this).attr('data-field-id');
+          var current_value = parseInt( $(target_id).val() );
+          var max_value = ( $(target_id).attr('max').length > 0 )? parseInt( $(target_id).attr('max') ) : 0 ;
+
+          if ( !isNaN(current_value) && ( (current_value <= max_value) || ( max_value === 0) )  ){
+
+            $(target_id).val(current_value + 1);
+            $(target_id).trigger('change');
+
+          } else {
+
+            $(target_id).val(1);
+
+          }
+        });
+
+        $(".quantity-minus").click(function(e) {
+          e.preventDefault();
+
+          var target_id = '#' + $(this).attr('data-field-id');
+          var current_value = parseInt( $(target_id).val() );
+          var min_value = parseInt( $(target_id).attr('min') );
+
+          if ( !isNaN(current_value) && (current_value > min_value) && current_value !== 0 ) {
+
+            $(target_id).val(current_value - 1);
+            $(target_id).trigger('change');
+
+          } else {
+
+            $(target_id).val(1);
+
+          }
         });
 
       }
@@ -79,52 +109,8 @@
       }
     },
     // Body class but dashes(-) change to underscores(_)
-    'single_product': {
+    'woocommerce': {
       init: function() {
-
-        $('.product-quantity-plus').click(function(e){
-          e.preventDefault();
-
-          var target = $(this).attr('field');
-          var current_value = parseInt( $('input[name='+target+']').val() );
-          var max_value = ( $('input[name='+target+']').attr('max').length > 0 )? parseInt( $('input[name='+target+']').attr('max') ) : 0 ;
-
-          if ( !isNaN(current_value) && ( (current_value <= max_value) || ( max_value === 0) )  ){
-
-            $('input[name='+target+']').val(current_value + 1);
-            $('.product-quantity-label').html(current_value + 1);
-
-          } else {
-
-            $('input[name='+target+']').val(1);
-            $('.product-quantity-label').html(1);
-
-            // Apply disabled style
-
-          }
-        });
-
-        $(".product-quantity-minus").click(function(e) {
-          e.preventDefault();
-
-          var target = $(this).attr('field');
-          var current_value = parseInt( $('input[name='+target+']').val() );
-          var min_value = parseInt( $('input[name='+target+']').attr('min') );
-
-          if ( !isNaN(current_value) && current_value > min_value ) {
-
-            $('input[name='+target+']').val(current_value - 1);
-            $('.product-quantity-label').html(current_value - 1);
-
-          } else {
-
-            $('input[name='+target+']').val(1);
-            $('.product-quantity-label').html(1);
-
-            // Apply disabled style
-
-          }
-        });
       }
     }
   };
