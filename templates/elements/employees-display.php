@@ -2,55 +2,51 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col-12 text-center pb-4">
         <h5 class="sans-serif"><i><? the_sub_field('pre_title'); ?></i></h5>
         <h2><? the_sub_field('title'); ?></h2>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-12">
-        <div class="wrapper">
 
-          <? $custom_terms = get_terms('group'); ?>
+      <? $custom_terms = get_terms('group'); ?>
 
-          <? foreach($custom_terms as $custom_term): wp_reset_query(); ?>
-            <? $args = array('post_type' => 'employees', 'tax_query' => array(array( 'taxonomy'=>'group', 'field'=>'slug', 'terms'=>$custom_term->slug ) )); ?>
-            <? $query = new wp_query( $args ); $i = 0; $total = $query->found_posts;?>
+      <? foreach($custom_terms as $custom_term): wp_reset_query(); ?>
+        <? $args = array('post_type' => 'employees', 'tax_query' => array(array( 'taxonomy'=>'group', 'field'=>'slug', 'terms'=>$custom_term->slug ) )); ?>
+        <? $query = new wp_query( $args ); $i = 0; $total = $query->found_posts;?>
 
-              <? if($query->have_posts()): ?>
-                <div class="item">
+          <? if($query->have_posts()): ?>
+            <div class="col-12 col-md-6 employees-item">
 
-                  <? $image = get_field('image', $custom_term); ?>
+              <? $image = get_field('image', $custom_term); ?>
 
-                  <? if($image): ?>
+              <? if($image): ?>
 
-                    <img class="img-fluid img-shadow" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>">
+                <img class="img-fluid img-shadow" src="<?= $image['sizes']['employees-display']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>">
 
-                  <? else: ?>
+              <? else: ?>
 
-                    <img class="img-fluid img-shadow" src="https://placehold.it/550x320?text=<?= $custom_term->name; ?>" title="Kies een afbeelding voor de groep '<?= $custom_term->name; ?>'.">
+                <div class="alert alert-danger">Deze groep heeft nog geen afbeelding!</div>
 
-                  <? endif; ?>
+              <? endif; ?>
 
-                  <div class="names">
-                    <? while( $query->have_posts() ) : $query->the_post(); $i++; ?>
+              <div class="names">
+                <? while( $query->have_posts() ) : $query->the_post(); $i++; ?>
 
-                      <? the_field('firstname'); ?><?= ($i < $total )?', ':''; ?>
+                  <? the_field('firstname'); ?><?= ($i < $total )?', ':''; ?>
 
-                    <? endwhile; ?>
-                  </div>
+                <? endwhile; ?>
+              </div>
 
-                  <div class="label"><?= $custom_term->name; ?></div>
+              <div class="label"><?= $custom_term->name; ?></div>
 
-                 </div>
+             </div>
 
-               <? wp_reset_postdata(); wp_reset_query();?>
-             <? endif; ?>
-            <? endforeach; ?>
+           <? wp_reset_postdata(); wp_reset_query();?>
+         <? endif; ?>
+        <? endforeach; ?>
 
-        </div>
-      </div>
     </div>
   </div>
 </section>

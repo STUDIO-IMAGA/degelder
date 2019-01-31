@@ -8,8 +8,8 @@
       </div>
     </div>
 
-    <div class="row wrapper">
-      <div class="col-12">
+    <div class="row">
+      <div class="col-12 pt-4">
         <div class="slick-slider">
 
           <? if( have_rows('slides') ): ?>
@@ -38,6 +38,6 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 </section>

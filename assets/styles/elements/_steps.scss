@@ -24,14 +24,25 @@
         padding-top: 3rem;
         padding-bottom: 3rem;
 
-        &:nth-of-type(even){
+      }
+    }
+  }
+}
 
-          div:first-child{
-            order: 2;
-          }
+@include media-breakpoint-up(sm){
+  .element{
+    &.steps{
+      .wrapper{
+        .item{
+          &:nth-of-type(even){
 
-          div:last-child{
-            order: 1;
+            div:first-child{
+              order: 2;
+            }
+
+            div:last-child{
+              order: 1;
+            }
           }
         }
       }

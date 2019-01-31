@@ -11,7 +11,7 @@
           	<? $post = $post_object; ?>
           	<? setup_postdata( $post ); ?>
 
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 mb-5 mb-lg-0">
               <a class="unstyled" href="<?= get_permalink($post->ID); ?>">
                 <h4><? the_sub_field('featured_page_title'); ?></h4>
                 <img class="img-fluid mb-2" src="<?= get_the_post_thumbnail_url($post->ID, 'featured-page'); ?>" alt="<? the_sub_field('featured_page_title'); ?>">

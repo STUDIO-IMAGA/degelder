@@ -32,3 +32,22 @@
   font-size: 22px;
   padding: 5px 8px;
 }
+
+.admin-bar{
+  .woocommerce-store-notice.demo_store{
+    top: 32px;
+  }
+  header{
+    margin-top: 32px;
+  }
+}
+@media screen and (max-width:782px) {
+  .admin-bar{
+    .woocommerce-store-notice.demo_store{
+      top: 46px;
+    }
+    header{
+      margin-top: 46px;
+    }
+  }
+}

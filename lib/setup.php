@@ -49,23 +49,28 @@ function setup() {
 
   // Use main stylesheet for visual editor
   // To add custom styles edit /assets/styles/layouts/_tinymce.scss
-  add_editor_style(Assets\asset_path('styles/main.css'));
+  add_editor_style(Assets\asset_path('styles/admin.css'));
 
   // Add image sizes
   // Header Element
-  add_image_size('header-background', 1080, 600, true);
+  add_image_size('header-narrow', 750, 600, true);
+  add_image_size('header-wide', 850, 600, true);
 
   // Featured Pages Element
   add_image_size('featured-page', 420, 280, true);
 
   // Featured Product Element
-  add_image_size('featured-product', 1600, 360, true);
+  add_image_size('featured-product', 1280, 360, true);
+  add_image_size('featured-product-sm', 640, 360, true);
+
+  // Employees Display Element
+  add_image_size('employees-display', 560, 320, true);
 
   // Quality Marks Component
   add_image_size('quality-mark', 76, 76, true);
 
   // RPA Featured Product Component
-  add_image_size('featured-product-small', 180, 180, true);
+  add_image_size('rpa-product', 180, 180, true);
 
   // Content Element
   add_image_size('content', 550, 320, true);

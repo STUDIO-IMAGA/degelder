@@ -33,6 +33,15 @@
           topOnEmptyHash: true
         });
 
+        $('.slick-slider').slick({
+          infinite: true,
+          speed: 300,
+          fade: true,
+          arrows: true,
+          responsive: true,
+          adaptiveHeight: true,
+        });
+
         function getScrollPixel() {
           var h=document.documentElement,b=document.body,st='scrollTop',sh='scrollHeight';return(h[st]||b[st]);
         }

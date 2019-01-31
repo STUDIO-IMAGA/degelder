@@ -1,7 +1,23 @@
 <? $header_background_image = get_field('header_background_image'); ?>
-<? $header_image_url = $header_background_image['header_image']['sizes']['header-background'] ?? get_the_post_thumbnail_url('header-background'); ?>
-<? $header_toggle = ( get_field('header_sub_content') ) ? 'header-wide' : 'header-narrow'; ?>
 <? $header_background_color = get_field('header_background_color'); ?>
+
+<?
+if( get_field('header_sub_content') ):
+
+  $header_toggle = 'header-narrow';
+  $header_col_left = 'col-12 col-lg-7 order-2 order-lg-1';
+  $header_col_right = 'col-12 col-lg-5 px-5 order-1 order-lg-2';
+
+else:
+
+  $header_toggle = 'header-wide';
+  $header_col_left = 'col-12 col-lg-8 order-2 order-lg-1';
+  $header_col_right = 'col-12 col-lg-4 order-1 order-lg-2';
+
+endif;
+
+$header_image_url = $header_background_image['header_image']['sizes'][$header_toggle] ?? get_the_post_thumbnail_url('header-background');
+?>
 
 <section class="element header <?= $header_toggle; ?>">
   <div class="container">
@@ -10,10 +26,10 @@
 
     <div class="row align-items-end">
 
-      <div class="col left">
+      <div class="<?= $header_col_left; ?>">
 
         <? if( $header_background_image['header_title'] ): ?>
-          <div class="row">
+          <div class="row d-none d-lg-block">
             <div class="col-12 text-white">
               <h1 class="display-1"><?= $header_background_image['header_title']; ?></h1>
             </div>
@@ -30,12 +46,8 @@
 
       </div>
 
-      <div class="col right bg-<?= $header_background_color['content']; ?> py-3">
-        <div class="row">
-          <div class="col-12">
-            <? the_field('header_content'); ?>
-          </div>
-        </div>
+      <div class="col <?= $header_col_right; ?> bg-<?= $header_background_color['content']; ?> py-3">
+        <? the_field('header_content'); ?>
       </div>
 
     </div>

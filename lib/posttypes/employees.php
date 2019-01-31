@@ -8,13 +8,13 @@ namespace IMAGA\Theme\Posttype\Employees;
 function create_post_type_employees() {
 
   $labels = array(
-    'name'                  => _x( 'Employees', 'Employees General Name', 'imaga' ),
-    'singular_name'         => _x( 'Employee', 'Employee Singular Name', 'imaga' ),
+    'name'                  => _x( 'Werknemers', 'Employees General Name', 'imaga' ),
+    'singular_name'         => _x( 'Werknemer', 'Employee Singular Name', 'imaga' ),
   );
 
   $args = array(
-    'label'                 => __( 'Employees', 'imaga' ),
-    'description'           => __( 'Employees of IMAGA', 'imaga' ),
+    'label'                 => __( 'Werknemers', 'imaga' ),
+    'description'           => __( 'Werknemers of De Gelder', 'imaga' ),
     'labels'                => $labels,
     'supports'              => array( 'title', 'editor', 'thumbnail' ),
     'taxonomies'            => array( 'skills' ), // Add taxonomies
@@ -27,7 +27,7 @@ function create_post_type_employees() {
     'show_in_admin_bar'     => true,
     'show_in_nav_menus'     => true,
     'can_export'            => true,
-    'has_archive'           => true,
+    'has_archive'           => false,
     'exclude_from_search'   => false,
     'publicly_queryable'    => true,
     'capability_type'       => 'post',

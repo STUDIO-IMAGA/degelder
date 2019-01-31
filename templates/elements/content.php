@@ -15,7 +15,7 @@
 
       <? endif; ?>
 
-      <div class="col-12 col-lg-6 order-2">
+      <div class="col-12 col-lg-6 order-4 order-lg-2">
         <? the_sub_field('content'); ?>
       </div>
 

@@ -17,6 +17,11 @@ add_action( 'after_setup_theme', function() {
         'required'           => true,
 		  ),
       array(
+  			'name'               => 'DuracellTomi\'s Google Tag Manager for WordPress',
+  			'slug'               => 'duracelltomi-google-tag-manager',
+        'required'           => true,
+		  ),
+      array(
         'name'               => 'ACF Content Analysis for Yoast SEO',
   			'slug'               => 'acf-content-analysis-for-yoast-seo',
         'required'           => true,

@@ -1,6 +1,6 @@
 .element{
   &.gallery{
-    width: 650px;
+    max-width: 650px;
     margin:0 auto;
     padding-bottom: 5rem;
 
@@ -18,9 +18,7 @@
       left: calc(50% - 70px);
     }
 
-    .wrapper{
-      padding-top: 2rem;
-
+    .slick-slider{
       .item{
         padding: 8px;
 
@@ -48,6 +46,7 @@
         border: 0px;
         top: 143px;
         font-size: 0px;
+        z-index: 2040;
 
         &:before{
           background-repeat: no-repeat;
@@ -84,6 +83,35 @@
             background-image: url('../images/icons/icon-pijl.svg');
             transform: rotate(180deg);
           }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .element{
+    &.gallery{
+      .slick-slider{
+        .slick-arrow{
+          &.slick-prev{
+            left: 0px;
+          }
+          &.slick-next{
+            right: 0px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(xs){
+  .element{
+    &.gallery{
+      .slick-slider{
+        .slick-arrow{
+          top: 100px;
         }
       }
     }

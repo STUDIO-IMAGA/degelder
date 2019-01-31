@@ -9,7 +9,7 @@
     </div>
 
     <div class="row wrapper">
-      <div class="col-10">
+      <div class="col-12 col-md-10">
 
         <? if( have_rows('steps') ): ?>
           <? while( have_rows('steps') ): the_row(); ?>
@@ -18,11 +18,11 @@
 
             <div class="row item">
 
-              <div class="col-3 text-center">
-                <img class="img-fluid" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>">
+              <div class="col-12 col-sm-5 col-md-4 col-xl-3 text-center">
+                <img class="img-fluid mb-3 mb-sm-0" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>">
               </div>
 
-              <div class="col-9">
+              <div class="col-12 col-sm-7 col-md-8 col-xl-9">
                 <? the_sub_field('content'); ?>
               </div>
 
