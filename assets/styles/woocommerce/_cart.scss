@@ -1,6 +1,8 @@
 .template{
   &-cart{
     .table{
+      background: $light;
+
       thead{
         th{
           border: none;
@@ -9,31 +11,48 @@
 
       tbody{
 
-        .product-remove{
-          position: relative;
-          
-          .remove{
-            position: absolute;
-            top: calc(50% - 12px);
-            color: $red;
-            border: 1px solid $red;
-            border-radius: 30px;
-            display: inline-block;
-            height: 24px;
-            width: 24px;
-            line-height: 20px;
-            text-align: center;
-          }
-        }
+        .cart-item{
+          border-bottom: 1px solid #ddd1b6;
 
-        .product-thumbnail{
-          a{
-            display: inline-block;
-            width: 80px;
+          .product-remove{
+            position: relative;
 
-            img{
-              @extend .img-fluid;
+            .remove{
+              position: absolute;
+              top: calc(50% - 12px);
+              color: $red;
+              border: 1px solid $red;
+              border-radius: 30px;
+              display: inline-block;
+              height: 24px;
+              width: 24px;
+              line-height: 20px;
+              text-align: center;
             }
+          }
+
+          .product-thumbnail{
+            text-align: center;
+
+            a{
+              display: inline-block;
+              width: 80px;
+
+              img{
+                @extend .img-fluid;
+              }
+            }
+          }
+
+          .product-remove,
+          .product-thumbnail,
+          .product-name,
+          .product-price,
+          .product-quantity,
+          .product-subtotal{
+            height: 80px;
+            vertical-align: middle;
+            border: none;
           }
         }
       }

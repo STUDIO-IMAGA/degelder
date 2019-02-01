@@ -68,7 +68,7 @@
           }
         }, 0);
 
-        $('.quantity-plus').click(function(e){
+        $('.woocommerce').on('click', '.quantity-plus', function (e){
           e.preventDefault();
 
           var target_id = '#' + $(this).attr('data-field-id');
@@ -87,7 +87,7 @@
           }
         });
 
-        $(".quantity-minus").click(function(e) {
+        $('.woocommerce').on('click', '.quantity-minus', function (e){
           e.preventDefault();
 
           var target_id = '#' + $(this).attr('data-field-id');

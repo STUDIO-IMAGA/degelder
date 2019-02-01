@@ -19,7 +19,7 @@ defined( 'ABSPATH' ) || exit;
 
 do_action( 'woocommerce_before_cart' ); ?>
 
-<form class="woocommerce-cart-form" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
+<form class="woocommerce-cart-form form-inline" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
 	<table class="table shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
@@ -44,7 +44,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 				if ( $_product && $_product->exists() && $cart_item['quantity'] > 0 && apply_filters( 'woocommerce_cart_item_visible', true, $cart_item, $cart_item_key ) ) {
 					$product_permalink = apply_filters( 'woocommerce_cart_item_permalink', $_product->is_visible() ? $_product->get_permalink( $cart_item ) : '', $cart_item, $cart_item_key );
 					?>
-					<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart_item', $cart_item, $cart_item_key ) ); ?>">
+					<tr class="woocommerce-cart-form__cart-item <?php echo esc_attr( apply_filters( 'woocommerce_cart_item_class', 'cart-item', $cart_item, $cart_item_key ) ); ?>">
 
 						<td class="product-remove">
 							<?php
@@ -138,23 +138,18 @@ do_action( 'woocommerce_before_cart' ); ?>
       </tr>
 
 			<tr>
-				<td colspan="6" class="actions">
-          <div class="row">
-            <div class="col-6">
-              <?php if ( wc_coupons_enabled() ) { ?>
-    						<div class="input-group coupon">
-                  <input type="text" name="coupon_code" class="form-control form-control-sm input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
-                  <div class="input-group-append">
-                    <button type="submit" class="btn btn-sm btn-outline-brown" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
-                  </div>
-    							<?php do_action( 'woocommerce_cart_coupon' ); ?>
-    						</div>
-    					<?php } ?>
-            </div>
-            <div class="col-6">
-              <button type="submit" class="btn btn-sm btn-yellow" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
-            </div>
-          </div>
+				<td colspan="3" class="actions">
+
+          <?php if ( wc_coupons_enabled() ) { ?>
+              <input type="text" name="coupon_code" class="form-control form-control-sm input-text mr-3" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
+              <button type="submit" class="btn btn-inline btn-sm btn-outline-brown" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+              <?php do_action( 'woocommerce_cart_coupon' ); ?>
+          <?php } ?>
+
+          <td colspan="3" class="actions text-right">
+            <button type="submit" class="btn btn-sm btn-yellow" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+          </td>
+
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 

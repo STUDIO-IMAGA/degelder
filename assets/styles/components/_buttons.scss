@@ -1,9 +1,10 @@
 .btn{
   margin-right: 1rem;
   font-weight: 700;
+  border-radius: 90rem;
 
   @extend .box-shadow;
-
+  
   &-sm{
     font-style: italic;
   }

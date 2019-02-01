@@ -7,13 +7,6 @@ use IMAGA\Theme\Wrapper;
 <html <? language_attributes(); ?>>
   <? get_template_part('templates/head'); ?>
   <body id="top" <? body_class(); ?> >
-    <div class="breakpoint-indicator">
-      <span class="d-block d-sm-none">XS</span>
-      <span class="d-none d-sm-block d-md-none">SM</span>
-      <span class="d-none d-md-block d-lg-none">MD</span>
-      <span class="d-none d-lg-block d-xl-none">LG</span>
-      <span class="d-none d-xl-block">XL</span>
-    </div>
 
     <!--[if IE]>
       <div class="alert alert-warning">

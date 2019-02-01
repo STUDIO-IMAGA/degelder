@@ -10,5 +10,27 @@
         }
       }
     }
+
+  }
+}
+
+.woocommerce-checkout{
+  .woocommerce-checkout-review-order-table{
+    background: $light;
+
+    td, th{
+      border: none;
+    }
+    
+    .cart_item{
+      border-bottom: 1px solid #ddd1b6;
+    }
+  }
+
+  #payment{
+    ul{
+      margin: 0;
+      padding: 0;
+    }
   }
 }
