@@ -8,7 +8,7 @@
     <?
     $date_now = date('Y-m-d H:i:s');
     $time_now = strtotime($date_now);
-    $time_next_week = strtotime('+7 day', $time_now);
+    $time_next_week = strtotime('+10 years', $time_now);
     $date_next_week = date('Y-m-d H:i:s', $time_next_week);
     $args = array(
       'posts_per_page' => 3,

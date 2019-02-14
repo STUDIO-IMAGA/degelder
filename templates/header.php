@@ -5,14 +5,14 @@
 if( get_field('header_sub_content') ):
 
   $header_toggle = 'header-narrow';
-  $header_col_left = 'col-12 col-lg-7 order-2 order-lg-1';
-  $header_col_right = 'col-12 col-lg-5 px-5 order-1 order-lg-2';
+  $header_col_left = 'col-left';
+  $header_col_right = 'col-right px-5';
 
 else:
 
   $header_toggle = 'header-wide';
-  $header_col_left = 'col-12 col-lg-8 order-2 order-lg-1';
-  $header_col_right = 'col-12 col-lg-4 order-1 order-lg-2';
+  $header_col_left = 'col-left';
+  $header_col_right = 'col-right';
 
 endif;
 
@@ -26,7 +26,7 @@ $header_image_url = $header_background_image['header_image']['sizes'][$header_to
 
     <div class="row align-items-end">
 
-      <div class="<?= $header_col_left; ?>">
+      <div class="col-12 <?= $header_col_left; ?>">
 
         <? if( $header_background_image['header_title'] ): ?>
           <div class="row d-none d-lg-block">
@@ -46,7 +46,7 @@ $header_image_url = $header_background_image['header_image']['sizes'][$header_to
 
       </div>
 
-      <div class="col <?= $header_col_right; ?> bg-<?= $header_background_color['content']; ?> py-3">
+      <div class="col-12 <?= $header_col_right; ?> bg-<?= $header_background_color['content']; ?> py-4">
         <? the_field('header_content'); ?>
       </div>
 

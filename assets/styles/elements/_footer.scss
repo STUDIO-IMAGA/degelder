@@ -1,4 +1,8 @@
 footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 350px;
   color: $brown-400;
   background-image: url(../images/footer-bg.png);
   background-size: cover;
@@ -6,7 +10,12 @@ footer{
   background-repeat: no-repeat;
   padding-top: 4rem;
   overflow: hidden;
+  font-size: 0.9375rem;
 
+   h6{
+     font-size: 1.063rem;
+   }
+   
   .list-unstyled{
     .nav-link,a{
       padding:0;
@@ -69,6 +78,7 @@ footer{
       top: -52px;
       left: -113px;
     }
+
     &:after{
       position: absolute;
       background-image: url('../images/icons/icon-dunne-boom.svg');
@@ -103,6 +113,17 @@ footer{
   .quality-marks{
     .item{
       @extend .p-1;
+    }
+  }
+
+  .socialmedia{
+    .service{
+      color: $brown-400;
+      text-transform: lowercase;
+
+      img{
+        margin-right: 8px;
+      }
     }
   }
 }

@@ -61,3 +61,16 @@ $step: 5;
       }
   }
 }
+
+@include media-breakpoint-down(md){
+  header{
+    .container-bg{
+      position: relative;
+      background-position: center;
+      background-size: cover;
+      margin-left: -($grid-gutter-width / 2);
+      margin-right: -($grid-gutter-width / 2);
+      height: 460px;
+    }
+  }
+}

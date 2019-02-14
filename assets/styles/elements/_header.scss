@@ -12,7 +12,13 @@
 
     &-narrow{
       .container-bg{
-        right: 41.6666666667%;
+        right: 30%;
+      }
+      .col-left{
+        max-width: 70%;
+      }
+      .col-right{
+        max-width: 30%;
       }
     }
 
@@ -20,13 +26,26 @@
       .container-bg{
         right: 33.3333333333%;
       }
+      .col-left{
+        max-width: 60%;
+      }
+      .col-right{
+        max-width: 40%;
+      }
     }
   }
 }
 
-@include media-breakpoint-down(lg){
+@include media-breakpoint-down(md){
   .element{
     &.header{
+      .col-left{
+        max-width: 100%;
+      }
+
+      .col-right{
+        max-width: 100%;
+      }
 
       &-narrow{
         .container-bg{

@@ -7,6 +7,18 @@
 
     &-price{
       color: $brown-400;
+      font-size: 1.375rem;
+      font-weight: 500;
+    }
+
+    &-description{
+      font-weight: 300;
+
+      em{
+        strong{
+          font-weight: 600;
+        }
+      }
     }
 
     .quantity{
@@ -38,6 +50,9 @@
           border-left: none;
           border-right: none;
           border-bottom: 5px solid transparent;
+          padding-left: 0px;
+          padding-right: 0px;
+          margin-right: 32px;
 
           &.active{
             border-bottom: 5px solid $yellow;

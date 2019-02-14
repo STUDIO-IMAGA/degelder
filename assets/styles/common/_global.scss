@@ -1,5 +1,14 @@
 ::selection {
-  background: #ffcf47;
+  background: $yellow;
+}
+
+html{
+  position: relative;
+  min-height: 100%;
+}
+
+body{
+   margin-bottom: 350px;
 }
 
 *{

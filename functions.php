@@ -1,7 +1,7 @@
 <?
 
 // Define Google Fonts
-define("GOOGLE_FONTS", "Amaranth:400,400i,700,700i|Zilla+Slab:600,700");
+define("GOOGLE_FONTS", "Amaranth:300,300i,400,400i,700,700i|Zilla+Slab:300,300i,400,400i,600,600i,700,700i");
 
 // Define Google Maps API key
 // https://developers.google.com/maps/documentation/javascript/get-api-key
@@ -12,12 +12,16 @@ define('ACF_EARLY_ACCESS', '5');
 
 $files = [
   'lib/setup.php',                        // Theme setup
+
+  'lib/integrations/wpsvg.php',           // WPSVG
+  'lib/integrations/version-info.php',    // Version Info
+  'lib/integrations/tgmpa.php',           // TGM Plugin Activation
+
   'lib/woocommerce.php',                  // Custom Post Type Reviews
   'lib/shortcodes.php',                   // Theme shortcodes
   'lib/navigation.php',                   // Navigation Functions
   'lib/navigation/bootstrap_walker.php',  // Navigation Bootstrap Walker
   'lib/navigation/start_depth.php',       // Navigation Start Depth
-  'lib/tgmpa.php',                        // TGM Plugin Activation
   'lib/plugins.php',                      // Required plugins
   'lib/assets.php',                       // Scripts and stylesheets
   'lib/extras.php',                       // Custom functions
@@ -29,7 +33,7 @@ $files = [
   'lib/posttypes/activities.php',         // Custom Post Type Activities
   'lib/posttypes/vacancies.php',          // Custom Post Type Vacancies
   'lib/posttypes/facts.php',              // Custom Post Type Vacancies
-  'lib/posttypes/reviews.php',              // Custom Post Type Vacancies
+  'lib/posttypes/reviews.php',            // Custom Post Type Vacancies
 
   'lib/taxonomies/employees-group.php',   // Custom Post Type Reviews
 

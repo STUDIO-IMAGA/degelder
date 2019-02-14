@@ -1,5 +1,5 @@
 {
-  "name": "imaga",
+  "name": "degelder",
   "homepage": "https://odil.io/",
   "authors": [
     "Odilio Witteveen <hallo@odil.io>"
@@ -54,7 +54,8 @@
         "./scss/_utilities.scss",
         "./js/dist/index.js",
         "./js/dist/tab.js",
-        "./js/dist/util.js"
+        "./js/dist/util.js",
+        "./js/dist/collapse.js"
       ]
     },
     "font-awesome": {

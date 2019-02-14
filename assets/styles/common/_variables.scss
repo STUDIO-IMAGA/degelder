@@ -16,15 +16,15 @@ $grid-breakpoints: (
   xs: 0,
   sm: 700px,
   md: 900px,
-  lg: 1200px,
-  xl: 1400px
+  lg: 1440px,
+  xl: 1600px
 );
 
 $container-max-widths: (
   sm: 640px,
   md: 780px,
-  lg: 1080px,
-  xl: 1280px
+  lg: 1280px,
+  xl: 1470px
 );
 
 // Color system
@@ -283,8 +283,8 @@ $input-btn-focus-width:       0rem;
 $input-btn-focus-color:       $brown-100;
 
 
-$input-btn-padding-y-sm:      .25rem;
-$input-btn-padding-x-sm:      1.3rem;
+$input-btn-padding-y-sm:      .48rem;
+$input-btn-padding-x-sm:      1.8rem;
 // $input-btn-line-height-sm:    $line-height-sm;
 
 $input-btn-padding-y-lg:      .5rem;
@@ -293,10 +293,11 @@ $input-btn-padding-x-lg:      1.8rem;
 // $input-btn-border-width:      $border-width;
 
 $input-border-radius:         0;
-$input-padding-y:             .7rem;
+$input-padding-y:             .02rem;
 $input-padding-x:             .7rem;
 $input-border-color:          $yellow;
 $input-border-width:          2px;
 $input-height:                50px;
+$input-bg:                    transparent;
 
 $alert-border-radius:         .2rem;

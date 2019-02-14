@@ -75,6 +75,20 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
             <a href="mailto:<?=$email;?>"><?=$email;?></a>
           </li>
         </ul>
+        <div class="socialmedia">
+          <? if( have_rows('services', 'options') ): ?>
+              <? while ( have_rows('services', 'options') ) : the_row();?>
+                <? $image = get_sub_field('icon'); ?>
+
+                  <a class="service" href="<? the_sub_field('url'); ?>" target="_blank">
+                    <img src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>" width="23" height="23" />
+                    <span><? the_sub_field('label'); ?></span>
+                  </a>
+
+
+              <? endwhile; ?>
+          <? endif; ?>
+        </div>
       </div>
 
       <div class="col-12 col-md-5 col-xl-3">

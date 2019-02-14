@@ -14,7 +14,7 @@
         </a>
 
         <div class="row justify-content-start">
-          <div class="col-12 col-lg-6 offset-lg-1 py-5 py-lg-9">
+          <div class="col-12 col-lg-6 offset-lg-1 py-5 py-lg-8">
             <h3><? the_sub_field('title');?></h3>
             <h5><? the_sub_field('subtitle'); ?></h5>
             <a class="btn btn-outline-brown btn-lg" href="<?= get_permalink($post->ID); ?>">Bestellen</a>

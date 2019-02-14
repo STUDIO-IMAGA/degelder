@@ -29,7 +29,7 @@
 
     <? if( $layout['fact_2']['post'] ): ?>
 
-      <? $post = $layout['fact_2']['post']; setup_postdata($post); $image = get_field('image', $post->ID); $color = $layout['fact_3']['color']; ?>
+      <? $post = $layout['fact_2']['post']; setup_postdata($post); $image = get_field('image', $post->ID); $color = $layout['fact_2']['color']; ?>
 
       <div class="col-md-6 col-lg-4">
         <div class="facts-item <?= $color; ?>">
