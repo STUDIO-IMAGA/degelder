@@ -12,10 +12,10 @@
 defined( 'ABSPATH' ) || exit;
 ?>
 
-<section class="bg-yellow-light">
+<section class="description bg-yellow-light">
   <div class="container">
-    <div class="row py-3">
-      <div class="col-12 text-center">
+    <div class="row justify-content-center py-3">
+      <div class="col-8 text-center">
         <h2><?= get_option( 'woocommerce_store_shop_title' ); ?></h2>
         <p><i><?= get_option('woocommerce_store_shop_description'); ?></i></p>
       </div>
@@ -66,6 +66,39 @@ defined( 'ABSPATH' ) || exit;
         <? endif; ?>
 
         <? do_action( 'woocommerce_after_main_content' ); ?>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="promotion">
+  <div class="container">
+    <div class="row">
+      <div class="col-6 shipping">
+        <div class="row align-items-center">
+          <div class="col-3 text-right">
+            <img class="img-fluid" src="http://placehold.it/111x135" alt="Shop Promo">
+          </div>
+          <div class="col-7">
+            <span class="h3"><?= get_option('woocommerce_store_shop_shipping_promotion'); ?></span>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 shop">
+        <div class="shop-bg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 221 168" preserveAspectRatio="none"><path d="M11,154.74C10.77,154,4.9,108.23,6.68,65L8.47,21.86s40.63-5.37,76.15-5.37,78.45,6.39,97.87,5.11,25-1.53,25-.76a62.13,62.13,0,0,0,3.32,23.76c4.34,12.78,2.81,45.74,2.81,52.64s3.83,50.34,7.67,55.2c0,0-11.25,1.53-18.4-1.54S11,154.74,11,154.74Z"></path></svg>
+        </div>
+        <div class="row">
+          <div class="col-6 px-2 text-right">
+            <img class="img-fluid" src="<?= get_option('woocommerce_store_shop_promotion_image'); ?>" alt="Shop Promo">
+          </div>
+          <div class="col-6 p-3">
+            <div>
+              <?= get_option('woocommerce_store_shop_promotion'); ?>
+            </div>
+            <a href="<?= get_option('woocommerce_store_shop_promotion_link_url'); ?>"><?= get_option('woocommerce_store_shop_promotion_link_label'); ?></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,4 +1,7 @@
 .woocommerce{
+  .description{
+    font-size: 1.188rem;
+  }
   .products{
     .product{
       position: relative;
@@ -57,6 +60,38 @@
           height: 13px;
           opacity: 1;
           background-image: url('../images/product-hover-bottom.png');
+        }
+      }
+    }
+  }
+  .promotion{
+    .shipping{}
+    .shop{
+      font-size: 1.438rem;
+      line-height: 32px;
+
+      a{
+        color: $white;
+        line-height: 37.5px;
+      }
+
+      img{
+        transform-origin: center;
+        transform: translateY(2rem);
+      }
+
+      &-bg{
+        position: absolute;
+        left: 35px;
+        right: 35px;
+        top: -30px;
+        bottom: -20px;
+        z-index: -1;
+
+        svg{
+          fill: #afd1a9;
+          width: 100%;
+          height: 100%;
         }
       }
     }

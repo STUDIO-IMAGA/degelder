@@ -9,6 +9,10 @@
     color: $body-color;
     margin-right: .3rem;
     margin-left: .3rem;
+
+    &:first-child{
+      margin-left: 0;
+    }
   }
   .breadcrumb_last{
     margin-left: .3rem;

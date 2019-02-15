@@ -1,12 +1,29 @@
 .review-featured-agenda{
+  position: relative;
 
-  .bg-reviews{
-    background-color: rgba(#faeed2, .6);
+  &:before,
+  &:after{
+    position: absolute;
+    content: '';
     background-blend-mode: multiply;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    z-index: -1;
   }
-  .bg-agenda{
-    background-color: rgba(#faeed2, .3);
-    background-blend-mode: multiply;
+
+  &:before{
+    // Achter reviews
+    background-color: rgba(#faeed2, .6);
+    left: 0;
+    right: 50%;
+  }
+
+  &:after{
+    // Achter Product & Agenda
+    background-color: rgba(#f1e2bb, .3);
+    left: 50%;
+    right: 0;
   }
 
   .review{
@@ -37,7 +54,7 @@
   }
   .agenda{
     margin-bottom: 1rem;
-    
+
     .event{
       line-height: 1.85;
       color: $brown-500;

@@ -47,6 +47,64 @@ function woocommerce_settings_fields($settings) {
           );
           $key++;
 
+          // Add Shipping promotion
+          $new_settings[$key] = array(
+              'title'    => __('Verzending Promotie'),
+              'desc'     => __('Voer hier de promotionele tekst in voor verzendingen.'),
+              'id'       => 'woocommerce_store_shop_shipping_promotion',
+              'type'     => 'text',
+              'desc_tip' => true,
+          );
+          $key++;
+
+          // Add Shop promotion image
+          $new_settings[$key] = array(
+              'title'    => __('Boerderijwinkel Promotie Afbeelding'),
+              'desc'     => __('Voer hier de URL in voor de afbeelding.'),
+              'id'       => 'woocommerce_store_shop_promotion_image',
+              'type'     => 'text',
+              'desc_tip' => true,
+          );
+          $key++;
+
+          // Add Shop promotion
+          $new_settings[$key] = array(
+              'title'    => __('Boerderijwinkel Promotie'),
+              'desc'     => __('Voer hier de promotionele tekst in voor de boerderijwinkel.'),
+              'id'       => 'woocommerce_store_shop_promotion',
+              'type'     => 'text',
+              'desc_tip' => true,
+          );
+          $key++;
+
+          // Add Shop promotion link
+          $new_settings[$key] = array(
+              'title'    => __('Boerderijwinkel Promotie link tekst'),
+              'desc'     => __('Voer hier de tekst in voor link van de promotionele tekst van de boerderijwinkel.'),
+              'id'       => 'woocommerce_store_shop_promotion_link_label',
+              'type'     => 'text',
+              'desc_tip' => true,
+          );
+          $key++;
+
+          $pages = get_pages();
+          $options = array();
+          foreach ( $pages as $page ) {
+            $options[get_page_link( $page->ID )] = __($page->post_title, 'woocommerce');
+          }
+
+
+          // Add Shop promotion URL
+          $new_settings[$key] = array(
+              'title'    => __('Boerderijwinkel Promotie URL'),
+              'desc'     => __('Voer hier de tekst in voor link van de promotionele tekst van de boerderijwinkel.'),
+              'id'       => 'woocommerce_store_shop_promotion_link_url',
+              'desc_tip' => true,
+              'type'    => 'select',
+              'options' => $options,
+          );
+          $key++;
+
           // Add Kamer van koophandel number
           $new_settings[$key] = array(
               'title'    => __('KvKnr.'),
@@ -255,3 +313,19 @@ add_filter('woocommerce_form_field_tel', __NAMESPACE__ . '\\clean_checkout_field
 add_filter('woocommerce_form_field_number', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
 add_filter('woocommerce_form_field_select', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
 add_filter('woocommerce_form_field_radio', __NAMESPACE__ . '\\clean_checkout_fields_class_attribute_values', 20, 4);
+
+add_filter( 'acf/location/rule_values/page_type', function ( $choices ) {
+    $choices['woo_shop_page'] = __('Shop pagina','image');
+    return $choices;
+});
+
+add_filter( 'acf/location/rule_match/page_type', function ( $match, $rule, $options ) {
+    if ( $rule['value'] == 'woo_shop_page' )
+    {
+        if ( $rule['operator'] == '==' )
+            $match = ( $options['post_id'] == wc_get_page_id( 'shop' ) );
+        if ( $rule['operator'] == '!=' )
+            $match = ( $options['post_id'] != wc_get_page_id( 'shop' ) );
+    }
+    return $match;
+}, 10, 3 );
