@@ -1,5 +1,5 @@
 <? if ( function_exists('yoast_breadcrumb') ): ?>
-  <section class="breadcrumbs<?=(is_product())?' bg-yellow-light':''; ?>">
+  <section class="breadcrumbs<?=(is_product()||is_singular(array('vacancies','reviews')))?' bg-yellow-light':''; ?>">
     <div class="container">
       <div class="row">
         <div class="col-12">

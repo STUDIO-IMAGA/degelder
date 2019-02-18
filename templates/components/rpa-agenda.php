@@ -34,7 +34,7 @@
         <? while( $query->have_posts() ): $query->the_post(); ?>
 
           <li>
-            <a class="event" href="#">
+            <a class="event" href="<?= get_permalink(); ?>">
               <div class="date">
                 <? the_field('date_time'); ?>
               </div>
@@ -52,7 +52,7 @@
 
     <? endif; ?>
 
-    <a class="btn btn-outline-brown btn-sm" href="#">Bekijk complete agenda</a>
+    <a class="btn btn-outline-brown btn-sm" href="/activiteiten">Bekijk complete agenda</a>
 
   </div>
 </div>

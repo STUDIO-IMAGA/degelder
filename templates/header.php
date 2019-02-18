@@ -46,7 +46,7 @@ $header_image_url = $header_background_image['header_image']['sizes'][$header_to
 
       </div>
 
-      <div class="col-12 <?= $header_col_right; ?> bg-<?= $header_background_color['content']; ?> py-4">
+      <div class="col-12 <?= $header_col_right; ?> bg-<?= $header_background_color['content']; ?> pb-4 pt-5">
         <? the_field('header_content'); ?>
       </div>
 

@@ -5,6 +5,7 @@
 html{
   position: relative;
   min-height: 100%;
+  margin-top: 0 !important;
 }
 
 body{
@@ -31,25 +32,12 @@ body{
   box-shadow: 8px 8px 0px 0px #ece6d9;
 }
 
-.breakpoint-indicator{
-  position: fixed;
-  z-index: 9999999;
-  background: rgba(0,0,0,.5);
-  border:1px solid #000;
-  color: #fff;
-  line-height: 1.6;
-  font-size: 22px;
-  padding: 5px 8px;
-}
-
 .admin-bar{
-  .woocommerce-store-notice.demo_store{
-    top: 32px;
-  }
   header{
     margin-top: 32px;
   }
 }
+
 @media screen and (max-width:782px) {
   .admin-bar{
     .woocommerce-store-notice.demo_store{
@@ -58,5 +46,17 @@ body{
     header{
       margin-top: 46px;
     }
+  }
+}
+
+@include media-breakpoint-down(md){
+  body{
+     margin-bottom: 510px;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  body{
+     margin-bottom: 450px;
   }
 }

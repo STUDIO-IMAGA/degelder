@@ -2,6 +2,7 @@
   .description{
     font-size: 1.188rem;
   }
+
   .products{
     .product{
       position: relative;
@@ -45,7 +46,7 @@
 
       &:hover{
         .woocommerce-loop-product__title{
-          color: $blue;
+          color: $blue-light;
         }
 
         &:before{
@@ -64,6 +65,7 @@
       }
     }
   }
+
   .promotion{
     .shipping{}
     .shop{
@@ -92,6 +94,19 @@
           fill: #afd1a9;
           width: 100%;
           height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(lg){
+  .woocommerce{
+    .promotion{
+      .shop{
+        &-bg{
+          left: 0px;
+          right: 0px;
         }
       }
     }

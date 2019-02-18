@@ -1,0 +1,69 @@
+.template-contact{
+  .shoppinghours{
+    position: relative;
+
+    h5{
+      line-height: 80px;
+    }
+
+    .shopping-bg{
+      position: absolute;
+      top: 0;
+      left: -32px;
+      right: 0;
+      height: 80px;
+      z-index: -1;
+
+      svg{
+        fill: $green-light;
+        width: 100%;
+        height: 100%;
+      }
+
+      &:before{
+        position: absolute;
+        top: -23px;
+        right: 50px;
+        content:'';
+        width: 94px;
+        height: 87px;
+        background-image: url('../images/icons/icon-klok.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .template-contact{
+    .shoppinghours{
+      margin-top: 2rem;
+
+      .shopping-bg{
+        left: -16px;
+        right: -16px;
+
+        &:before{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.archive-activities{
+  .activities-item{
+    position: relative;
+
+    &:after{
+      position: absolute;
+      content: "";
+      width: 140px;
+      height: 4px;
+      background-color: #fcd87a;
+      bottom: -2rem;
+      left: calc(50% - 70px);
+    }
+  }
+}

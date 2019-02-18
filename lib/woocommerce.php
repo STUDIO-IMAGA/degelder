@@ -251,7 +251,7 @@ function grd_remove_woocommerce_styles_scripts() {
 define( 'WOOCOMMERCE_USE_CSS', false );
 add_action( 'init', __NAMESPACE__ . '\\grd_remove_woocommerce_styles_scripts', 99 );
 
-function iap_wc_bootstrap_form_field_args ($args, $key, $value) {
+function wc_bootstrap_form_field_args ($args, $key, $value) {
 
   // var_dump($args);
   /*
@@ -291,7 +291,7 @@ function iap_wc_bootstrap_form_field_args ($args, $key, $value) {
   $args['input_class'][] = 'form-control';
   return $args;
 }
-add_filter('woocommerce_form_field_args', __NAMESPACE__ . '\\iap_wc_bootstrap_form_field_args', 10, 3);
+add_filter('woocommerce_form_field_args', __NAMESPACE__ . '\\wc_bootstrap_form_field_args', 10, 3);
 
 function clean_checkout_fields_class_attribute_values( $field, $key, $args, $value ){
     if( is_checkout() ){

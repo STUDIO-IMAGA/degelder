@@ -1,6 +1,21 @@
+.form-control{
+  font-family: 'Zilla Slab', serif;
+  font-weight: 400;
+
+  &::placeholder{
+    font-family: 'Zilla Slab', serif;
+    font-weight: 400;
+  }
+}
 .wpcf7-form{
+  .wpcf7-textarea{
+    padding-top: .8rem;
+    height: 120px;
+  }
+
   .wpcf7-acceptance{
     display: block;
+    font-family: 'Zilla Slab', serif;
     font-size: 15px;
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -53,14 +68,14 @@
   .wpcf7-not-valid-tip{
     font-family: 'Zilla Slab', serif;
     color: $red;
-    font-size: 16px;
+    font-size: 15px;
   }
 
   .wpcf7-response-output{
     border: none;
     font-family: 'Zilla Slab', serif;
-    font-weight: bold;
-    font-size: 19px;
+    font-weight: 400;
+    font-size: 15px;
   }
 
   .wpcf7-response-output{
@@ -136,7 +151,6 @@
         }
       }
     }
-    .dropdown-wrapper{}
   }
 
   &.select2-container--open{

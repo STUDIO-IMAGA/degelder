@@ -1,0 +1,12 @@
+.home{
+  .element{
+    &.header{
+      &-narrow,
+      &-wide{
+        .col-right{
+          max-height: 720px;
+        }
+      }
+    }
+  }
+}

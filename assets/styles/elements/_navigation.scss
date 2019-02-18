@@ -14,6 +14,7 @@ header{
         width: 290px;
       }
     }
+
     .winkelmandje{
       display: inline-block;
       color: $black;
@@ -38,6 +39,7 @@ header{
       }
     }
   }
+
   #nav-top{
     height: 40px;
     .nav-item{
@@ -46,6 +48,7 @@ header{
       }
     }
   }
+
   #nav-main{
     .container{
       align-items: start;
@@ -69,6 +72,7 @@ header{
         width: 250px;
       }
     }
+
     #nav-top{
       height: 0px;
       .nav-item{
@@ -77,6 +81,7 @@ header{
         }
       }
     }
+
     #nav-main{
       .container{
         margin-top: 22px;
@@ -84,13 +89,16 @@ header{
     }
   }
 }
+
 #header-spacer{
   height:114px;
 }
+
 @include media-breakpoint-down(md){
   #header-spacer{
     height:81px;
   }
+
   header{
     .navbar-toggler{
       .navbar-toggler-text{
@@ -98,6 +106,7 @@ header{
         margin-left: 12px;
       }
     }
+
     .navbar{
       .navbar-brand{
         margin-top: 8px;
@@ -109,6 +118,7 @@ header{
         }
       }
     }
+
     #nav-top{
       height: 0px;
       .nav-item{
@@ -117,12 +127,14 @@ header{
         }
       }
     }
+
     #nav-main{
       .container{
         align-items: center;
 
       }
     }
+
     &.nav-fixed{
       #nav-main{
         .container{
@@ -132,6 +144,7 @@ header{
     }
   }
 }
+
 @include media-breakpoint-down(sm){
   #header-spacer{
     height:68px;

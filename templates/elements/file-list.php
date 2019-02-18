@@ -10,8 +10,8 @@
 
     <? if( have_rows('lists') ): ?>
       <? while( have_rows('lists') ): the_row(); ?>
-        <div class="row pt-4">
-          <div class="col-12">
+        <div class="row justify-content-center pt-4">
+          <div class="col-10">
 
             <h4><? the_sub_field('list_title'); ?></h4>
 

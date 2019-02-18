@@ -26,4 +26,27 @@ global $product;
 
 <?php //do_action( 'woocommerce_product_additional_information', $product ); ?>
 
-Calorieën: <?= $product->get_attribute( 'calorie' ); ?>
+<? if( have_rows('lists') ): ?>
+  <? while( have_rows('lists') ): the_row(); ?>
+    <div class="mb-5">
+      <h4><? the_sub_field('title'); ?></h4>
+
+      <? if( have_rows('items') ): ?>
+        <div class="table-responsive">
+          <table class="table">
+            <? while( have_rows('items') ): the_row(); ?>
+              <tr>
+                <td>
+                  <? the_sub_field('label'); ?>
+                </td>
+                <td>
+                  <? the_sub_field('value'); ?>
+                </td>
+              </tr>
+            <? endwhile;?>
+          </table>
+        </div>
+      <? endif;?>
+    </div>
+  <? endwhile;?>
+<? endif;?>

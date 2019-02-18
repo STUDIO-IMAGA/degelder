@@ -15,7 +15,7 @@ footer{
    h6{
      font-size: 1.063rem;
    }
-   
+
   .list-unstyled{
     .nav-link,a{
       padding:0;
@@ -30,7 +30,6 @@ footer{
   .trekker,
   .kaasboerderij,
   .bosjes-links,
-  .bosjes-rechts,
   .bosjes-links:before,
   .bosjes-links:after,
   .bosjes-rechts,
@@ -43,7 +42,7 @@ footer{
 
   .trekker{
     width: 84px;
-    height: 61px;
+    height: 62px;
     background-image: url('../images/icons/icon-trekker.svg');
     background-size: 84px;
     top: -7px;
@@ -124,6 +123,28 @@ footer{
       img{
         margin-right: 8px;
       }
+    }
+  }
+}
+
+@include media-breakpoint-down(md){
+  footer{
+    height: 510px;
+  }
+}
+@include media-breakpoint-down(sm){
+  footer{
+    height: 450px;
+
+    .trekker{
+      display: none;
+    }
+    .kaasboerderij{
+      right: 2rem;
+    }
+    .boom-rechts,
+    .bosjes-rechts{
+      display: none;
     }
   }
 }

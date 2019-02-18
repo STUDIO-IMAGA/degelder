@@ -28,6 +28,6 @@
 
 <div class="row">
   <div class="col-12">
-    <a class="btn btn-outline-brown btn-sm" href="/reviews">Lees alle reacties</a> <a class="btn btn-outline-brown btn-sm" href="mailto:info@kaasboerderijdegelder.nl?subject=Review">Geef een reactie</a>
+    <a class="btn btn-outline-brown btn-sm" href="/reviews">Lees alle reacties</a> <a class="btn btn-outline-brown btn-sm" href="/geef-een-reactie">Geef een reactie</a>
   </div>
 </div>

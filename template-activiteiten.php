@@ -1,6 +1,6 @@
 <?
 /**
-* Template Name: Vacatures
+* Template Name: Activiteiten
 */
 ?>
 
@@ -8,4 +8,4 @@
 
 <? get_template_part('templates/breadcrumbs'); ?>
 
-<? get_template_part('templates/components/vacancy','list'); ?>
+<? get_template_part('templates/components/activities','list'); ?>

@@ -10,25 +10,12 @@
   font-family: 'Amaranth', sans-serif;
 }
 
-.element{
-  a{
-    &.unstyled{
-      text-decoration: none !important;
-      @extend .text-body;
-
-      &:before{
-        display: none;
-      }
-    }
-  }
-}
-
-p{
-  a{
+.element, .wpcf7-list-item-label{
+  a:not([class]){
     position: relative;
     transition: all .3s ease;
 
-    &:before{
+    &:after{
       position: absolute;
       content: '';
       top: .05rem;
@@ -46,9 +33,18 @@ p{
       color: #33a6d5;
       text-decoration: none;
 
-      &:before{
+      &:after{
         opacity: 0;
         z-index: -1;
+      }
+    }
+
+    &.unstyled{
+      text-decoration: none !important;
+      @extend .text-body;
+
+      &:before{
+        display: none;
       }
     }
   }

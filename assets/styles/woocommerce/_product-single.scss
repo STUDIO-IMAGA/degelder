@@ -1,6 +1,10 @@
 .woocommerce{
-  .product{
+  &.single{
+    background-image: none;
+    background-color: #FFFCF5;
+  }
 
+  .product{
     .woocommerce-product-gallery{
       text-align: center;
     }
@@ -12,7 +16,8 @@
     }
 
     &-description{
-      font-weight: 300;
+      font-family: 'Zilla Slab', serif;
+      font-weight: 400;
 
       em{
         strong{
@@ -43,7 +48,8 @@
         margin-bottom: -1px;
 
         .nav-link{
-          font-family: Zilla Slab,serif;
+          font-family: 'Zilla Slab', serif;
+          font-weight: 400;
           padding-bottom: 1.3rem;
           background: transparent;
           border-top:none;
@@ -61,8 +67,18 @@
         }
       }
     }
+
     #woocommerce_product_panels{
       padding-top: 2rem;
+
+      .tab-pane{
+        font-family: 'Zilla Slab', serif;
+        font-weight: 400;
+
+        .table{
+          max-width: 400px;
+        }
+      }
     }
   }
 }

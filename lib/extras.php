@@ -24,7 +24,7 @@ add_filter('body_class', __NAMESPACE__ . '\\body_class');
 * Clean up the_excerpt()
 */
 function excerpt_more() {
-  return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'imaga') . '</a>';
+  return '&hellip; <div><a class="btn btn-yellow btn-sm" href="' . get_permalink() . '">' . __('Lees meer', 'imaga') . '</a></div>';
 }
 add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
@@ -68,16 +68,9 @@ function acf_flexible_content_layout_title( $title, $field, $layout, $i ) {
 add_filter( 'acf/fields/flexible_content/layout_title', __NAMESPACE__ . '\\acf_flexible_content_layout_title', 10, 4 );
 
 /**
- * Fire BrowserSync reload on post save
- */
-add_action('save_post', function() {
-  $args = ['blocking' => false];
-  wp_remote_get('http://'.$_SERVER['SERVER_ADDR'].':3000/__browser_sync__?method=reload', $args);
-} );
-/**
  * Shorten $text by $limit amount of words
  */
-function limit_text($text, $limit, $prepend) {
+function limit_text($text, $limit, $prepend = '&hellip;') {
 
   $text = strip_tags($text);
 

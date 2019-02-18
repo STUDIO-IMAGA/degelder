@@ -2,6 +2,10 @@
   &.files-list{
     @extend .pt-5;
 
+    .sans-serif{
+      font-weight: 400;
+    }
+
     .wrapper{
       @extend .list-unstyled;
       border: 1px solid #e0ddd6;
@@ -11,6 +15,10 @@
       a{
         color: $body-color;
         text-decoration: none !important;
+
+        &:after{
+          display: none;
+        }
       }
 
       .item{

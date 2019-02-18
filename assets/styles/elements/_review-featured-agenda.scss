@@ -25,33 +25,6 @@
     left: 50%;
     right: 0;
   }
-
-  .review{
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-direction: row;
-    margin-bottom: 20px;
-
-    .author{
-      background-image: url('../images/icons/icon-quote.svg');
-      background-size: 100% 53px;
-      background-repeat: no-repeat;
-      background-position: center 5px;
-      width: 20%;
-      text-align: center;
-      padding-top: 14px;
-      font-size: .95rem;
-      font-style: italic;
-      font-weight: 600;
-      line-height: 1.33;
-    }
-    .quote{
-      margin-left: 27px;
-      width: 80%;
-      font-size: 1rem;
-    }
-  }
   .agenda{
     margin-bottom: 1rem;
 
@@ -73,5 +46,33 @@
         font-size: 1.25rem;
       }
     }
+  }
+}
+
+.review{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  margin-bottom: 20px;
+
+  .author{
+    background-image: url('../images/icons/icon-quote.svg');
+    background-size: 100% 53px;
+    background-repeat: no-repeat;
+    background-position: center 5px;
+    width: 20%;
+    text-align: center;
+    padding-top: 14px;
+    font-size: .95rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.33;
+  }
+  
+  .quote{
+    margin-left: 27px;
+    width: 80%;
+    font-size: 1rem;
   }
 }

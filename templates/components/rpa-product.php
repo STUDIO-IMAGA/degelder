@@ -1,5 +1,5 @@
 <? $post_ID = get_sub_field('featured_product'); ?>
-<? $image = get_field('featured_image_small', $post_ID); ?>
+<? $image = get_field('featured_image', $post_ID); ?>
 
 <h5 class="mb-4">
   <span class="underlined"><? the_sub_field('title_product'); ?></span>

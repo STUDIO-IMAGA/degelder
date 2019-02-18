@@ -16,6 +16,10 @@
       @extend .btn;
       @extend .btn-sm;
       @extend .btn-light;
+
+      &:before{
+        display: none;
+      }
     }
   }
 
@@ -48,6 +52,10 @@
     @extend .btn;
     @extend .btn-sm;
     @extend .btn-light;
+
+    &:before{
+      display: none;
+    }
   }
 }
 

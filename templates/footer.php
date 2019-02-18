@@ -26,7 +26,7 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
 
     <div class="row">
 
-      <div class="col-md-5 col-xl-3 d-none d-md-block">
+      <div class="col-12 col-md-6 col-xl-3 d-none d-md-block">
         <h6>Openingstijden boerderijwinkel</h6>
         <div class="row">
           <div class="col-5 col-xl-4">
@@ -54,12 +54,12 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
         </div>
       </div>
 
-      <div class="col-md-4 col-xl-3 d-none d-md-block">
+      <div class="col-12 col-md-6 col-xl-3 d-none d-md-block">
         <h6>Klantenservice</h6>
         <?= Navigation\navigation_list('tertiary_navigation','tertiary_navigation','list-unstyled');?>
       </div>
 
-      <div class="col-12 col-md-3 col-xl-3">
+      <div class="col-12 col-md-6 col-xl-3 mb-4 mb-md-0">
         <h6>Contactgegevens</h6>
         <ul class="list-unstyled">
           <li>
@@ -91,7 +91,7 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
         </div>
       </div>
 
-      <div class="col-12 col-md-5 col-xl-3">
+      <div class="col-12 col-md-6 col-xl-3">
         <h6>Wij zijn lid van</h6>
         <? get_template_part('templates/components/quality-marks'); ?>
       </div>

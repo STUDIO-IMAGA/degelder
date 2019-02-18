@@ -8,24 +8,9 @@ $enable-gradients:      false;
 $enable-transitions:    true;
 $enable-grid-classes:   true;
 $enable-print-styles:   true;
-
-$grid-columns:                12;
-$grid-gutter-width:           70px;
-
-$grid-breakpoints: (
-  xs: 0,
-  sm: 700px,
-  md: 900px,
-  lg: 1440px,
-  xl: 1600px
-);
-
-$container-max-widths: (
-  sm: 640px,
-  md: 780px,
-  lg: 1280px,
-  xl: 1440px
-);
+$grid-columns:          12;
+$grid-gutter-width:     70px;
+$spacer:                1rem;
 
 // Color system
 $white:  #fff;
@@ -40,18 +25,6 @@ $gray-700: #616161;
 $gray-800: #424242;
 $gray-900: #212121;
 $black:  #000;
-
-$grays: (
-  100: $gray-100,
-  200: $gray-200,
-  300: $gray-300,
-  400: $gray-400,
-  500: $gray-500,
-  600: $gray-600,
-  700: $gray-700,
-  800: $gray-800,
-  900: $gray-900
-);
 
 // De Gelder Colours
 // Primair
@@ -68,6 +41,8 @@ $brown-400:     #624e37; //#837264;
 $brown-500:     $brown;
 $green:         #7ead7c;
 $cyan-blue:     #badcea;
+
+$brown-light:   $brown-400;
 $blue-light:    #c2dce9; //#33a6d5;
 $yellow-light:  #fcd87a; //#f3e1b5;
 $green-light:   #afd1a9;
@@ -83,8 +58,21 @@ $orange:        #f4701f;
 $teal:          #466baa;
 $turquoise:     #00bfa5;
 
+$grays: (
+  100: $gray-100,
+  200: $gray-200,
+  300: $gray-300,
+  400: $gray-400,
+  500: $gray-500,
+  600: $gray-600,
+  700: $gray-700,
+  800: $gray-800,
+  900: $gray-900
+);
+
 $colors: (
   brown:         $brown-500,
+  brown-light:   $brown-light,
   yellow:        $yellow,
   blue:          $blue,
 
@@ -120,6 +108,7 @@ $theme-colors: (
   dark:         $gray-800,
 
   brown:         $brown-500,
+  brown-light:   $brown-light,
   yellow:        $yellow,
   blue:          $blue,
 
@@ -156,7 +145,6 @@ $theme-colors: (
 );
 
 // Spacing system
-$spacer: 1rem;
 $spacers: (
   0: 0,
   1: ($spacer * .25),
@@ -171,65 +159,79 @@ $spacers: (
   10: ($spacer * 8),
 );
 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 700px,
+  md: 1280px,
+  lg: 1440px,
+  xl: 1600px
+);
 
-$body-bg:                     #f3f0e9;
-$body-color:                  $brown-500;
+$container-max-widths: (
+  sm: 640px,
+  md: 960px,
+  lg: 1280px,
+  xl: 1440px
+);
 
-$font-family-sans-serif:      'Amaranth', sans-serif;
-$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-$font-family-base:            $font-family-sans-serif;
+$body-bg:                           #f3f0e9;
+$body-color:                        $brown-500;
 
-$font-size-base:              1.125rem;        // About 18px
-$font-size-lg:                $font-size-base; // About 18px
-$font-size-sm:                1rem;            // About 16px
+$font-family-sans-serif:            'Amaranth', sans-serif;
+$font-family-monospace:             SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-base:                  $font-family-sans-serif;
 
-$line-height-lg:              1.35;
-$line-height-sm:              1.35;
+$font-size-base:                    1.125rem;        // About 18px
+$font-size-lg:                      $font-size-base; // About 18px
+$font-size-sm:                      1rem;            // About 16px
 
-$font-weight-light:           300;
-$font-weight-normal:          400;
-$font-weight-bold:            700;
+$line-height-lg:                    1.35;
+$line-height-sm:                    1.35;
 
-$font-weight-base:            $font-weight-normal;
-$line-height-base:            1.5;
+$font-weight-light:                 300;
+$font-weight-normal:                400;
+$font-weight-bold:                  700;
 
-$link-color:                  $black;
-$link-decoration:             none;
-$link-hover-color:            $link-color;
-$link-hover-decoration:       none;
+$font-weight-base:                  $font-weight-normal;
+$line-height-base:                  1.5;
 
-$paragraph-margin-bottom:     .6rem;
+$link-color:                        $black;
+$link-decoration:                   none;
+$link-hover-color:                  $link-color;
+$link-hover-decoration:             none;
 
-$headings-margin-bottom:      .6rem;
-$headings-font-family:        'Zilla Slab', serif;
-$headings-font-weight:        700;
-$headings-line-height:        1.17;
-$headings-color:              inherit;
+$paragraph-margin-bottom:           .6rem;
 
-$h1-font-size:                2.38rem;  // 38px
-$h2-font-size:                2rem;     // 32px
-$h3-font-size:                1.625rem; // 26px
-$h4-font-size:                1.5rem;   // 24px
-$h5-font-size:                1.375rem; // 22px
-$h6-font-size:                1.125rem; // 18px
+$headings-margin-bottom:            .6rem;
+$headings-font-family:              'Zilla Slab', serif;
+$headings-font-weight:              700;
+$headings-line-height:              1.17;
+$headings-color:                    inherit;
 
-$display1-size:               4rem;
-$display2-size:               3.5rem;
-$display3-size:               3rem;
-$display4-size:               2.8rem;
+$h1-font-size:                      2.38rem;  // 38px
+$h2-font-size:                      2rem;     // 32px
+$h3-font-size:                      1.625rem; // 26px
+$h4-font-size:                      1.5rem;   // 24px
+$h5-font-size:                      1.375rem; // 22px
+$h6-font-size:                      1.125rem; // 18px
 
-$display1-weight:             700;
-$display2-weight:             300;
-$display3-weight:             300;
-$display4-weight:             300;
-$display-line-height:         1;
+$display1-size:                     4rem;
+$display2-size:                     3.5rem;
+$display3-size:                     3rem;
+$display4-size:                     2.8rem;
 
-$lead-font-size:              ($font-size-base * 1.25);
-$lead-font-weight:            300;
+$display1-weight:                   700;
+$display2-weight:                   300;
+$display3-weight:                   300;
+$display4-weight:                   300;
+$display-line-height:               1;
 
-$small-font-size:             80%;
+$lead-font-size:                    ($font-size-base * 1.25);
+$lead-font-weight:                  300;
 
-$text-muted:                  $gray-600;
+$small-font-size:                   80%;
+
+$text-muted:                        $gray-600;
 
 $navbar-padding-y:                  0;
 $navbar-padding-x:                  0;
@@ -257,47 +259,46 @@ $navbar-light-toggler-border-color: transparent;
 $navbar-brand-padding-y:            0;
 $navbar-padding-x:                  1.5rem;
 
-$table-border-color:          rgba(255, 255, 255, .2);
-$table-hover-bg:              rgba($gray-100, .3);
+$table-border-color:                rgba(255, 255, 255, .2);
+$table-hover-bg:                    rgba($gray-100, .3);
 
-$input-focus-color:           $brown;
-$input-focus-border-color:    $cyan;
-$input-placeholder-color:     $gray-400;
+$border-width:                      2px;
+$border-color:                      $gray-300;
 
-$border-width:                2px;
-$border-color:                $gray-300;
-
-$border-radius:               0;
-$border-radius-lg:            0;
-$border-radius-sm:            0;
-
-$transition-base:             all .3s ease;
-$transition-fade:             opacity .3s ease;
-$transition-collapse:         height .3s ease;
-
-$input-btn-padding-y:         .8rem;
-$input-btn-padding-x:         1.2rem;
-// $input-btn-line-height:       $line-height-base;
-
-$input-btn-focus-width:       0rem;
-$input-btn-focus-color:       $brown-100;
+$border-radius:                     0;
+$border-radius-lg:                  0;
+$border-radius-sm:                  0;
 
 
-$input-btn-padding-y-sm:      .48rem;
-$input-btn-padding-x-sm:      1.8rem;
-// $input-btn-line-height-sm:    $line-height-sm;
+$transition-base:                   all .3s ease;
+$transition-fade:                   opacity .3s ease;
+$transition-collapse:               height .3s ease;
 
-$input-btn-padding-y-lg:      .5rem;
-$input-btn-padding-x-lg:      1.8rem;
-// $input-btn-line-height-lg:    $line-height-lg;
-// $input-btn-border-width:      $border-width;
+$btn-disabled-opacity:              1;
 
-$input-border-radius:         0;
-$input-padding-y:             .02rem;
-$input-padding-x:             .7rem;
-$input-border-color:          $yellow;
-$input-border-width:          2px;
-$input-height:                50px;
-$input-bg:                    transparent;
+$input-btn-padding-y:               .8rem;
+$input-btn-padding-x:               1.2rem;
 
-$alert-border-radius:         .2rem;
+$input-btn-focus-width:             0rem;
+$input-btn-focus-color:             $brown-100;
+
+$input-btn-padding-y-sm:            .48rem;
+$input-btn-padding-x-sm:            1.8rem;
+
+$input-btn-padding-y-lg:            .5rem;
+$input-btn-padding-x-lg:            1.8rem;
+
+$input-border-radius:               0;
+$input-padding-y:                   .02rem;
+$input-padding-x:                   1rem;
+$input-border-color:                $yellow;
+$input-border-width:                2px;
+$input-height:                      50px;
+$input-bg:                          transparent;
+$input-placeholder-color:           $brown;
+$input-focus-color:                 $brown;
+$input-focus-border-color:          $cyan;
+
+$input-btn-focus-box-shadow:        0px 2px 4px 0 rgba(255, 207, 71, 0.6) !important;
+
+$alert-border-radius:               .2rem;

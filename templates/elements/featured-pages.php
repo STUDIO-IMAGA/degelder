@@ -1,5 +1,5 @@
 <section class="element featured-pages">
-  <div class="container py-7">
+  <div class="container py-4">
     <div class="row">
       <? if( have_rows('featured_pages') ): ?>
         <? while( have_rows('featured_pages') ): the_row(); ?>

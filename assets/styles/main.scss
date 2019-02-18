@@ -43,6 +43,7 @@
 // endbower
 
 @import "common/global";
+@import "common/frontpage";
 @import "components/buttons";
 @import "components/backgrounds";
 @import "components/comments";
@@ -52,8 +53,9 @@
 @import "components/animations";
 @import "components/quality-marks";
 @import "components/vacancy-promo";
-@import "components/vacancy-list";
 @import "components/breadcrumbs";
+@import "components/vacancy-list";
+@import "components/activities-list";
 
 @import "elements/facts";
 @import "elements/header";
