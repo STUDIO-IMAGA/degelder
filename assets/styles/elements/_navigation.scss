@@ -34,6 +34,7 @@ header{
         width: 32px;
         margin-right: .2rem;
       }
+
       &-prijs{
         font-style: italic;
       }
@@ -62,6 +63,7 @@ header{
       }
     }
   }
+
   &.nav-fixed{
     .navbar-brand{
       margin-top: -15px;
@@ -75,6 +77,7 @@ header{
 
     #nav-top{
       height: 0px;
+
       .nav-item{
         .nav-link{
           color: transparent !important;
@@ -157,6 +160,26 @@ header{
 
         img{
           width: 150px;
+        }
+      }
+
+      .navbar-toggler{
+        .navbar-toggler-text{
+          display: none;
+        }
+      }
+
+      .winkelmandje{
+        &-icon{
+          display: block;
+          height: 28px;
+          width: 28px;
+          margin-right: auto;
+          margin-left: auto;
+        }
+
+        &-prijs{
+          display: block;
         }
       }
     }

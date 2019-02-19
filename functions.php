@@ -16,6 +16,7 @@ $files = [
   'lib/integrations/wpsvg.php',           // WPSVG
   'lib/integrations/version-info.php',    // Version Info
   'lib/integrations/tgmpa.php',           // TGM Plugin Activation
+  'lib/integrations/acf.php',             // TGM Plugin Activation
 
   'lib/woocommerce.php',                  // Custom Post Type Reviews
   'lib/shortcodes.php',                   // Theme shortcodes

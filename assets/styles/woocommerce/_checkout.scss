@@ -15,13 +15,49 @@
 }
 
 .woocommerce-checkout{
+  .woocommerce-shipping-fields{
+    label.checkbox{
+      display: block;
+
+      input[type='checkbox']{
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        & ~ .ship-to-different-address-label{
+          display: inline-block;
+
+          &:before{
+            display: inline-block;
+            height: 26px;
+            width: 26px;
+            border: 2px solid $yellow;
+            vertical-align: middle;
+            margin-right: .6rem;
+            content:'';
+          }
+        }
+
+        &:checked ~ .ship-to-different-address-label{
+          &:before{
+            background-image: url('../images/icons/icon-checkmark-dark.svg');
+            background-repeat: no-repeat;
+            background-size: .8rem;
+            background-position: center;
+          }
+        }
+      }
+    }
+  }
   .woocommerce-checkout-review-order-table{
     background: $light;
 
     td, th{
       border: none;
     }
-    
+
     .cart_item{
       border-bottom: 1px solid #ddd1b6;
     }

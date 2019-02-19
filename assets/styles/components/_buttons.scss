@@ -17,10 +17,17 @@
   &-yellow{
     //button-variant($background, $border, $hover-background, $hover-border, $active-background, $active-border)
     @include button-variant($yellow, $yellow, #fcd975, #fcd975, #fcd975, #fcd975);
+
+    &:focus,
+    &:active{
+      box-shadow: 0px 2px 4px 0 rgba(255, 207, 71, 0.6) !important;
+    }
   }
 
-  &:focus:not([class*="outline"]),
-  &:active:not([class*="outline"]){
-    box-shadow: 0px 2px 4px 0 rgba(255, 207, 71, 0.6) !important;
+  &-outline-brown{
+    &:focus,
+    &:active{
+      box-shadow: 0px 2px 4px 0 rgba(26, 23, 27, 0.25) !important;
+    }
   }
 }

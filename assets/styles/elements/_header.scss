@@ -17,9 +17,11 @@
       .container-bg{
         right: 30%;
       }
+
       .col-left{
         max-width: 70%;
       }
+
       .col-right{
         max-width: 30%;
         min-height: 450px;
@@ -31,9 +33,11 @@
       .container-bg{
         right: 33.3333333333%;
       }
+
       .col-left{
         max-width: 60%;
       }
+
       .col-right{
         max-width: 40%;
         min-height: 450px;
@@ -43,7 +47,7 @@
   }
 }
 
-@include media-breakpoint-up(lg){
+@include media-breakpoint-up(md){
   .element{
     &.header{
       &-narrow{
@@ -60,7 +64,34 @@
     }
   }
 }
+
 @include media-breakpoint-down(md){
+  .element{
+    &.header{
+      .col-left{
+        max-width: 60%;
+      }
+
+      .col-right{
+        max-width: 40%;
+      }
+
+      &-narrow{
+        .container-bg{
+          right: 0;
+        }
+      }
+
+      &-wide{
+        .container-bg{
+          right: 0;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm){
   .element{
     &.header{
       .col-left{

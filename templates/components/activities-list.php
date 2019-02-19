@@ -13,7 +13,11 @@
             <? while( $query->have_posts() ) : $query->the_post(); ?>
 
               <div class="item media mb-6">
-                <img src="<?= get_the_post_thumbnail_url(); ?>" class="mr-3" alt="<? the_title(); ?>" width="150">
+
+                <? if(has_post_thumbnail()): ?>
+                  <img src="<?= get_the_post_thumbnail_url(); ?>" class="mr-3" alt="<? the_title(); ?>" width="150">
+                <? endif; ?>
+
                 <div class="media-body">
                   <h5>
                     <? the_title(); ?><br/>

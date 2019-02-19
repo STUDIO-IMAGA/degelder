@@ -25,6 +25,7 @@
     left: 50%;
     right: 0;
   }
+
   .agenda{
     margin-bottom: 1rem;
 
@@ -69,10 +70,41 @@
     font-weight: 600;
     line-height: 1.33;
   }
-  
+
   .quote{
     margin-left: 27px;
     width: 80%;
     font-size: 1rem;
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .review-featured-agenda{
+
+    .bg-reviews{
+      background-color: rgba(#faeed2, .6);
+    }
+
+    .bg-agenda{
+      background-color: rgba(#f1e2bb, .3);
+    }
+
+    &:before,
+    &:after{
+      background-color: transparent;
+    }
+  }
+  .review{
+    flex-direction: column;
+
+    .author{
+      width: 180px;
+      align-self: center;
+      min-height: 60px;
+    }
+
+    .quote{
+      width: 100%;
+    }
   }
 }

@@ -35,15 +35,15 @@
 @include media-breakpoint-down(xs){
   .element{
     &.employees-display{
-      .wrapper{
-        .item{
-          display: inline-block;
-          float:none;
-          width: 100%;
-          margin-bottom: 2rem;
+      .employees-item{
+        margin-bottom: 1rem;
+
+        &:nth-of-type(even){
+          padding-top: 0;
         }
-        .item:nth-of-type(even){
-          margin-top: 0px;
+
+        &:nth-last-of-type(1){
+          margin-bottom: 1rem;
         }
       }
     }

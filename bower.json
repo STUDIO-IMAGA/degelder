@@ -55,7 +55,8 @@
         "./js/dist/index.js",
         "./js/dist/tab.js",
         "./js/dist/util.js",
-        "./js/dist/collapse.js"
+        "./js/dist/collapse.js",
+        "./js/dist/modal.js"
       ]
     },
     "font-awesome": {

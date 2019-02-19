@@ -40,6 +40,7 @@
               border: 2px solid $yellow;
               vertical-align: text-top;
               margin-right: .6rem;
+              content:'';
             }
           }
 
@@ -136,6 +137,7 @@
       border: 2px solid $yellow;
       height: 50px;
       border-radius: 0;
+      background-color: transparent;
 
       .select2-selection__rendered{
         line-height: 45px;

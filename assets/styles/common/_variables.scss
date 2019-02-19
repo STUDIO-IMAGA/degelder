@@ -161,17 +161,17 @@ $spacers: (
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 700px,
-  md: 1280px,
-  lg: 1440px,
-  xl: 1600px
+  sm: 784px,
+  md: 980px,
+  lg: 1300px,
+  xl: 1500px
 );
 
 $container-max-widths: (
-  sm: 640px,
+  sm: 768,
   md: 960px,
   lg: 1280px,
-  xl: 1440px
+  xl: 1470px
 );
 
 $body-bg:                           #f3f0e9;
@@ -299,6 +299,6 @@ $input-placeholder-color:           $brown;
 $input-focus-color:                 $brown;
 $input-focus-border-color:          $cyan;
 
-$input-btn-focus-box-shadow:        0px 2px 4px 0 rgba(255, 207, 71, 0.6) !important;
+$input-btn-focus-box-shadow:        none;
 
 $alert-border-radius:               .2rem;

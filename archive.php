@@ -1,4 +1,4 @@
-<? get_template_part('templates/breadcrumbs'); ?>
+<? get_template_part('templates/components/breadcrumbs'); ?>
 
 <? if (!have_posts()) : ?>
   <div class="alert alert-warning">

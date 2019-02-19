@@ -17,7 +17,7 @@
               <? $image = get_sub_field('image'); ?>
               <div class="item">
 
-                <img class="img-fluid img-shadow" src="<?= $image['url']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>">
+                <img class="img-fluid img-shadow" src="<?= $image['sizes']['gallery-image']; ?>" alt="<?= $image['alt']; ?>" title="<?= $image['title']; ?>">
 
                 <div class="description">
 

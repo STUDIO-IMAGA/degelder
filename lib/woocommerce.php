@@ -233,15 +233,19 @@ remove_action( 'woocommerce_before_main_content','woocommerce_breadcrumb', 20, 0
  * Rename product tabs
  * source: https://fillintheblank.co/latest/removing-breadcrumbs-in-woocommerce/
  */
-function woocommerce_rename_tabs($tabs) {
+function woocommerce_edit_tabs($tabs) {
 
   $tabs['description']['title'] = 'Uitgebreide informatie';
+  $tabs['description']['priority'] = 10;
+
   $tabs['additional_information']['title'] = 'Voedingswaarden';
+  $tabs['additional_information']['priority'] = 20;
+  $tabs['additional_information']['callback'] = 'woocommerce_product_additional_information_tab';
 
   return $tabs;
 
 }
-add_filter( 'woocommerce_product_tabs', __NAMESPACE__ . '\\woocommerce_rename_tabs', 98);
+add_filter( 'woocommerce_product_tabs', __NAMESPACE__ . '\\woocommerce_edit_tabs', 98);
 
 
 function grd_remove_woocommerce_styles_scripts() {

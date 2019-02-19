@@ -6,13 +6,13 @@ if( get_field('header_sub_content') ):
 
   $header_toggle = 'header-narrow';
   $header_col_left = 'col-left';
-  $header_col_right = 'col-right px-5';
+  $header_col_right = 'col-right px-4 pb-4 pt-4';
 
 else:
 
   $header_toggle = 'header-wide';
   $header_col_left = 'col-left';
-  $header_col_right = 'col-right';
+  $header_col_right = 'col-right pb-4 pt-5';
 
 endif;
 
@@ -46,7 +46,7 @@ $header_image_url = $header_background_image['header_image']['sizes'][$header_to
 
       </div>
 
-      <div class="col-12 <?= $header_col_right; ?> bg-<?= $header_background_color['content']; ?> pb-4 pt-5">
+      <div class="col-12 <?= $header_col_right; ?> bg-<?= $header_background_color['content']; ?>">
         <? the_field('header_content'); ?>
       </div>
 

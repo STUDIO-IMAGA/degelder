@@ -51,6 +51,11 @@
       </ul>
 
     <? endif; ?>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-12 text-center text-md-left">
 
     <a class="btn btn-outline-brown btn-sm" href="/activiteiten">Bekijk complete agenda</a>
 

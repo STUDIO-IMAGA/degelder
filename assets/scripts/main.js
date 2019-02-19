@@ -71,6 +71,8 @@
         $('.woocommerce').on('click', '.quantity-plus', function (e){
           e.preventDefault();
 
+          $('#update_cart').removeAttr('disabled');
+
           var target_id = '#' + $(this).attr('data-field-id');
           var current_value = parseInt( $(target_id).val() );
           var max_value = ( $(target_id).attr('max').length > 0 )? parseInt( $(target_id).attr('max') ) : 0 ;
@@ -89,6 +91,8 @@
 
         $('.woocommerce').on('click', '.quantity-minus', function (e){
           e.preventDefault();
+
+          $('#update_cart').removeAttr('disabled');
 
           var target_id = '#' + $(this).attr('data-field-id');
           var current_value = parseInt( $(target_id).val() );

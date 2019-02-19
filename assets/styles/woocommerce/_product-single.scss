@@ -7,6 +7,10 @@
   .product{
     .woocommerce-product-gallery{
       text-align: center;
+
+      .wp-post-image{
+        @extend .img-fluid;
+      }
     }
 
     &-price{
@@ -26,12 +30,12 @@
       }
     }
 
-    .quantity{
-      display: inline-block;
-    }
-
     &-add-to-cart{
       margin-top: 2rem;
+
+      .quantity{
+        display: inline-block;
+      }
 
       .add-to-cart-button{
         font-style: italic;
@@ -77,6 +81,25 @@
 
         .table{
           max-width: 400px;
+        }
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(sm){
+  .woocommerce{
+    .product{
+      &-add-to-cart{
+        text-align: center;
+
+        .quantity{
+          display: block;
+          margin-bottom: 1rem;
+        }
+
+        .add-to-cart-button{
+          margin: 0 auto;
         }
       }
     }

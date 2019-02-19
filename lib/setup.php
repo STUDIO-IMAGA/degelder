@@ -70,13 +70,16 @@ function setup() {
   add_image_size('quality-mark', 76, 76, true);
 
   // RPA Featured Product Component
-  add_image_size('rpa-product', 180, 180, true);
+  add_image_size('rpa-product', 150, 150, true);
 
   // Content Element
   add_image_size('content', 550, 320, true);
 
   // File List Element
   add_image_size('file', 74, 74);
+
+  // Gallery Element
+  add_image_size('file', 650, 370);
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 

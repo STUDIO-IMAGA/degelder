@@ -1,11 +1,14 @@
 .template{
   &-cart{
-    .table{
+    .shop_table{
       background: $light;
 
       thead{
         th{
           border: none;
+          font-size: 1rem;
+          font-weight: 400;
+          color: $black;
         }
       }
 
@@ -58,4 +61,17 @@
       }
     }
   }
+}
+
+@include media-breakpoint-down(sm){
+  .template{
+    &-cart{
+      .shop_table{
+        .product-thumbnail{
+          display: none;
+        }
+      }
+    }
+  }
+
 }

@@ -9,6 +9,8 @@
   &-error{
     padding: .8rem;
     color: $light;
+    margin: 0;
+    list-style: none;
 
     .button,
     .restore-item,

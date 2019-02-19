@@ -129,54 +129,36 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<?php do_action( 'woocommerce_cart_contents' ); ?>
 
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td><?php _e( 'Subtotal', 'woocommerce' ); ?></td>
-        <td data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
+        <td class="product-remove"></td>
+        <td class="product-thumbnail"></td>
+        <td class="product-name" ></td>
+        <td class="product-price" ></td>
+        <td class="product-quantity" ><?php _e( 'Subtotal', 'woocommerce' ); ?></td>
+        <td class="product-subtotal" data-title="<?php esc_attr_e( 'Subtotal', 'woocommerce' ); ?>"><?php wc_cart_totals_subtotal_html(); ?></td>
       </tr>
 
-			<tr>
-				<td colspan="3" class="actions">
-
-          <?php if ( wc_coupons_enabled() ) { ?>
-              <input type="text" name="coupon_code" class="form-control form-control-sm input-text mr-3" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
-              <button type="submit" class="btn btn-inline btn-sm btn-outline-brown" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
-              <?php do_action( 'woocommerce_cart_coupon' ); ?>
-          <?php } ?>
-
-          <td colspan="3" class="actions text-right">
-            <button type="submit" class="btn btn-sm btn-yellow" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
-          </td>
 
 
-					<?php do_action( 'woocommerce_cart_actions' ); ?>
+			<?php do_action( 'woocommerce_cart_actions' ); ?>
 
-					<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
-				</td>
-			</tr>
+			<?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
 
 			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 		</tbody>
 	</table>
+
+  <?php if ( wc_coupons_enabled() ) { ?>
+    <input type="text" name="coupon_code" class="form-control form-control-sm input-text mr-3" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />
+    <button type="submit" class="btn btn-inline btn-sm btn-outline-brown" name="apply_coupon" value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>"><?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?></button>
+    <?php do_action( 'woocommerce_cart_coupon' ); ?>
+  <?php } ?>
+
+  <button id="update_cart" type="submit" class="btn btn-lg btn-outline-brown" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
 	<?php do_action( 'woocommerce_after_cart_table' ); ?>
 </form>
 
 <div class="wc-proceed-to-checkout">
   <?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
-</div>
-
-<div class="cart-collaterals mt-4">
-	<?php
-		/**
-		 * Cart collaterals hook.
-		 *
-		 * @hooked woocommerce_cross_sell_display
-		 * @hooked woocommerce_cart_totals - 10
-		 */
-		//do_action( 'woocommerce_cart_collaterals' );
-	?>
 </div>
 
 <?php do_action( 'woocommerce_after_cart' ); ?>

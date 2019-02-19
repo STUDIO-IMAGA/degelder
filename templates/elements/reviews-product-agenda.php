@@ -11,3 +11,5 @@
     </div>
   </div>
 </section>
+
+<? get_template_part('templates/components/rpa','modal'); ?>

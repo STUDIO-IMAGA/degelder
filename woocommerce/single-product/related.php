@@ -26,7 +26,7 @@ if ( $related_products ) : ?>
       <?php woocommerce_product_loop_start(); ?>
 
       <?php foreach ( $related_products as $related_product ) : ?>
-        <div class="product col-3">
+        <div class="product col-12 col-md-6 col-lg-3">
 
           <? $post_object = get_post( $related_product->get_id() ); ?>
 

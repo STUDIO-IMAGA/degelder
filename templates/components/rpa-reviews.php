@@ -27,7 +27,7 @@
 </div>
 
 <div class="row">
-  <div class="col-12">
-    <a class="btn btn-outline-brown btn-sm" href="/reviews">Lees alle reacties</a> <a class="btn btn-outline-brown btn-sm" href="/geef-een-reactie">Geef een reactie</a>
+  <div class="col-12 text-center text-md-left;">
+    <a class="btn btn-outline-brown btn-sm" href="/reviews">Lees alle reacties</a> <a class="btn btn-outline-brown btn-sm" href="/geef-een-reactie" data-toggle="modal" data-target="#reviewsmodal">Geef een reactie</a>
   </div>
 </div>
