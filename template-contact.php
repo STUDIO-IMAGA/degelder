@@ -38,7 +38,9 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
           </p>
           <div class="company-artwork"></div>
           <div class="shoppinghours mt-6">
-            <div class="shopping-bg"><svg preserveAspectRatio="none" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 221 168"><path d="M5.56,151.84S1,110.44,2.49,75.43,5.56,25.35,5.56,25.35s11.5,1.79,41.14,0,165.08-6.14,165.08-6.14,2.55,6.14,4.34,46.51,2.81,86.12,2.81,86.12S12.2,151.33,5.56,151.84Z"/></svg></div>
+            <div class="shopping-bg">
+              <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 369.5 45.9" width="369" height="46"><path d="m0 45.9c122.7-4.9 245.6-6 368.4-2.6 1.1-13.9 1.3-28 0.7-41.9-27.2-0.3-54.4-0.6-81.6-0.8-27.2-0.2-54.4-0.3-81.6-0.4-27.3-0.1-54.6-0.1-82 0-27.2 0.1-54.4 0.2-81.6 0.4-6.8 0-13.6 0.1-20.4 0.2-3.4 0-6.8 0.1-10.2 0.1-2.3 0-6.8-0.9-8.8 0.4-3.5 2.2-1.4 11.7-1.4 15.2 0 6.7-0.3 13.5-0.8 20.2-0.1 0.8-0.6 9.4-0.8 9.4z" fill="#a4d0a3"/></svg>
+            </div>
             <h5>Openingstijden boerderijwinkel</h5>
             <div class="row pb-2">
               <div class="col-4 col-xl-2 pr-0">
