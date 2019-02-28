@@ -61,7 +61,7 @@ function setup() {
 
   // Featured Product Element
   add_image_size('featured-product', 1280, 360, true);
-  add_image_size('featured-product-sm', 640, 360, true);
+  add_image_size('featured-product-sm', 640, 360, array('right','center'));
 
   // Employees Display Element
   add_image_size('employees-display', 560, 320, true);

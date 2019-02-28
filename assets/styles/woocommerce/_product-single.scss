@@ -2,85 +2,85 @@
   &.single{
     background-image: none;
     background-color: #FFFCF5;
-  }
 
-  .product{
-    .woocommerce-product-gallery{
-      text-align: center;
+    .product{
+      .woocommerce-product-gallery{
+        text-align: center;
 
-      .wp-post-image{
-        @extend .img-fluid;
-      }
-    }
-
-    &-price{
-      color: $brown-400;
-      font-size: 1.375rem;
-      font-weight: 500;
-    }
-
-    &-description{
-      font-family: 'Zilla Slab', serif;
-      font-weight: 400;
-
-      em{
-        strong{
-          font-weight: 600;
+        .wp-post-image{
+          @extend .img-fluid;
         }
       }
-    }
 
-    &-add-to-cart{
-      margin-top: 2rem;
-
-      .quantity{
-        display: inline-block;
+      &-price{
+        color: $brown-400;
+        font-size: 1.375rem;
+        font-weight: 500;
       }
 
-      .add-to-cart-button{
-        font-style: italic;
-        font-weight: bold;
-        padding: .8rem 2rem;
-        margin-left: 1rem;
-      }
-    }
-
-    #woocommerce_product_tabs{
-      border-bottom: 1px solid #ddd1b6;
-
-      .nav-item{
-        margin-bottom: -1px;
-
-        .nav-link{
-          font-family: 'Zilla Slab', serif;
-          font-weight: 400;
-          padding-bottom: 1.3rem;
-          background: transparent;
-          border-top:none;
-          border-left: none;
-          border-right: none;
-          border-bottom: 5px solid transparent;
-          padding-left: 0px;
-          padding-right: 0px;
-          margin-right: 32px;
-
-          &.active{
-            border-bottom: 5px solid $yellow;
-            color: $brown;
-          }
-        }
-      }
-    }
-
-    #woocommerce_product_panels{
-      padding-top: 2rem;
-
-      .tab-pane{
+      &-description{
         font-family: 'Zilla Slab', serif;
         font-weight: 400;
 
-        .table{
-          max-width: 400px;
+        em{
+          strong{
+            font-weight: 600;
+          }
+        }
+      }
+
+      &-add-to-cart{
+        margin-top: 2rem;
+
+        .quantity{
+          display: inline-block;
+        }
+
+        .add-to-cart-button{
+          font-style: italic;
+          font-weight: bold;
+          padding: .8rem 2rem;
+          margin-left: 1rem;
+        }
+      }
+
+      #woocommerce_product_tabs{
+        border-bottom: 1px solid #ddd1b6;
+
+        .nav-item{
+          margin-bottom: -1px;
+
+          .nav-link{
+            font-family: 'Zilla Slab', serif;
+            font-weight: 400;
+            padding-bottom: 1.3rem;
+            background: transparent;
+            border-top:none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 5px solid transparent;
+            padding-left: 0px;
+            padding-right: 0px;
+            margin-right: 32px;
+
+            &.active{
+              border-bottom: 5px solid $yellow;
+              color: $brown;
+            }
+          }
+        }
+      }
+
+      #woocommerce_product_panels{
+        padding-top: 2rem;
+
+        .tab-pane{
+          font-family: 'Zilla Slab', serif;
+          font-weight: 400;
+
+          .table{
+            max-width: 400px;
+          }
         }
       }
     }

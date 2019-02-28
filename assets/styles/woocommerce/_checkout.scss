@@ -51,8 +51,9 @@
       }
     }
   }
+
   .woocommerce-checkout-review-order-table{
-    background: $light;
+    background-color: $light;
 
     td, th{
       border: none;
@@ -63,10 +64,19 @@
     }
   }
 
-  #payment{
+  #payment,
+  #order_review{
     ul{
-      margin: 0;
-      padding: 0;
+      @extend .list-unstyled;
+    }
+  }
+
+  #payment{
+    padding: .75rem;
+    background-color: $light;
+
+    .payment_box{
+      max-width: 360px;
     }
   }
 }

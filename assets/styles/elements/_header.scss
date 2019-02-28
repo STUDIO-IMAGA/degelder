@@ -50,12 +50,7 @@
 @include media-breakpoint-up(md){
   .element{
     &.header{
-      &-narrow{
-        .col-right{
-          max-height: 450px;
-        }
-      }
-
+      &-narrow,
       &-wide{
         .col-right{
           max-height: 450px;
@@ -76,12 +71,7 @@
         max-width: 40%;
       }
 
-      &-narrow{
-        .container-bg{
-          right: 0;
-        }
-      }
-
+      &-narrow,
       &-wide{
         .container-bg{
           right: 0;
@@ -102,14 +92,14 @@
         max-width: 100%;
       }
 
-      &-narrow{
-        .container-bg{
-          right: 0;
-        }
-      }
-
+      &-narrow,
       &-wide{
         .container-bg{
+          position: relative;
+          height:320px;
+          background-position: top center;
+          margin-left: -($grid-gutter-width / 2);
+          margin-right: -($grid-gutter-width / 2);
           right: 0;
         }
       }

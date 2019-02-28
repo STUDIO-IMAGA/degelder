@@ -174,14 +174,10 @@
   .select2-dropdown{
     border: 2px solid $cyan;
     border-radius: 0;
-
-    .select2-search{
-
-    }
-    .select2-results{
-      .select2-results__options{
-        .select2-results__option{}
-      }
-    }
   }
+}
+
+
+select{
+  @extend .custom-select;
 }

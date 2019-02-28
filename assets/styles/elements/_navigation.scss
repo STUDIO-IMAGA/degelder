@@ -15,6 +15,10 @@ header{
       }
     }
 
+    .navbar-toggler{
+      outline: none;
+    }
+
     .winkelmandje{
       display: inline-block;
       color: $black;
@@ -95,6 +99,48 @@ header{
 
 #header-spacer{
   height:114px;
+}
+
+@include media-breakpoint-down(lg){
+  header{
+    #nav-main{
+      .navbar-toggler[aria-expanded="true"]{
+        .navbar-toggler-icon{
+          background-image: url('../images/icons/icon-menu-close.svg');
+        }
+      }
+    }
+
+    #nav-mobile{
+      box-shadow:inset 0px 2px 4px 0 rgba(26, 23, 27, 0.16);
+      background-color: $cyan;
+
+      #primary_mobile,
+      #secondary_mobile,
+      #tertiary_mobile{
+        padding-top: 1rem;
+        padding-left: ($grid-gutter-width / 2);
+        padding-right: ($grid-gutter-width / 2);
+        padding-bottom: 1rem;
+      }
+
+      #primary_mobile{
+        .nav-item{
+          .nav-link{
+            font-size: 1.2rem;
+            font-style: italic;
+          }
+        }
+      }
+
+      #tertiary_mobile{
+        border-top: 1px solid #81b7c5;
+        text-align: center;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+      }
+    }
+  }
 }
 
 @include media-breakpoint-down(md){

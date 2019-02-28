@@ -2,13 +2,13 @@
   &-cart{
     .shop_table{
       background: $light;
+      font-size: 1rem;
+      font-weight: 400;
+      color: $black;
 
       thead{
         th{
           border: none;
-          font-size: 1rem;
-          font-weight: 400;
-          color: $black;
         }
       }
 
@@ -59,6 +59,10 @@
           }
         }
       }
+    }
+    #coupon_code{
+      margin-right: 1rem;
+      margin-bottom: .8rem;
     }
   }
 }

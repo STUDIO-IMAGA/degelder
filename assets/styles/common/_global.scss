@@ -48,6 +48,11 @@ body{
     }
   }
 }
+@include media-breakpoint-down(lg){
+  body{
+     margin-bottom: 520px;
+  }
+}
 
 @include media-breakpoint-down(md){
   body{

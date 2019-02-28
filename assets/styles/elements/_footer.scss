@@ -126,12 +126,18 @@ footer{
     }
   }
 }
+@include media-breakpoint-down(lg){
+  footer{
+    height: 520px;
+  }
+}
 
 @include media-breakpoint-down(md){
   footer{
     height: 510px;
   }
 }
+
 @include media-breakpoint-down(sm){
   footer{
     height: 450px;

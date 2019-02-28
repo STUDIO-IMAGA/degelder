@@ -18,7 +18,7 @@ function brand( $image_url, $width = 180 ){
 
 function toggler( $theme_location = 'primary_navigation' ){
 
-  $html = '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#' . $theme_location . '" aria-controls="' . $theme_location . '" aria-expanded="false" aria-label="' . __('Toggle navigation','imaga') . '">';
+  $html = '<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="' . $theme_location . '" aria-controls="' . $theme_location . '" aria-expanded="false" aria-label="' . __('Toggle navigation','imaga') . '">';
   $html .= '<span class="navbar-toggler-icon"></span>';
   $html .= '<span class="navbar-toggler-text">Menu</span>';
   $html .= '</button>';
