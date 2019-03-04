@@ -22,7 +22,11 @@ $header_image_url = $header_background_image['header_image']['sizes'][$header_to
 <section class="element header <?= $header_toggle; ?>">
   <div class="container">
 
-    <div class="container-bg" style="background-image:url(<?= $header_image_url; ?>);"></div>
+    <div id="header-bg" class="container-bg" style="background-image:url(<?= $header_image_url; ?>);">
+      <div class="header-title-mobile">
+        <?= $header_background_image['header_title']; ?>
+      </div>
+    </div>
 
     <div class="row align-items-end">
 
@@ -37,7 +41,7 @@ $header_image_url = $header_background_image['header_image']['sizes'][$header_to
         <? endif; ?>
 
         <? if( get_field('header_sub_content') ): ?>
-          <div class="row bg-<?= $header_background_color['sub_content']; ?>">
+          <div id="header-sub" class="row bg-<?= $header_background_color['sub_content']; ?>">
             <div class="col-12 py-3">
               <? the_field('header_sub_content'); ?>
             </div>

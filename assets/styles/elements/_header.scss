@@ -10,11 +10,18 @@
     }
 
     .display-1{
+      font-family: 'Zilla Slab', serif;
       text-shadow: 0.7px 0.7px 3px rgba(255, 255, 225, .15), 1.5px 1.3px 4px rgba(255, 255, 255, .15);
+      margin-bottom: 2.8rem;
+    }
+
+    .header-title-mobile{
+      display: none;
     }
 
     &-narrow{
       .container-bg{
+        background-position: top left;
         right: 30%;
       }
 
@@ -63,6 +70,25 @@
 @include media-breakpoint-down(md){
   .element{
     &.header{
+      .header-title-mobile{
+        position: absolute;
+        display: block;
+        font-family: 'Zilla Slab', serif;
+        font-size: 2.5rem;
+        font-weight: 800;
+        bottom: 3rem;
+        width: 100%;
+        text-align: center;
+        color: $white;
+        text-shadow: .7px .7px 3px rgba(255, 255, 225, .15), 1.5px 1.3px 4px rgba(255, 255, 255, .15);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-down(md){
+  .element{
+    &.header{
       .col-left{
         max-width: 60%;
       }
@@ -74,7 +100,7 @@
       &-narrow,
       &-wide{
         .container-bg{
-          right: 0;
+          right: 40%;
         }
       }
     }
@@ -96,7 +122,7 @@
       &-wide{
         .container-bg{
           position: relative;
-          height:320px;
+          height: 320px;
           background-position: top center;
           margin-left: -($grid-gutter-width / 2);
           margin-right: -($grid-gutter-width / 2);

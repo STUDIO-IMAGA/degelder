@@ -118,10 +118,14 @@ header{
       #primary_mobile,
       #secondary_mobile,
       #tertiary_mobile{
-        padding-top: 1rem;
         padding-left: ($grid-gutter-width / 2);
         padding-right: ($grid-gutter-width / 2);
-        padding-bottom: 1rem;
+      }
+
+      #primary_mobile,
+      #secondary_mobile{
+        padding-top: .6rem;
+        padding-bottom: .6rem;
       }
 
       #primary_mobile{
@@ -134,10 +138,10 @@ header{
       }
 
       #tertiary_mobile{
+        padding-top: .8rem;
+        padding-bottom: 1rem;
         border-top: 1px solid #81b7c5;
         text-align: center;
-        padding-top: .8rem;
-        padding-bottom: .8rem;
       }
     }
   }

@@ -20,16 +20,15 @@
       init: function() {
 
         // init Animate On Scroll
-        // AOS.init({
-        //    offset: 220,
-        //    startEvent: 'load',
-        //    once: 'true',
-        // });
+        AOS.init({
+           offset: 220,
+           startEvent: 'load',
+           once: 'true',
+        });
 
         // init Smooth Scroll
         var scroll = new SmoothScroll('a[href*="#"]', {
           updateURL: false,
-          offset: -2,
           topOnEmptyHash: true
         });
 
@@ -60,6 +59,18 @@
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
+
+        var header_background = $('#header-bg');
+
+        window.addEventListener('load', function () {
+          var header_sub_height = $('#header-sub').height();
+          header_background.css('bottom', header_sub_height);
+        });
+
+        window.addEventListener('resize', function () {
+          var header_sub_height = $('#header-sub').height();
+          header_background.css('bottom', header_sub_height);
+        })
 
         // Set the offset when entering page with hash present in the url
         window.setTimeout(function(){
