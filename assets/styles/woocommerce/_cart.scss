@@ -68,14 +68,134 @@
 }
 
 @include media-breakpoint-down(sm){
-  .template{
+  .woocommerce{
     &-cart{
       .shop_table{
-        .product-thumbnail{
-          display: none;
+        thead{
+          display:none;
+        }
+        tbody{
+          .cart-item{
+            position: relative;
+            height: 100px;
+
+            .product-remove,
+            .product-thumbnail,
+            .product-name,
+            .product-price,
+            .product-quantity,
+            .product-subtotal{
+              position: absolute;
+            }
+
+            .product-remove{
+              top: calc(50% - 25px);
+              left: 0;
+              width: 50px;
+              height: 50px;
+            }
+
+            .product-thumbnail{
+              top: calc(50% - 50px);
+              left: 50px;
+              width: 100px;
+              height: 100px;
+            }
+
+            .product-name{
+              top: 0;
+              left: 150px;
+              width: calc(100% - 150px);
+            }
+
+            .product-price{
+              top: 0px;
+              right: 0px;
+
+              &:before{
+                content:attr(data-title);
+              }
+            }
+
+            .product-quantity{
+              left: 150px;
+              bottom: 0;
+              height: 60px;
+
+              .quantity-minus,
+              .quantity-plus{
+                height: 30px;
+                width: 30px;
+              }
+            }
+
+            .product-subtotal{
+              right: 0px;
+              bottom: 0px;
+              height: 50px;
+
+              &:before{
+                content:attr(data-title);
+              }
+            }
+          }
         }
       }
     }
   }
+}
 
+@media (max-width: 560px){
+  .woocommerce{
+    &-cart{
+      .shop_table{
+        tbody{
+          .cart-item{
+            position: relative;
+            height: 150px;
+
+            .product-remove,
+            .product-thumbnail,
+            .product-name,
+            .product-price,
+            .product-quantity,
+            .product-subtotal{
+              position: absolute;
+            }
+
+            .product-remove{
+              top: calc(50% - 40px);
+            }
+
+            .product-thumbnail{
+              top: 0px;
+              left: 40px;
+            }
+
+            .product-name{
+              top: 0;
+              left: 150px;
+            }
+
+            .product-price{
+              top: auto;
+              right: 0px;
+              bottom: 0px;
+            }
+
+            .product-quantity{
+              left: 20px;
+              bottom: 0;
+              height: 60px;
+            }
+
+            .product-subtotal{
+              right: 0px;
+              bottom: 0px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

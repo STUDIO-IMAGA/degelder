@@ -47,9 +47,9 @@
 
         document.addEventListener('scroll', function(){
 
-          var s= Math.floor( getScrollPixel() );
+          var depth = Math.floor( getScrollPixel() );
 
-          if( s > 180){
+          if( depth > 180){
             document.getElementById("navigation").classList.add('nav-fixed');
           }else{
             document.getElementById("navigation").classList.remove('nav-fixed');
@@ -70,7 +70,7 @@
         window.addEventListener('resize', function () {
           var header_sub_height = $('#header-sub').height();
           header_background.css('bottom', header_sub_height);
-        })
+        });
 
         // Set the offset when entering page with hash present in the url
         window.setTimeout(function(){
@@ -127,6 +127,37 @@
     'home': {
       init: function() {
         // JavaScript to be fired on the home page
+
+        $slick_slider = $('.slick-reviews');
+        settings = {
+          mobileFirst: true,
+          infinite: true,
+          speed: 300,
+          fade: true,
+          adaptiveHeight: true,
+          prevArrow:'<div class="slick-prev"></div>',
+          nextArrow:'<div class="slick-next"></div>',
+        };
+
+        // reslick only if it's not slick()
+        window.addEventListener('resize', function() {
+          if ($(window).width() > 960) {
+            if ($slick_slider.hasClass('slick-initialized')) {
+              $slick_slider.slick('unslick');
+            }
+            return;
+          }
+
+          if (!$slick_slider.hasClass('slick-initialized')) {
+            return $slick_slider.slick(settings);
+          }
+        });
+
+        window.addEventListener('load', function() {
+          if ($(window).width() < 980) {
+            $slick_slider.slick(settings);
+          }
+        });
       },
       finalize: function() {
         // JavaScript to be fired on the home page, after the init JS

@@ -78,6 +78,64 @@
   }
 }
 
+@include media-breakpoint-down(md){
+  .review{
+    flex-direction: column;
+    text-align: center;
+
+    .author{
+      width: 180px;
+      min-height: 60px;
+      margin: 0 auto;
+    }
+
+    .quote{
+      width: 100%;
+      margin: 0;
+    }
+  }
+
+  .slick-reviews{
+    .slick-arrow{
+      position: absolute;
+      bottom: -14px;
+      width:32px;
+      height:32px;
+      background-color: $yellow;
+      border: none;
+      border-radius: 100px;
+      font-size: 0px;
+      color: transparent;
+      z-index: 1000;
+
+      &:after{
+        position: absolute;
+        content:'';
+        top:0;
+        bottom:0;
+        left:0;
+        right:0;
+        background-image:url('../images/icons/icon-chevron.svg');
+        background-size: 14px;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      &.slick-next{
+        right: calc(50% - 50px);
+      }
+
+      &.slick-prev{
+        left: calc(50% - 50px);
+
+        &:after{
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
 @include media-breakpoint-down(sm){
   .review-featured-agenda{
 
@@ -92,19 +150,6 @@
     &:before,
     &:after{
       background-color: transparent;
-    }
-  }
-  .review{
-    flex-direction: column;
-
-    .author{
-      width: 180px;
-      align-self: center;
-      min-height: 60px;
-    }
-
-    .quote{
-      width: 100%;
     }
   }
 }

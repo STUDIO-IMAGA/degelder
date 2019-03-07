@@ -15,6 +15,7 @@
     .button,
     .restore-item,
     .showcoupon{
+      vertical-align: baseline;
       @extend .btn;
       @extend .btn-sm;
       @extend .btn-light;
@@ -99,6 +100,21 @@
       text-align: center;
       line-height: 38px;
       width: 100px;
+    }
+  }
+}
+
+@media (max-width: 560px){
+  .woocommerce{
+    &-message,
+    &-info,
+    &-error{
+      margin-left: -($grid-gutter-width / 2);
+      margin-right: -($grid-gutter-width / 2);
+
+      .showcoupon{
+        padding: .2rem .5rem;
+      }
     }
   }
 }
