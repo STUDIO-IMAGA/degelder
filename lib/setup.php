@@ -79,7 +79,7 @@ function setup() {
   add_image_size('file', 74, 74);
 
   // Gallery Element
-  add_image_size('file', 650, 370);
+  add_image_size('gallery-image', 650, 370);
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 
@@ -128,7 +128,7 @@ function add_google_fonts() {
   // Defined in functions.php
   if( ! defined( 'GOOGLE_FONTS' ) ) return;
 
-  wp_enqueue_style( 'imaga/google-fonts', 'http://fonts.googleapis.com/css?family=' . GOOGLE_FONTS );
+  wp_enqueue_style( 'imaga/google-fonts', 'https://fonts.googleapis.com/css?family=' . GOOGLE_FONTS );
 
 }
 add_action( 'wp_head', __NAMESPACE__ . '\\add_google_fonts' , 1);
