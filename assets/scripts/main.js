@@ -62,14 +62,36 @@
 
         var header_background = $('#header-bg');
 
-        window.addEventListener('load', function () {
+        function resize_header_background(){
           var header_sub_height = $('#header-sub').height();
           header_background.css('bottom', header_sub_height);
+        }
+
+        function reposition_gallery_arrows(){
+          window.setTimeout(function(){
+            var slick_image_height = $('.element.gallery .slick-slide img').height();
+            $('.element.gallery .slick-arrow').css('top', (slick_image_height / 2) - 23 );
+          }, 320);
+        }
+
+        window.addEventListener('load', function () {
+
+          // set header image height on load
+          resize_header_background();
+
+          // set gallery next/prev arrow position
+          reposition_gallery_arrows();
+
         });
 
         window.addEventListener('resize', function () {
-          var header_sub_height = $('#header-sub').height();
-          header_background.css('bottom', header_sub_height);
+
+          // set header image height on load
+          resize_header_background();
+
+          // set gallery next/prev arrow position
+          reposition_gallery_arrows();
+
         });
 
         // Set the offset when entering page with hash present in the url
@@ -91,6 +113,7 @@
           if ( !isNaN(current_value) && ( (current_value <= max_value) || ( max_value === 0) )  ){
 
             $(target_id).val(current_value + 1);
+            $("#quantity-label").html(current_value + 1);
             $(target_id).trigger('change');
 
           } else {
@@ -112,6 +135,7 @@
           if ( !isNaN(current_value) && (current_value > min_value) && current_value !== 0 ) {
 
             $(target_id).val(current_value - 1);
+            $("#quantity-label").html(current_value - 1);
             $(target_id).trigger('change');
 
           } else {

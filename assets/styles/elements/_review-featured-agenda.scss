@@ -14,14 +14,16 @@
 
   &:before{
     // Achter reviews
-    background-color: rgba(#faeed2, .6);
+    background-image: url('../images/papier-reviews.jpg');
+    background-size: cover;
     left: 0;
     right: 50%;
   }
 
   &:after{
     // Achter Product & Agenda
-    background-color: rgba(#f1e2bb, .3);
+    background-image: url('../images/papier-product-en-agenda.jpg');
+    background-size: cover;
     left: 50%;
     right: 0;
   }
@@ -140,16 +142,18 @@
   .review-featured-agenda{
 
     .bg-reviews{
-      background-color: rgba(#faeed2, .6);
+      background-image: url('../images/papier-reviews.jpg');
+      background-size: cover;
     }
 
     .bg-agenda{
-      background-color: rgba(#f1e2bb, .3);
+      background-image: url('../images/papier-product-en-agenda.jpg');
+      background-size: cover;
     }
 
     &:before,
     &:after{
-      background-color: transparent;
+      background-image: none;
     }
   }
 }

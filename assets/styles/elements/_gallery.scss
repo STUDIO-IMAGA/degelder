@@ -1,6 +1,6 @@
 .element{
   &.gallery{
-    max-width: 650px;
+    max-width: 850px;
     margin:0 auto;
     padding-bottom: 5rem;
 
@@ -19,6 +19,9 @@
     }
 
     .slick-slider{
+      margin-left: 100px;
+      margin-right: 100px;
+
       .item{
         padding: 8px;
 
@@ -44,8 +47,8 @@
         height: 46px;
         background-color: $yellow-light;
         border: 0px;
-        top: 143px;
         font-size: 0px;
+        top:160px; // default
         z-index: 1010;
 
         &:before{
@@ -95,23 +98,9 @@
       .slick-slider{
         .slick-arrow{
           &.slick-prev{
-            left: 0px;
           }
           &.slick-next{
-            right: 0px;
           }
-        }
-      }
-    }
-  }
-}
-
-@include media-breakpoint-down(xs){
-  .element{
-    &.gallery{
-      .slick-slider{
-        .slick-arrow{
-          top: 100px;
         }
       }
     }

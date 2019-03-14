@@ -21,9 +21,10 @@ if ( $max_value && $min_value === $max_value ) {
 	?>
 	<div class="quantity">
     <label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></label>
-    <input type='button' value='-' class='quantity-minus' data-field-id='<?php echo esc_attr( $input_id ); ?>'/><div class="label-wrapper">
+    <button class='quantity-minus' data-field-id='<?php echo esc_attr( $input_id ); ?>'>-</button><div class="label-wrapper">
+      <span id="quantity-label"><?php echo esc_attr( $input_value ); ?></span>
       <input
-      type="number"
+      type="hidden"
       id="<?php echo esc_attr( $input_id ); ?>"
       class="quantity-label"
       step="<?php echo esc_attr( $step ); ?>"
@@ -36,8 +37,7 @@ if ( $max_value && $min_value === $max_value ) {
       pattern="<?php echo esc_attr( $pattern ); ?>"
       inputmode="<?php echo esc_attr( $inputmode ); ?>"
       aria-labelledby="<?php echo esc_attr( $labelledby ); ?>" />
-    </div><input type='button' value='+' class='quantity-plus' data-field-id='<?php echo esc_attr( $input_id ); ?>'/>
-
+    </div><button class='quantity-plus' data-field-id='<?php echo esc_attr( $input_id ); ?>'>+</button>
 	</div>
 	<?php
 }

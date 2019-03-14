@@ -22,6 +22,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 <form class="woocommerce-cart-form form-inline" action="<?php echo esc_url( wc_get_cart_url() ); ?>" method="post">
 	<?php do_action( 'woocommerce_before_cart_table' ); ?>
 
+<div class="shop_table_wrapper">
+
 	<table class="table shop_table shop_table_responsive cart woocommerce-cart-form__contents" cellspacing="0">
 		<thead class="bg-yellow-light text-brown">
 			<tr>
@@ -146,6 +148,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 			<?php do_action( 'woocommerce_after_cart_contents' ); ?>
 		</tbody>
 	</table>
+</div>
 
   <?php if ( wc_coupons_enabled() ) { ?>
     <input type="text" name="coupon_code" class="form-control form-control-sm input-text" id="coupon_code" value="" placeholder="<?php esc_attr_e( 'Coupon code', 'woocommerce' ); ?>" />

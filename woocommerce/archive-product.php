@@ -10,6 +10,8 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+
+use IMAGA\Theme\Assets;
 ?>
 
 <section class="description bg-yellow-light">
@@ -77,7 +79,7 @@ defined( 'ABSPATH' ) || exit;
       <div class="col-12 col-lg-6 shipping">
         <div class="row align-items-center">
           <div class="col-4 col-lg-3 text-right">
-            <img class="img-fluid" src="http://placehold.it/111x135" alt="Shop Promo">
+            <img class="img-fluid" src="<?= Assets\asset_path('images/gratis-verzending.svg'); ?>" alt="Shop Promo">
           </div>
           <div class="col-8 col-lg-7">
             <span class="h3"><?= get_option('woocommerce_store_shop_shipping_promotion'); ?></span>
