@@ -67,7 +67,8 @@
   }
 
   .promotion{
-    .shipping{}
+    padding-bottom: 4rem;
+
     .shop{
       font-size: 1.438rem;
       line-height: 32px;
@@ -98,15 +99,34 @@
       }
     }
   }
+
+  &-sidebar{
+    margin-bottom: 4rem;
+    
+    &.sticky-top{
+      top: 150px;
+    }
+  }
 }
 
 @include media-breakpoint-down(lg){
   .woocommerce{
     .promotion{
+      .shipping{
+        img{
+          max-width: 120px;
+        }
+      }
       .shop{
+        margin-top: 3rem;
+
         &-bg{
           left: 0px;
           right: 0px;
+          bottom: -40px;
+        }
+        img{
+          transform: translateY(0rem);
         }
       }
     }

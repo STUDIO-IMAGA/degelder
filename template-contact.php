@@ -22,7 +22,7 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
 <section class="template-contact">
   <div class="container">
     <div class="row mt-5">
-      <div class="col-12 col-xl-6 mb-4">
+      <div class="col-12 col-md-7 col-xl-6 mb-4">
         <div class="contact-info">
           <h5><? the_title(); ?></h5>
           <h5 class="text-brown-400 mb-3"><i>Adressgegevens</i></h5>
@@ -69,7 +69,7 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
           </div>
         </div>
       </div>
-      <div class="col-12 col-xl-6 mb-4">
+      <div class="col-12 col-md-5 col-xl-6 mb-4">
         <h5>Stuur ons een bericht</h5>
         <?= do_shortcode('[contact-form-7 id="571"]');?>
       </div>

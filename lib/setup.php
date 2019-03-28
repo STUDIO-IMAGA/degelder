@@ -53,33 +53,33 @@ function setup() {
 
   // Add image sizes
   // Header Element
-  add_image_size('header-narrow', 750, 600, true);
-  add_image_size('header-wide', 850, 600, true);
+  add_image_size('header-narrow', 750, 600);
+  add_image_size('header-wide', 850, 600);
 
   // Featured Pages Element
-  add_image_size('featured-page', 420, 280, true);
+  add_image_size('featured-page', 420, 280);
 
   // Featured Product Element
-  add_image_size('featured-product', 1280, 360, true);
+  add_image_size('featured-product', 1280, 360);
   add_image_size('featured-product-sm', 640, 360, array('right','center'));
 
   // Employees Display Element
-  add_image_size('employees-display', 560, 320, true);
+  add_image_size('employees-display', 560, 320);
 
   // Quality Marks Component
-  add_image_size('quality-mark', 76, 76, true);
+  add_image_size('quality-mark', 76, 76);
 
   // RPA Featured Product Component
-  add_image_size('rpa-product', 150, 150, true);
+  add_image_size('rpa-product', 150, 150);
 
   // Content Element
-  add_image_size('content', 550, 320, true);
+  add_image_size('content', 550, 320, false);
 
   // File List Element
-  add_image_size('file', 74, 74);
+  add_image_size('file', 74, 74, false);
 
   // Gallery Element
-  add_image_size('gallery-image', 650, 370);
+  add_image_size('gallery-image', 650, 370, false);
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');
 

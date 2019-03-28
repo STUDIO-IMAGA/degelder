@@ -3,13 +3,6 @@
 // Define Google Fonts
 define("GOOGLE_FONTS", "Amaranth:300,300i,400,400i,700,700i|Zilla+Slab:300,300i,400,400i,600,600i,700,700i");
 
-// Define Google Maps API key
-// https://developers.google.com/maps/documentation/javascript/get-api-key
-//define("GOOGLE_MAPS_API", "AIzaSyB5QTXactMQKDZThuga9XwRtr5r1TC3fTs");
-
-// Activate ACF 5 beta
-define('ACF_EARLY_ACCESS', '5');
-
 $files = [
   'lib/setup.php',                        // Theme setup
 

@@ -55,7 +55,6 @@
             document.getElementById("navigation").classList.remove('nav-fixed');
           }
         });
-
       },
       finalize: function() {
         // JavaScript to be fired on all pages, after page specific JS is fired
@@ -144,7 +143,6 @@
 
           }
         });
-
       }
     },
     // Home page
