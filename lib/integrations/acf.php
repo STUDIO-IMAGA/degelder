@@ -3494,6 +3494,13 @@ acf_add_local_field_group(array(
 				'value' => 'woo_shop_page',
 			),
 		),
+    array(
+			array(
+				'param' => 'post_type',
+				'operator' => '==',
+				'value' => 'activities',
+			),
+		),
 	),
 	'menu_order' => 2,
 	'position' => 'acf_after_title',
