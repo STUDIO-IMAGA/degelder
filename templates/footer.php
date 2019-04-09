@@ -76,8 +76,8 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
           </li>
         </ul>
         <div class="socialmedia">
-          <? if( have_rows('services', 'options') ): ?>
-              <? while ( have_rows('services', 'options') ) : the_row();?>
+          <? if( have_rows('services', 'option') ): ?>
+              <? while ( have_rows('services', 'option') ) : the_row();?>
                 <? $image = get_sub_field('icon'); ?>
 
                   <a class="service" href="<? the_sub_field('url'); ?>" target="_blank">

@@ -8,7 +8,14 @@
         </button>
       </div>
       <div class="modal-body">
-        <?= do_shortcode('[contact-form-7 id="887"]'); ?>
+        <? $shortcode = get_field('form_shortcode', 'option'); ?>
+        <? if($shortcode): ?>
+          <?= do_shortcode( $shortcode ); ?>
+        <? else: ?>
+          <div class="alert alert-danger">
+            <span>Kies een formulier in de <a href="/wp-admin/admin.php?page=degelder-options" rel="nofollow">Thema Instellingen</span>
+          </div>
+        <? endif; ?>
       </div>
     </div>
   </div>
