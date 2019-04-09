@@ -342,7 +342,7 @@ gulp.task('zip', function(callback) {
    base: '.'
   })
   .pipe(loadplugins.zip(pkg.name +'.zip'))
-  .pipe(gulp.dest( OSHome + '/Documents/Releases'));
+  .pipe(gulp.dest( OSHome + '/Documents/Themes'));
 });
 
 

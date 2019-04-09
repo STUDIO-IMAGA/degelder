@@ -98,11 +98,17 @@
         }
       }
     }
+
+    .shipping{
+      img{
+        transform: rotate(-3deg);
+      }
+    }
   }
 
   &-sidebar{
     margin-bottom: 4rem;
-    
+
     &.sticky-top{
       top: 150px;
     }
