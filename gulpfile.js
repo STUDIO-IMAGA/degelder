@@ -246,6 +246,7 @@ gulp.task('default', ['clean'], function() {
 
 gulp.task('zip', function(callback) {
   var pkg = getPackageJSON();
+  var newversion = semver.inc(pkg.version, argv.production);
   return gulp.src([
     'dist/**/*',
     'acf-json/*',
