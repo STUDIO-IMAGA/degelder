@@ -16,7 +16,7 @@
     }
   ],
   "scripts": {
-    "build": "bower install && gulp",
+    "build": "gulp",
     "jshint": "gulp jshint",
     "jscs": "jscs gulpfile.js assets/scripts/*.js"
   },
@@ -61,8 +61,12 @@
     "wiredep": "4.0.0"
   },
   "dependencies": {
-    "bootstrap": "^4.1.3",
+    "aos": "2.3.4",
+    "bootstrap": "^4.3.0",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
-    "popper.js": "^1.14.5"
+    "popper.js": "^1.14.5",
+    "slick-carousel": "^1.8.1",
+    "smooth-scroll": "^15.0.0"
   }
 }
