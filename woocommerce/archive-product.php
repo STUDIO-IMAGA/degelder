@@ -31,7 +31,7 @@ use IMAGA\Theme\Assets;
   <div class="container">
     <div class="row pt-2">
 
-      <div class="col-12 col-sm-4 col-md-3 col-lg-3">
+      <div class="col-12 col-sm-5 col-md-4 col-lg-3">
         <div class="woocommerce-sidebar sticky-top">
 
           <? dynamic_sidebar( 'woocommerce-sidebar' ); ?>
@@ -39,7 +39,7 @@ use IMAGA\Theme\Assets;
         </div>
       </div>
 
-      <div class="woocommerce-products col-12 col-sm-8 col-md-9 col-lg-9">
+      <div class="woocommerce-products col-12 col-sm-7 col-md-8 col-lg-9">
 
         <? if ( woocommerce_product_loop() ): ?>
 
@@ -50,7 +50,7 @@ use IMAGA\Theme\Assets;
 
               <? do_action( 'woocommerce_shop_loop' ); ?>
 
-              <div class="product col-12 col-sm-6 col-md-4">
+              <div class="product col-12 col-md-6 col-lg-4">
 
                 <? wc_get_template_part( 'content', 'product' ); ?>
 

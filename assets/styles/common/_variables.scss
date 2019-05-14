@@ -161,15 +161,15 @@ $spacers: (
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 784px,
-  md: 980px,
+  sm: 576px,
+  md: 960px,
   lg: 1300px,
   xl: 1500px
 );
 
 $container-max-widths: (
-  sm: 768,
-  md: 960px,
+  sm: 480,
+  md: 896px,
   lg: 1280px,
   xl: 1470px
 );
