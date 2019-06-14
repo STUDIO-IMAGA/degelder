@@ -43,27 +43,32 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
             </div>
             <h5>Openingstijden boerderijwinkel</h5>
             <div class="row pb-2">
-              <div class="col-4 col-xl-2 pr-0">
+              <div class="col-4 col-xl-3 pr-0">
                 Ma
               </div>
-              <div class="col-7 col-xl-8 px-0">
+              <div class="col-7 col-xl-9 px-0">
                 <?=get_option('woocommerce_store_shoppinghours_monday');?>
               </div>
             </div>
             <div class="row align-items-center pb-2">
-              <div class="col-4 col-xl-2 pr-0">
+              <div class="col-4 col-xl-3 pr-0">
                 Di t/m vr
               </div>
-              <div class="col-7 col-xl-8 px-0">
+              <div class="col-7 col-xl-9 px-0">
                 <?=get_option('woocommerce_store_shoppinghours_tue_vr');?>
               </div>
             </div>
             <div class="row pb-2">
-              <div class="col-4 col-xl-2 pr-0">
+              <div class="col-4 col-xl-3 pr-0">
                 Za
               </div>
-              <div class="col-7 col-xl-8 px-0">
+              <div class="col-7 col-xl-9 px-0">
                 <?=get_option('woocommerce_store_shoppinghours_saturday');?>
+              </div>
+            </div>
+            <div class="row pb-2">
+              <div class="col-12">
+                Gesloten op zon- en feestdagen
               </div>
             </div>
           </div>

@@ -52,6 +52,11 @@ $full_address = str_replace(' ','+', $address.'+'.$postcode.'+'.$city);
             <?=get_option('woocommerce_store_shoppinghours_saturday');?>
           </div>
         </div>
+        <div class="row">
+          <div class="col-12">
+            Gesloten op zon- en feestdagen
+          </div>
+        </div>
       </div>
 
       <div class="col-12 col-md-6 col-xl-3 d-none d-md-block">
