@@ -5,6 +5,7 @@ define("GOOGLE_FONTS", "Amaranth:300,300i,400,400i,700,700i|Zilla+Slab:300,300i,
 
 $files = [
   'lib/setup.php',                        // Theme setup
+  'lib/updater.php',                      // Theme Updater
 
   'lib/integrations/wpsvg.php',           // WPSVG
   'lib/integrations/version-info.php',    // Version Info
