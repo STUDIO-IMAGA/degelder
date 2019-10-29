@@ -52,3 +52,7 @@ if(!class_exists('WooCommerce')):
     wp_die('This theme requires WooCommerce to function.');
   endif;
 endif;
+
+// Init updater
+$puc = Puc_v4_Factory::buildUpdateChecker( 'https://github.com/STUDIO-IMAGA/degelder', __FILE__, 'imaga' );
+$puc->getVcsApi()->enableReleaseAssets();
