@@ -24,6 +24,7 @@ var bump          = require('gulp-bump');
 var fs            = require('fs');
 var semver        = require('semver');
 var smushit       = require('gulp-smushit');
+var release       = require('gulp-github-release');
 
 var manifest      = require('asset-builder')('./assets/manifest.json');
 var path          = manifest.paths;
@@ -203,7 +204,7 @@ gulp.task('jshint', function() {
     .pipe(gulpif(enabled.failJSHint, jshint.reporter('fail')));
 });
 
-gulp.task('clean', require('del').bind(null, [path.dist]));
+gulp.task('clean', require('del').bind(null, [path.dist, 'tmp/**']));
 
 gulp.task('watch', function() {
   browserSync.init({
@@ -230,8 +231,8 @@ gulp.task('build', function(callback) {
   ];
 
   if (argv.production) {
-    tasks.push('version');
     tasks.push('zip');
+    tasks.push('clean');
   }
 
   runSequence.apply(
@@ -242,29 +243,6 @@ gulp.task('build', function(callback) {
 
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
-});
-
-gulp.task('zip', function(callback) {
-  var pkg = getPackageJSON();
-  var newversion = semver.inc(pkg.version, argv.production);
-  return gulp.src([
-    'dist/**/*',
-    'acf-json/*',
-    'templates/**/*',
-    'woocommerce/**/*',
-    'vendor/**/*',
-    'lang/*',
-    'lib/**/*',
-    '*.css',
-    '*.md',
-    '*.php',
-    '*.txt',
-    '*.png',
-  ], {
-   base: '.'
-  })
-  .pipe(loadplugins.zip(pkg.name +'.zip'))
-  .pipe(gulp.dest( OSHome + '/Documents/Themes/' + pkg.name + '/v' + newversion));
 });
 
 gulp.task('version', function() {
@@ -294,4 +272,47 @@ gulp.task('version', function() {
       this.emit('end');
     }
   });
+});
+
+gulp.task('move', ['version'], function() {
+  var pkg = getPackageJSON();
+  return gulp.src([
+    'dist/**',
+    'acf-json/**',
+    'templates/**',
+    'woocommerce/**',
+    'vendor/**',
+    'lang/*',
+    'lib/**',
+    '*.css',
+    '*.md',
+    '*.php',
+    '*.txt',
+    '*.png',
+  ], {
+   base: '.'
+  })
+  .pipe(gulp.dest( './tmp' ));
+});
+
+gulp.task('zip', ['move'], function() {
+  var pkg = getPackageJSON();
+  return gulp.src([
+    pkg.name + '/**',
+  ], {
+   base: '.'
+  })
+  .pipe(loadplugins.zip(pkg.name +'.zip'))
+  .pipe(gulp.dest( './releases/v' + pkg.version ));
+});
+
+gulp.task('push-latest', function(){
+  var pkg = getPackageJSON();
+  return gulp.src( './releases/v' + pkg.version + '/' + pkg.name + '.zip')
+  .pipe(release({
+    token: process.env.GITHUB_TOKEN,
+    notes: 'Automated Release: v' + pkg.version,
+    prerelease: false,
+    manifest: require('./package.json')
+  }));
 });

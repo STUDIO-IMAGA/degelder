@@ -55,5 +55,5 @@ if(!class_exists('WooCommerce')):
 endif;
 
 // Init updater
-$puc = Puc_v4_Factory::buildUpdateChecker( 'https://github.com/STUDIO-IMAGA/degelder', __FILE__, 'imaga' );
+$puc = Puc_v4_Factory::buildUpdateChecker( 'https://github.com/STUDIO-IMAGA/degelder', __FILE__ );
 $puc->getVcsApi()->enableReleaseAssets();
